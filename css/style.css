@@ -10,6 +10,12 @@ body {
   background: #fff;
   color: #1c0730;
 }
+  
+/* Apply font to all elements for consistency */
+* {
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  font-weight: 400; /* Default weight */
+}
 
 /* Container to align header with page content */
 .container {
@@ -91,8 +97,8 @@ body {
   list-style: none;
   display: flex;
   gap: 25px;
-  font-weight: 600;
-  font-size: 1.1rem;
+  font-weight: 1200;
+  font-size: 1.2rem;
   align-items: center;
 }
 
@@ -154,8 +160,8 @@ body {
   }
 
   .mobile-dropdown-menu ul > li > a {
-    padding: 16px 20px;
-    font-size: 1rem;
+    padding: 25px 20px;
+    font-size: 1.2rem;
     font-weight: 800;
     color:  white;
     cursor: pointer;
@@ -170,19 +176,19 @@ body {
 /* Smallest screens adjustments */
 @media (max-width: 400px) {
   .site-name {
-    font-size: 0.85rem;
+    font-size: 0.80rem;
     font-weight: 600;
     margin-top: 5px;
     margin-left: -28px;
   }
   .site-submenu {
-    font-size: 0.70rem;
+    font-size: 0.7rem;
     font-weight: 500;
     white-space: nowrap;
     color:  #2f0755;
     margin-top: 37px;
-    margin-left: -158px;
-    letter-spacing: 0.60rem;
+    margin-left: -147px;
+    letter-spacing: 0.50rem;
   }
 
   .logo {
@@ -212,30 +218,29 @@ body {
 .logo {
   height: 47px;
   width: auto;
-  margin-left: -95px;
-  margin-top: 8px;
+  margin-left: -115px;
+  margin-top: 9px;
 }
 
 .site-name {
   font-size: 1.1rem;
   margin-top: -05px;
-  margin-left: -35px;
+  margin-left: -25px;
 }
 
   .site-submenu {
     margin-top: 40px;
-    margin-left: -208px;
+    margin-left: -214px;
     letter-spacing: 12.5px;
   
   }
 
   .main-nav {
-    margin-right: -60px;
+    margin-right: -62px;
   }
 }
 
 /* HEADER STYLING DONE!>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>> */
-
 /* HOEPAGE HERO VIDEO BACKGROUND SECTION */
 .hero-slideshow {
   position: relative;
@@ -259,7 +264,6 @@ body {
   z-index: 1;
   filter: brightness(0.3); /* darken video for text readability */
 
-  
 }
 
 .hero-overlay {
@@ -406,64 +410,12 @@ body {
     transform: scale(1.05);
   }
 
-  /* Text block below image */
-  .pastor-description {
-    max-width: 600px;
-    margin: 0 auto;
-    padding: 0;
-  }
-
-  /* Heading style */
-  .pastor-description h2 {
-    font-size: 2.3rem;
-    margin-bottom: 0.5rem;
-    font-weight: 700;
-    color: #3b0a45; /* dark purple */
-    text-align: center;
-  }
-
-  /* Paragraph style */
-  .pastor-description p {
-    font-size: 1.3rem;
-    line-height: 1.6;
-    font-weight: 500;
-    margin: 0;
-    color: #3b0a45; /* dark purple */
-  }
-
-  /* Responsive: tablets */
-  @media (max-width: 768px) {
-    .pastor-photo {
-      width: 200px;
-      height: 200px;
-    }
-
-    .pastor-description h2 {
-      font-size: 2rem;
-      text-align: center;
-    }
-
-    .pastor-description p {
-      font-size: 1.1rem;
-    }
-  }
-
-  /* Responsive: phones */
-  @media (max-width: 480px) {
-    .pastor-photo {
-      width: 150px;
-      height: 150px;
-    }
-
-    .pastor-description h2 {
-      font-size: 1.4rem;
-      text-align: center;
-    }
-
-    .pastor-description p {
-      font-size: 0.90rem;
-    }
-  }
+   .pastor-description p{
+    margin-top: 10px;
+    font-size: 0.9rem;
+    font-style: italic;
+    line-height: 1.4;
+   }
 
   .arivideos-section {
   max-width: 1100px;
@@ -471,82 +423,16 @@ body {
   padding: 0 20px;
   color: #3b0a45; /* dark purple */
   text-align: center;
+   line-height: 1.4
 }
 
-.arivideos-title {
-  font-size: 2.8rem;
-  margin-bottom: 0.5rem;
-  color: goldenrod; /* gold */
-  font-weight: 700;
-  text-shadow: 1px 1px 3px rgba(0,0,0,0.3);
-  text-align: center;
-}
 
-.arivideos-intro {
-  font-size: 1.25rem;
-  margin-bottom: 2rem;
-  font-weight: 500;
-  max-width: 700px;
-  margin-left: auto;
-  margin-right: auto;
-}
 
-.arivideos-list {
-  display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
-  gap: 2.5rem;
-}
-
-.arivideo-item iframe {
-  width: 100%;
-  height: 180px;
-  border-radius: 8px;
-  box-shadow: 0 4px 12px rgba(0,0,0,0.15);
-  background-color: #000;
-}
-
-.arivideo-title {
-  font-size: 1.3rem;
-  color: #3b0a45;
-  margin: 0.75rem 0 0.4rem 0;
-  font-weight: 700;
-}
-
-.arivideo-description {
-  font-size: 1rem;
-  color: #3b0a45;
-  font-weight: 400;
-  line-height: 1.4;
-}
-
-/* Responsive tweaks */
-@media (max-width: 480px) {
-  .arivideos-title {
-    font-size: 2rem;
-    text-align: center;
-  }
-
-  .arivideos-intro {
-    font-size: 1rem;
-  }
-
-  .arivideo-item iframe {
-    height: 160px;
-  }
-
-  .arivideo-title {
-    font-size: 1.1rem;
-  }
-
-  .arivideo-description {
-    font-size: 0.9rem;
-  }
-}
 
 /* TSHWANE TV */
   /* container */
   .ari-broadcast-ad{
-    background: linear-gradient(135deg, var(--ari-dark-purple) 0%, var(--ari-gold) 100%);
+    background: #2f0755;
     color: var(--ari-white);
     padding: 2.5rem 1rem;
     border-radius: 12px;
@@ -563,7 +449,7 @@ body {
     margin: 0 0 .6rem;
     font-weight: 800;
     display: inline-block; /* allow transform */
-    color: goldenrod;
+    color:  goldenrod;
     text-shadow: 0 5px 10px rgba(0,0,0,0.35);
     text-align: center;
   }
@@ -575,15 +461,15 @@ body {
     max-width: 720px;
     margin-left: auto;
     margin-right: auto;
-    color: var(--ari-white);
+    color: white;
   }
 
-  .ari-contact-link{ color: var(--ari-white); text-decoration: none; font-weight:700; }
+  .ari-contact-link{ color: white; text-decoration: none; font-weight:700; }
 
   .ari-broadcast-cta{
     display: inline-block;
     background: goldenrod;
-    color: var(--ari-dark-purple);
+    color:  #2f0755;
     padding: .75rem 2.25rem;
     border-radius: 40px;
     font-weight: 800;
@@ -637,130 +523,237 @@ body {
     }
   }
 
-/* WE BRING HEALING , HOMEPAGE STYLING */
-:root {
-  --mission-dark-purple: #3b0a45;
-  --mission-gold: #d4af37;
-  --mission-white: #ffffff;
-}
 
-.church-mission {
-  position: relative;
-  min-height: 350px;
-  padding: 3rem 1rem;
-  color: var(--mission-white);
-}
-
-.church-mission-overlay {
-  position: absolute;
-  inset: 0;
-  background-color: rgba(0, 0, 0, 0.45);
-}
-
-.church-mission-content {
-  position: relative;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  gap: 2rem;
+/* ===============================
+   VIDEO GALLERY SECTION  HOMEPAGE YOUTUBE VIDEOS >>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>
+================================ */
+.video-gallery-section {
   max-width: 1100px;
-  margin: 0 auto;
-  flex-wrap: wrap;
-  z-index: 1;
-}
-
-/* Image Styling */
-.church-mission-image img {
-  max-width: 350px;
-  width: 100%;
-  height: auto;
-  border-radius: 10px;
-  box-shadow: 0 5px 20px rgba(0,0,0,0.4);
-}
-
-/* Text Area */
-.church-mission-textarea {
-  max-width: 550px;
-  text-align: left;
-}
-
-.church-mission-heading {
-  font-size: 2.25rem;
-  font-weight: 800;
-  margin-bottom: 1rem;
-  color: goldenrod;
-  text-shadow: 0 3px 10px rgba(0,0,0,0.5);
-}
-
-.church-mission-text {
-  font-size: 1rem;
-  margin-bottom: 1.5rem;
+  margin: 4rem auto 6rem;
+  padding: 0 20px;
+  color: #1c0730; /* dark purple */
+  text-align: center;
   line-height: 1.5;
 }
 
+.video-gallery-title {
+  font-size: 2rem;
+  color: #2f0755; /* dark purple */
+  margin-bottom: 0.5rem;
+  font-weight: 600;
+  line-height: 1.2;
+}
+
+.video-gallery-intro {
+  font-size: 1rem;
+  color: #3b0a45; /* slightly lighter purple */
+  margin-bottom: 2rem;
+}
+
+/* ===============================
+   VIDEO CARDS
+================================ */
+.video-gallery-list {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 30px; /* spacing between cards */
+}
+
+.video-card {
+  background-color: #f9f9f9; /* optional card background, can change to brand color if desired */
+  border-radius: 12px;
+  overflow: hidden;
+  max-width: 320px;
+  width: 100%;
+  box-shadow: 0px 6px 20px rgba(0,0,0,0.1);
+  text-align: center;
+  transition: transform 0.3s;
+}
+
+.video-card:hover {
+  transform: translateY(-5px);
+}
+
+.video-card iframe {
+  width: 100%;
+  height: 180px; /* adjusts automatically on desktop */
+  border: none;
+}
+
+.video-title {
+  color: #1c0730; /* dark purple */
+  font-size: 1.1rem;
+  margin: 12px 0 6px;
+}
+
+.video-description {
+  color: #3b0a45; /* slightly lighter purple */
+  font-size: 0.95rem;
+  padding: 0 10px 15px;
+}
+
+/* ===============================
+   RESPONSIVE MOBILE
+================================ */
+@media (max-width: 767px) {
+  .video-gallery-list {
+    flex-direction: column;
+    align-items: center;
+    gap: 20px;
+  }
+
+  .video-card iframe {
+    height: 200px; /* slightly taller on small screens */
+  }
+}
+
+
+
+/* WE BRING HEALING , HOMEPAGE STYLING */
+/* ===== Church Mission Section ===== */
+.church-mission {
+  position: relative;
+  background-color: rgb(199, 185, 211);
+  padding: 60px 20px;
+  color: white;
+  font-family: 'Arial', sans-serif;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+/* ===== Slideshow ===== */
+.church-mission-slideshow {
+  position: relative;
+  width: 100%;
+  max-width: 1000px;
+  height: 400px;
+  overflow: hidden;
+  margin-bottom: 40px;
+  border-radius: 10px;
+  box-shadow: 0px 4px 15px rgba(0, 0, 0, 0.9);
+}
+
+.church-mission-slideshow .slide {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  opacity: 0;
+  animation: crossfade 12s infinite;
+}
+
+.church-mission-slideshow .slide img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  display: block;
+  border-radius: 10px;
+  
+}
+
+/* Slide delays */
+.church-mission-slideshow .slide:nth-child(1) { animation-delay: 0s; }
+.church-mission-slideshow .slide:nth-child(2) { animation-delay: 4s; }
+.church-mission-slideshow .slide:nth-child(3) { animation-delay: 8s; }
+
+/* Overlay */
+.slideshow-overlay {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: rgba(128, 0, 128, 0.2); /* semi-transparent purple */
+  z-index: 1;
+  pointer-events: none;
+  border-radius: 10px;
+}
+
+/* Crossfade animation */
+@keyframes crossfade {
+  0%, 33.33% { opacity: 1; }
+  33.34%, 100% { opacity: 0; }
+}
+
+/* ===== Text Content ===== */
+.church-mission-content {
+  max-width: 700px;
+  text-align: center;
+  background-color: rgb(96, 75, 114); /* translucent background */
+  padding: 30px;
+  border-radius: 10px;
+  opacity: 0;
+  animation: textFadeIn 2s ease forwards;
+  animation-delay: 1s; /* fade after slideshow starts */
+}
+
+/* Text fade-in animation */
+@keyframes textFadeIn {
+  0% { opacity: 0; transform: translateY(20px); }
+  100% { opacity: 1; transform: translateY(0); }
+}
+
+/* Heading */
+.church-mission-heading {
+  font-size: 2rem;
+  color: goldenrod;
+  margin-bottom: 20px;
+  font-weight: bold;
+}
+
+/* Paragraph */
+.church-mission-text {
+  font-size: 1.rem;
+  line-height: 1.6;
+  margin-bottom: 25px;
+  font-weight: 290;
+}
+
+/* Button */
 .church-mission-btn {
   display: inline-block;
+  padding: 12px 25px;
   background-color: goldenrod;
-  color: var(--mission-dark-purple);
-  padding: 0.8rem 2rem;
-  border-radius: 40px;
-  font-weight: bold;
+  color: #1a0a3c;
   text-decoration: none;
-  animation: mission-pulse 2s infinite;
+  font-weight: bold;
+  border-radius: 5px;
+  transition: all 0.3s ease;
 }
 
 .church-mission-btn:hover {
-  background-color: var(--mission-white);
-  color: var(--mission-dark-purple);
+  background-color: white;
+  transform: translateY(-3px);
 }
 
-/* Button Pulse Animation */
-@keyframes mission-pulse {
-  0%, 100% { transform: scale(1); }
-  50% { transform: scale(1.05); }
-}
-
-/* Responsive */
-@media (max-width: 768px) {
-  .church-mission-content {
-    flex-direction: column;
-    text-align: center;
+/* ===== Responsive ===== */
+@media (max-width: 992px) {
+  .church-mission-slideshow {
+    height: 300px;
   }
-  .church-mission-textarea {
-    text-align: center;
+
+  .church-mission-content {
+    padding: 20px;
+    
+    
+  }
+}
+
+@media (max-width: 576px) {
+  .church-mission-slideshow {
+    height: 200px;
   }
 
   .church-mission-heading {
-    text-align: center;
+    font-size: 1.6rem;
   }
 
-  .church-mission-overlay {
-    margin-bottom: px;
+  .church-mission-text {
+    font-size: 1rem;
   }
 }
 
-/* MAP SECTION STYLING */
-.map-section {
-  max-width: 900px;
-  margin: 3rem auto;
-  padding: 0 1rem;
-  text-align: center;
-}
-
-.map-section h2 {
-  font-size: 2rem;
-  margin-bottom: 1rem;
-  color: #3b0a45; /* dark purple */
-}
-
-.map-container {
-  width: 100%;
-  height: 400px;
-  border-radius: 12px;
-  overflow: hidden;
-  box-shadow: 0 6px 18px rgba(0,0,0,0.15);
-  margin-bottom: 150px;
-}
 
 /* Responsive height for smaller screens */
 @media (max-width: 480px) {
@@ -820,7 +813,7 @@ body {
 
 /* ===== PASTOR INFO TEXT ===== */
 .pastor-info h2 {
-  font-size: 1.6rem;
+  font-size: 1.3rem;
   color: #4B006E; /* dark purple */
   margin: 0.3rem 0;
   text-align: center;
@@ -828,7 +821,7 @@ body {
 }
 
 .pastor-info p {
-  font-size: 1.1rem;
+  font-size: 0.8rem;
   color: #555;
   text-align: center;
   margin: 0;
@@ -936,7 +929,7 @@ body {
 
 /* ===== INDIVIDUAL SUB-SECTIONS ===== */
 .sub-section {
-  background: #f9f9f9;
+  background: #f5f3f3;
   border-left: 5px solid #4B006E; /* dark purple highlight bar */
   padding: 1.2rem 1.5rem;
   border-radius: 8px;
@@ -949,147 +942,87 @@ body {
   font-weight: 700;
   font-size: 1.6rem;
   margin-bottom: 0.5rem;
+  text-align: left;
 }
 
 .sub-section p {
+  font-size: 1rem;
+  line-height: 1.6;
+  color: #444;
+  margin: 0;
+}   
+
+
+/* Make Faith Statement content match Vision/Mission styling */
+/* Core beliefs container - three columns on desktop */
+.core-beliefs {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr); /* three equal columns */
+  gap: 2rem;
+  padding: 3rem 2rem;
+  max-width: 1290px;
+  margin: 0 auto 100px auto;
+}
+
+/* Individual belief items (Vision, Mission, Faith Statement) */
+.belief-item.sub-section {
+  background: #f9f9f9;
+  border-left: 6px solid #4B006E;
+  border-radius: 12px;
+  padding: 2rem 2rem; /* same padding left and right */
+  box-shadow: 0 2px 8px rgba(75, 0, 110, 0.1);
+  color: #222;
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  display: flex;
+  flex-direction: column;
+}
+
+/* Section Titles */
+.belief-item.sub-section h2 {
+  color: #4B006E;
+  font-weight: 700;
+  font-size: 1.6rem;
+  margin-bottom: 1rem;
+  text-align: left;
+}
+
+/* Paragraphs and Lists */
+.belief-item.sub-section p,
+.belief-item.sub-section ul,
+.belief-item.sub-section li {
   font-size: 1rem;
   line-height: 1.5;
   color: #444;
   margin: 0;
 }
 
-/* ===== RESPONSIVE ===== */
-@media (max-width: 480px) {
-  .core-beliefs {
-    padding: 2rem 1rem;
-  }
-  .belief-item.combined-container-alt {
-    padding: 2rem 1.2rem;
-  }
-
-  .sub-section h2 {
- text-align: center;
-}
-
- .pastor-info {
-  margin-top: -5px;
- }
-
- .pastor-info h2 {
-  font-size: 1.2rem;
- }
-  .pastor-info p {
-  font-size: 0.8rem;
-  font-style: italic;
-  margin-top: 3px;
- }
-
- .belief-item.bible-verse {
-  margin-top: -10px;
- }
-}
-
-/* ===== DESKTOP REARRANGEMENT ===== */
-@media (min-width: 901px) {
-  .core-beliefs {
-    display: flex;
-    flex-direction: column;
-    gap: 2rem;
-  }
-
- .pastor-info {
-  margin-top: 15px;
- }
-
-  /* Make Bible Verse appear before Vision/Mission */
-  .belief-item.bible-verse {
-    order: 1;
-    margin-top: 0;
-    margin-bottom: 0;
-  }
-
-  .belief-item.combined-container {
-    order: 2;
-  }
-}
-   
-/* THIS IS OUR FAITH STATEMENT CONTAINER>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>> */
-.content-block.belief-section {
-  background: #f9f9f9;/* light off-white background */
-  border-radius: 8px;
-  margin: 20px 0;
-  position: relative;
-  box-shadow: 0 0 8px rgba(47, 7, 85, 0.15);
-  margin-bottom: 100px;
-  margin-top: -100px;
-  max-width: 1290px;      /* limit width */
-  margin-left: auto;     /* center horizontally */
-  margin-right: auto;
-  padding-left: 20px;    /* internal left space */
-  padding-right: 20px;   /* internal right space */
-}
-
-/* Vertical accent bar on left */
-.content-block.belief-section::before {
-  content: "";
-  position: absolute;
-  left: 0;
-  top: 15px;
-  bottom: 15px;
-  width: 6px;
-  background-color: #4B006E; /* dark purple */
-  border-radius: 4px;
-}
-
-/* Title Styling */
-.section-header {
-  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
-  font-weight: 700;
-  color: #4B006E;
-  margin-bottom: 15px;
-  font-size: 1.6rem;
-}
-
-/* Text content styling */
-.statement-content {
-  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
-  font-size: 1rem;
-  color: #1c0730;
-  line-height: 1.6;
-  margin-left: 12px;
-}
-
-.statement-content ul {
-  padding-left: 20px;
-  margin: 0;
+.belief-item.sub-section ul {
+  padding-left: 1.5rem; /* same as padding for other items */
   list-style-type: disc;
 }
 
-.statement-content ul li {
+.belief-item.sub-section ul li {
   margin-bottom: 10px;
 }
 
-/* Responsive Adjustments */
-@media (max-width: 600px) {
-  .section-header {
-    font-size: 1.6rem;
+/* Mobile: stack vertically */
+@media (max-width: 900px) {
+  .core-beliefs {
+    grid-template-columns: 1fr;
+    padding: 2rem 1rem;
+  }
+
+  .belief-item.sub-section {
+    padding: 1.5rem 1.2rem;
+  }
+
+  .belief-item.sub-section h2 {
     text-align: center;
   }
-  .statement-content {
-    font-size: 1rem;
-    line-height: 1.5;
-    color: #444;
-    margin: 0;
-  }
-
-  .content-block.belief-section {
-  max-width: 330px;      /* limit width */
-    
 }
-}
- /* OUR FAITH STATEMENT CONTAINER   DONE , IT USES ITS OWN CONTAINER >>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>*/
 
-/* SAW A SEED   STYLING */
+
+/* SAW A SEED   button STYLING>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>> */
 .sow-seed-btn {
   position: fixed;
   bottom: 30px;
@@ -1137,7 +1070,72 @@ body {
     box-shadow: 0 8px 25px rgba(40, 167, 69, 0.7);
   }
 }
-/* SAW A SEED STYLING DONE>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>> */
+/* SAW A SEED button STYLING DONE>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>> */
+
+
+/* ===== Giving Section - New Style ===== */
+.give-section {
+  background: linear-gradient(135deg, #ffffff, #ead0f8); /* Dark purple gradient */
+  color: #fff;
+  padding: 4rem 2rem;
+  text-align: center;
+  border-top: 5px solid #FFD700; /* Gold accent on top */
+  border-bottom: 5px solid #FFD700; /* Gold accent on bottom */
+}
+
+.give-section .give-wrapper {
+  max-width: 720px;
+  margin: auto;
+  background: #2f0755;
+  padding: 2rem 1.5rem;
+  border-radius: 12px;
+  box-shadow: 0 8px 20px rgba(0,0,0,0.5);
+}
+
+.give-section h2 {
+  font-size: 2.2rem;
+  color: goldenrod; /* Gold heading */
+  font-weight: 700;
+  margin-bottom: 1rem;
+}
+
+.give-section p {
+  font-size: 1.1rem;
+  line-height: 1.7;
+  margin-bottom: 2rem;
+  color: #fff;
+}
+
+.give-section h3 {
+  font-size: 1.5rem;
+  color: #FFD700;
+  margin-bottom: 1rem;
+}
+
+.give-section ul {
+  list-style: none;
+  padding: 0;
+  margin: 0 auto;
+  max-width: 450px;
+}
+
+.give-section ul li {
+  font-size: 1.1rem;
+  margin-bottom: 0.7rem;
+  color: #fff;
+  transition: transform 0.3s ease;
+}
+
+.give-section ul li strong {
+  color: #FFD700; /* Highlight labels */
+}
+
+.give-section ul li:hover {
+  transform: scale(1.05);
+  color: #FFD700;
+}
+
+
 
 /* TESTIMONY  STYLING */
 :root {
@@ -1146,49 +1144,171 @@ body {
   --brand-white: #ffffff;
 }
 
-.testimonies-banner {
-  background-color: #2f0755; /* dark purple */
-  color: #d4af37; /* gold */
-  padding: 4rem 1rem 3rem;
+.testimony-banner {
+  position: relative;
+  height: 200px; /* adjust height as needed */
+  display: flex;
+  justify-content: center;
+  align-items: center;
   text-align: center;
-  border-radius: 12px;
-  max-width: 900px;
-  margin: 3rem auto 2rem;
-  box-shadow: 0 8px 30px rgba(212, 175, 55, 0.4);
-  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
-  margin-top: -30px;
+  overflow: hidden;
+  margin-bottom: 50px;
 }
 
-.testimony-page-title {
-  font-size: 3rem;
-  font-weight: 900;
+.testimony-banner .banner-img {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  object-fit: cover; /* ensures image covers the section */
+  opacity: 0.4; /* low opacity for faded effect */
+  z-index: 1;
+}
+
+.testimony-banner .overlay {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(44, 5, 80, 0.6); /* purple overlay */
+  z-index: 2;
+  
+}
+
+.testimony-banner .banner-content {
+  position: relative;
+  z-index: 3;
+  color: #ffffff; /* white text */
+  padding: 0 20px;
+}
+
+.testimony-banner h2 {
+  font-size: 2.5rem;
   margin-bottom: 0.5rem;
-  letter-spacing: 3px;
+  font-weight: bold;
+  color: goldenrod;
   text-transform: uppercase;
-  color: #d4af37; /* gold */
 }
 
-.testimony-subtitle {
-  font-size: 2rem;
-  font-weight: 700;
-  margin-bottom: 1rem;
-  color: #ffffff; /* white */
-  text-align: center;
-}
-
-.testimony-description {
-  font-size: 1.2rem;
-  max-width: 650px;
+.testimony-banner p {
+  font-size: 1.1rem;
+  max-width: 700px;
   margin: 0 auto;
-  color: #e6d5a4; /* light gold */
-  line-height: 1.5;
+  line-height: 1.4;
 }
+
+/* Responsive for mobile */
+@media (max-width: 767px) {
+  .testimony-banner {
+    height: 130px;
+  }
+
+  .testimony-banner h2 {
+    font-size: 1.4rem;
+  }
+
+  .testimony-banner p {
+    font-size: 0.85rem;
+  }
+}
+
+
+/* ===== Testimony Scripture Section (Responsive) ===== */
+.verse-section {
+  position: relative;
+  /* Replace with your image */
+  color: #ffffff;
+  text-align: center;
+  padding: 80px 20px;        /* base vertical spacing */
+  overflow: hidden;
+}
+
+/* Brand purple overlay with low opacity for readability */
+.verse-overlay {
+  position: absolute; inset: 0;
+  background: rgba(52, 21, 80, 0.6); /* #1c0730 @ 60% */
+  z-index: 1;
+}
+
+/* Centered inner box with side whitespace + gold borders */
+.verse-content {
+  position: relative; z-index: 2;
+  max-width: 960px;
+  margin: 0 auto;
+  margin-top: -50px;
+  margin-bottom: -50px;
+
+  /* Left/right whitespace */
+  padding: 32px 24px;
+
+  /* Gold side borders to frame the verse */
+  border-left: 3px solid #d8ac1b;
+  border-right: 3px solid #d8ac1b;
+
+  /* Subtle backdrop to lift text from image (optional) */
+  background: rgba(0, 0, 0, 0.08);
+  border-radius: 12px;
+  box-shadow: 0 10px 30px rgba(0,0,0,0.25);
+}
+
+/* Typography */
+.verse-title {
+  font-size: 1.7rem;
+  line-height: 1.2;
+  margin: 0 0 14px;
+  color: #d8ac1b;            /* Gold */
+  font-weight: 800;
+  letter-spacing: 0.3px;
+}
+
+.verse-text {
+  font-size: 1rem;
+  line-height: 1.8;
+  margin: 0;
+  font-style: italic;
+  color: #ffffff;
+}
+
+.verse-reference {
+  display: block;
+  margin-top: 10px;
+  font-style: normal;
+  font-weight: 700;
+  letter-spacing: 0.3px;
+  color: #ffffff;
+}
+
+/* ===== Responsive Tweaks ===== */
+@media (min-width: 640px) {
+  .verse-content {
+    padding: 40px 40px;         /* more inner whitespace on tablets+ */
+    border-left-width: 4px;
+    border-right-width: 4px;
+  }
+  .verse-title { font-size: 2.2rem; }
+}
+
+@media (min-width: 1024px) {
+  .verse-section { padding: 110px 24px; }
+  .verse-content {
+    padding: 48px 64px;         /* generous whitespace on desktop */
+    border-left-width: 5px;
+    border-right-width: 5px;
+  }
+  .verse-title { font-size: 2.4rem; }
+  .verse-text  { font-size: 1.2rem; }
+}
+
 
 .testimonies-videos {
   display: flex;
   gap: 2rem;
   justify-content: center;
   flex-wrap: wrap;
+  margin-top:  50px;
+  margin-bottom: -50px;
 }
 
 /* Base styles for all videos */
@@ -1301,7 +1421,7 @@ body {
 .ministries-banner {
   position: relative;
   width: 100%;
-  height: 220px; /* taller banner */
+  height: 150px; /* taller banner */
   overflow: hidden;
 }
 
@@ -1309,8 +1429,8 @@ body {
 .ministries-banner-img {
   width: 100%;
   height: 100%;
-  object-fit: cover;
-  opacity: 0.5; /* low opacity on image */
+  object-fit:cover;
+  opacity: 0.7; /* low opacity on image */
   display: block;
 }
 
@@ -1318,7 +1438,7 @@ body {
 .overlay {
   position: absolute;
   inset: 0;
-  background-color: rgba(59, 0, 102, 0.6); /* dark purple overlay */
+  background-color: rgba(59, 0, 102, 0.7); /* dark purple overlay */
   z-index: 1;
 }
 
@@ -1353,7 +1473,7 @@ body {
 /* Responsive adjustments */
 @media (max-width: 768px) {
   .ministries-banner {
-    height: 250px;
+    height: 200x;
   }
   .ministries-banner-title {
     font-size: 2rem;
@@ -1365,7 +1485,7 @@ body {
 
 @media (max-width: 400px) {
   .ministries-banner {
-    height: 150px;
+    height:115px;
   }
   .ministries-banner-title {
     font-size: 1.5rem;
@@ -1420,6 +1540,7 @@ body {
   font-size: 2.5rem;
   color: var(--brand-dark-purple);
   margin-bottom: 15px;
+  font-weight: 500;
 }
 
 .outreach-ministry-text p {
@@ -1496,15 +1617,17 @@ body {
 
 .deliverance-ministry-text h2,
 .healing-ministry-text h2 {
-  font-size: 2.6rem;
+  font-size: 2.3rem;
   color: var(--brand-gold);
   margin-bottom: 20px;
+  font-weight: 400;
 }
 
 .deliverance-ministry-text p,
 .healing-ministry-text p {
-  font-size: 1.15rem;
+  font-size: 1rem;
   line-height: 1.6;
+  margin-bottom: 30px;
 }
 
 .deliverance-ministry-video,
@@ -1558,15 +1681,17 @@ body {
 
 .prophecy-ministry-text h2,
 .word-ministry-text h2 {
-  font-size: 2.6rem;
+  font-size: 2.3rem;
   color: var(--brand-gold);
   margin-bottom: 20px;
+  font-weight: 400;
 }
 
 .prophecy-ministry-text p,
 .word-ministry-text p {
-  font-size: 1.15rem;
+  font-size: 1rem;
   line-height: 1.6;
+  margin-bottom: 30px;
 }
 
 .prophecy-ministry-video,
@@ -1719,198 +1844,230 @@ body {
   }
 }
 /* EVENT PAGE DONE >>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>> */
-
-/* ===== CHURCH INFORMATION SECTION STYLING ===== */
-.church-info-section {
-    background-color: #f8f8f8;
-    padding: 50px 20px;
-    text-align: center;
-}
-
-.church-info-title {
-    font-size: 2.5rem;
-    color: #3b0066; /* Dark purple */
-    margin-bottom: 30px;
-    font-weight: bold;
-    text-align: center;
-}
-
-.church-info-grid {
-    display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
-    gap: 20px;
-    max-width: 900px;
-    margin: auto;
-}
-
-.church-card {
-    background: #fff;
-    border: 2px solid #d4af37; /* Gold border */
-    border-radius: 10px;
-    padding: 20px;
-    box-shadow: 0 4px 10px rgba(0,0,0,0.05);
-}
-
-.church-name {
-    font-size: 1.3rem;
-    color: #3b0066;
-    margin-bottom: 10px;
-}
-
-.church-address,
-.church-phone,
-.church-email {
-    font-size: 1rem;
-    color: #444;
-    margin: 5px 0;
-}
-
-.church-phone {
-    font-weight: bold;
-    color: #d4af37;
-}
-
-.church-email {
-    color: #3b0066;
-    font-style: italic;
-}
-
-/* Responsive */
-@media (max-width: 600px) {
-    .church-info-title {
-        font-size: 2.5rem;
-    }
-    .church-card {
-        padding: 15px;
-    }
-}
-
-/* ===== PRAYER REQUEST FORM - FRESH BRAND COLORS STYLING ===== */
-.prayer-request-section {
-  background: #faf7f2; /* very light cream/off-white for soft contrast */
-  padding: 60px 20px;
+/* ===== Contact Form Section ===== */
+.contact-form-section {
+  background: #fdf8f0;
+  padding: 3rem 2rem;
   text-align: center;
-  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
-  color: #3b0066; /* dark purple text */
+}
+.contact-form-section h2 {
+  color: #6A0DAD;
+  margin-bottom: 0.5rem;
+  font-weight: 500;
+}
+.contact-form-section p {
+  color: #444;
+  margin-bottom: 1.5rem;
+}
+.contact-form-section form {
+  max-width: 600px;
+  margin: auto;
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+}
+.contact-form-section input,
+.contact-form-section textarea {
+  padding: 0.8rem;
+  border-radius: 6px;
+  border: 1px solid #ccc;
+  font-size: 1rem;
+}
+.contact-form-section textarea { min-height: 120px; }
+.contact-form-section button {
+  background: gold;
+  border: none;
+  color: #6A0DAD;
+  padding: 0.9rem;
+  font-size: 1rem;
+  font-weight: bold;
+  border-radius: 6px;
+  cursor: pointer;
+  transition: all 0.3s ease;
+}
+.contact-form-section button:hover {
+  background: #6A0DAD;
+  color: white;
 }
 
-.prayer-request-container {
-  max-width: 720px;
-  margin: 0 auto;
-  background: #ffffff; /* crisp white */
-  padding: 40px 40px 50px;
+/* Contact Section */
+/* Contact Section Container */
+.contact-section {
+  background: #fdf8f0; /* Dark purple gradient */
+  color: #ffffff;
+  padding: 50px 30px;
+  max-width: 500px;
+  margin: 40px auto;
   border-radius: 20px;
-  border: 3px solid #d4af37; /* gold border */
-  box-shadow: 0 10px 25px rgba(212, 175, 55, 0.2);
-}
-
-.prayer-request-title {
-  font-size: 2.6rem;
-  font-weight: 800;
-  color: #3b0066; /* dark purple */
-  margin-bottom: 12px;
-  letter-spacing: 0.07em;
-  text-transform: uppercase;
+  box-shadow: 0 15px 30px rgba(0, 0, 0, 0.35);
+  font-family: 'Arial', sans-serif;
   text-align: center;
+  position: relative;
+  overflow: hidden;
 }
 
-.prayer-request-subtitle {
-  font-size: 1.15rem;
-  color: #a17c03; /* deep gold */
-  font-style: italic;
-  margin-bottom: 38px;
-  line-height: 1.5;
+/* Animated Header Decoration */
+.contact-section h2 {
+  color: #6A0DAD; /* Gold */
+  font-size: 32px;
+  margin-bottom: 30px;
+  position: relative;
+  display: inline-block;
   font-weight: 600;
 }
 
-.prayer-request-form {
-  text-align: left;
-}
-
-.prayer-request-form label {
+.contact-section h2::after {
+  content: "";
   display: block;
-  font-weight: 700;
-  font-size: 1.05rem;
-  margin-bottom: 10px;
-  color: #3b0066;
-  letter-spacing: 0.02em;
+  width: 60%;
+  height: 3px;
+  background: goldenrod;
+  margin: 8px auto 0;
+  border-radius: 2px;
 }
 
-.prayer-request-form input,
-.prayer-request-form textarea {
-  width: 100%;
-  padding: 16px 18px;
-  font-size: 1rem;
-  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
-  border: 2.5px solid #d4af37; /* gold border */
-  border-radius: 14px;
-  margin-bottom: 28px;
-  color: #3b0066;
-  background-color: #fff;
-  transition: border-color 0.25s ease, box-shadow 0.25s ease;
+/* Contact Items with Modern Card Style */
+.contact-item {
+  display: flex;
+  align-items: center;
+  gap: 15px;
+  margin: 18px 0;
+  padding: 14px 20px;
+  border-left: 4px solid goldenrod; /* Gold left border */
+  border-radius: 12px;
+  background-color: #3b0066;
+  transition: all 0.4s ease;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.2);
 }
 
-.prayer-request-form input:focus,
-.prayer-request-form textarea:focus {
-  border-color: #7a3db0; /* medium purple */
-  box-shadow: 0 0 10px #d4af37aa;
-  outline: none;
+.contact-item i {
+  color: goldenrod;
+  font-size: 22px;
+  min-width: 25px;
+  text-align: center;
 }
 
-.prayer-request-form textarea {
-  min-height: 140px;
-  resize: vertical;
+/* Hover Effect for Each Contact Item */
+.contact-item:hover {
+  transform: translateX(8px);
+  background-color: goldenrod;
 }
 
-.prayer-submit-btn {
-  width: 100%;
-  padding: 16px;
-  font-size: 1.3rem;
-  font-weight: 800;
-  color: #fff;
-  background: linear-gradient(270deg, #3b0066, #d4af37, #3b0066);
-  background-size: 600% 600%;
-  border: none;
-  border-radius: 50px;
-  cursor: pointer;
-  box-shadow: 0 6px 15px rgba(212, 175, 55, 0.7);
-  animation: pulseGradient 8s ease infinite;
-  transition: box-shadow 0.3s ease;
+.contact-item:hover i {
+  color: #2e005c;
 }
 
-.prayer-submit-btn:hover,
-.prayer-submit-btn:focus {
-  box-shadow: 0 10px 30px rgba(212, 175, 55, 1);
-  outline: none;
-  animation-play-state: paused;
+.contact-item a {
+  color: #ffffff;
+  font-weight: 400;
+  text-decoration: none;
+  transition: all 0.3s ease;
 }
 
-/* Pulsing gradient animation */
-@keyframes pulseGradient {
-  0% {
-    background-position: 0% 50%;
-  }
-  50% {
-    background-position: 100% 50%;
-  }
-  100% {
-    background-position: 0% 50%;
-  }
+.contact-item:hover a {
+  color: #2e005c;
 }
 
-/* Responsive adjustments */
-@media (max-width: 600px) {
-  .prayer-request-title {
-    font-size: 1.9rem;
-  }
+/* Special Styling for WhatsApp & Email */
+.contact-item .whatsapp,
+.contact-item a[href^="mailto:"] {
+  padding: 6px 14px;
+  border-radius: 25px;
+  transition: all 0.3s ease;
+  margin-left: -20px;
+  font-weight: 500;
+}
 
-  .prayer-request-container {
-    padding: 30px 25px 40px;
-  }
+.contact-item .whatsapp:hover,
+.contact-item a[href^="mailto:"]:hover {
+  background-color: #ffffff;
+  color: #2e005c;
+  border-color:  goldenrod;
+  transform: scale(1.05);
 }
 /* CONTACT PAGE DONE>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>> */
 
 
+
+/* =============================
+   Branch Section Container
+   ============================= */
+.branch-map {
+  background-color: #ffffff; /* White background */
+  color: #2e005c;            /* Dark purple text */
+  padding: 30px 20px;        
+  margin: 30px auto;         
+  border-radius: 15px;       
+  max-width: 800px;          
+  box-shadow: 0 8px 20px rgba(0,0,0,0.1); /* Soft shadow */
+  font-family: 'Arial', sans-serif; 
+  text-align: center;
+  transition: transform 0.3s ease;
+  margin-top: 50px;
+}
+
+.branch-map:hover {
+  transform: scale(1.02); 
+}
+
+/* =============================
+   Branch Section Heading
+   ============================= */
+.branch-map h2 {
+  color: #2e005c;          /* Gold heading */
+  font-size: 28px;
+  margin-bottom: 15px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 10px;    
+  font-weight: 500;           /* Space between icon and text */
+}
+
+/* =============================
+   Branch Section Text
+   ============================= */
+.branch-map p {
+  font-size: 16px;
+  margin-bottom: 20px;
+  color: #2e005c;          /* Dark purple text */
+}
+
+/* =============================
+   Map Container Styling
+   ============================= */
+
+
+.map-container iframe {
+  width: 100%;                  
+  height: 300px;                
+  border: 0;
+  border-radius: 12px;
+}
+
+/* =============================
+   Responsive Mobile Styling
+   ============================= */
+@media (max-width: 600px) {
+  .branch-map {
+    padding: 20px 15px;        
+  }
+
+  .branch-map h2 {
+    font-size: 24px;            
+  }
+
+  .branch-map p {
+    font-size: 14px;            
+  }
+
+  .map-container iframe {
+    height: 350px; 
+          
+  }
+}
+
+/* THIS  IS GIVE STYLING>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>> */
 .give-banner {
   position: relative;
   height: 220px;
@@ -2008,7 +2165,6 @@ body {
   }
 }
 
-/* ===== GIVE PAGE: ENCOURAGING WORDS + BANK DETAILS ===== */
 /* ===== Encouraging Words + Bank Section (Isolated) ===== */
 .encouraging-bank-section-2025 {
   text-align: center;
@@ -2066,7 +2222,7 @@ body {
 
 /* ===== Partner Section ===== */
 .ari-partner-section {
-  background-color: #1c0730; /* Dark purple */
+  background-color: #2f0755; /* Dark purple */
   padding: 40px 20px;
   text-align: center;
 }
@@ -2214,294 +2370,279 @@ body {
 }
 /* =PRIVACY POLICY, terms and condition and disclaimer uses one styling.... PAGE DONE >>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>===== */
 
-
-/* ========================================
+/* ===============================
    FOOTER BASE STYLING
-======================================== */
+================================ */
 .custom-footer {
-  background-color: #1c0730; /* Dark purple background */
-  color: white;
-  text-align: center;
- padding: 3rem 1rem;
+  background-color: #1c0730; /* Dark Purple */
+  color: #ffffff;
+  width: 100%;
+  padding: 3rem 1rem;
   font-family: Arial, sans-serif;
-  
-}  
+  box-sizing: border-box;
+  text-align: center;
+}
 
-.contact-entry {
+/* ===============================
+   VISIT US SECTION
+================================ */
+.footer-visit-us {
+  background-color: #1c0730; /* Dark Purple */
+  color: #ffffff;
+  padding: 50px 20px;
+  border-radius: 12px;
+  max-width: 1000px;
+  margin: 0 auto 40px;
+}
+
+.footer-visit-us .visit-title {
+  font-size: 2rem;
+  margin-bottom: 12px;
+  color: goldenrod; /* Gold */
+}
+
+.footer-visit-us .visit-intro {
+  color: #ffffff;
+  margin-bottom: 35px;
+}
+
+.footer-visit-us .locations {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+  gap: 70px;
+}
+
+.footer-visit-us .location-card {
+  background-color: #2a0f4b; /* Slightly lighter purple */
+  padding: 25px;
+  border-radius: 12px;
+  box-shadow: 0 4px 10px rgba(0,0,0,0.3);
+  transition: transform 0.2s;
+}
+
+.footer-visit-us .location-card:hover {
+  transform: translateY(-5px);
+}
+
+.footer-visit-us .location-card h4 {
+  color: goldenrod; /* Gold */
+  margin-bottom: 10px;
+}
+
+.footer-visit-us .location-card p {
+  color: #ffffff;
+  margin-bottom: 12px;
+}
+
+.footer-visit-us .map-link {
+  display: inline-block;
+  padding: 10px 20px;
+  background-color: goldenrod; /* Gold */
+  color: #1c0730; /* Dark Purple text */
+  border-radius: 6px;
+  text-decoration: none;
+  font-weight: 500;
+  transition: background-color 0.3s;
+}
+
+.footer-visit-us .map-link:hover {
+  background-color: #ffffff;
+  color: #1c0730;
+}
+
+/* Make Google Maps iframe responsive only on mobile */
+@media (max-width: 768px) {
+  .footer-visit-us .location-card iframe {
+    width: 100% !important;
+    height: 250px !important; /* adjust height as needed */
+    border: 0;
+    border-radius: 8px;
+  }
+
+  /* Make sure the link-style maps (anchor tags) still look fine */
+  .footer-visit-us .map-link {
+    display: block;
+    text-align: center;
+    margin-top: 12px;
+  }
+}
+
+
+
+/* ===============================
+   MAIN ROW (Contact | Logo | Links)
+================================ */
+.footer-main-row {
+  display: flex;
+  justify-content: center;
+  align-items: flex-start;
+  gap: 50px;
+  flex-wrap: wrap;
+  margin-bottom: 40px;
+}
+
+/* Contact Box */
+.footer-contact-box {
+  background-color: goldenrod; /* Gold */
+  color: #1c0730; /* Dark Purple */
+  padding: 25px;
+  border-radius: 10px;
+  max-width: 320px;
+  text-align: center;
+}
+
+.footer-contact-box .contact-entry {
   display: block;
   text-decoration: none;
   color: #1c0730;
   margin-bottom: 15px;
-  transition: background-color 0.3s, color 0.3s;
   padding: 10px;
   border-radius: 8px;
+  transition: background-color 0.3s, color 0.3s;
 }
 
-.contact-entry:hover {
-  background-color: rgba(28, 7, 48, 0.1); /* subtle hover effect */
-  color: #000;
+.footer-contact-box .contact-entry:hover {
+  background-color: rgba(255,255,255,0.2);
+  color: #ffffff;
 }
 
-.contact-entry i {
-  font-size: 30px;
-  margin-bottom: 8px;
-}
-
-.contact-entry p {
-  margin: 0;
-  font-weight: bold;
-  font-size: 16px;
-}
-/* ========================================
-   GOLD CONTACT BOX
-======================================== */
-.contact-box {
-  background-color: #d8ac1b;
-  color: #1c0730; /* Dark purple text */
-  padding: 30px;
-  border-radius: 10px;
-  max-width: 300px;
-  margin: 0 auto 40px;
-  box-shadow: 0 0 8px rgba(0, 0, 0, 0.904);
-  
-}
-
-.contact-section {
-  margin-bottom: 15px;
-}
-
-.contact-section i {
-  font-size: 30px;
-  margin-bottom: 10px;
-}
-
-.contact-section p {
-  margin: 0;
-  font-weight: bold;
-}
-
-.contact-box hr {
+.footer-contact-box hr {
   border: none;
   border-top: 2px solid #1c0730;
-  margin: 20px 0;
+  margin: 15px 0;
 }
 
-/* ========================================
-   LOGO & SOCIAL SECTION
-======================================== */
-.footer-logo-social {
-  margin-bottom: 40px;
+/* Logo & Social */
+.footer-logo-social .footer-logo {
+  width: 220px;
+  margin: 0 auto 15px;
+  display: block;
 }
 
-.footer-logo {
-  width: 200px;
-  margin-bottom: 10px;
-  margin-top: 30px;
-}
-
-.follow-us {
+.footer-logo-social .follow-us {
+  color: #d8ac1b; /* Gold */
   font-weight: bold;
   margin-bottom: 10px;
-  font-size: 18px;
-  color: rgb(238, 175, 17);
 }
 
-.social-icons a {
-  color: white;
-  margin: 0 10px;
+.footer-logo-social .social-icons a {
+  color: #ffffff;
   font-size: 20px;
+  margin: 0 5px;
   transition: color 0.3s;
 }
 
-.social-icons a:hover {
-  color: gold;
+.footer-logo-social .social-icons a:hover {
+  color: #d8ac1b; /* Gold */
 }
 
-/* ========================================
-   QUICK LINKS & LEGAL COLUMNS
-======================================== */
+/* Quick Links & Legal */
 .footer-columns {
   display: flex;
-  flex-wrap: wrap;
-  justify-content: center;
-  gap: 40px;
-  margin-bottom: 30px;
+  flex-direction: column;
+  gap: 20px;
+  text-align: center;
 }
 
-.footer-column {
-  min-width: 150px;
-}
-
-.footer-column h3 {
-  margin-bottom: 10px;
-  font-size: 18px;
-  border-bottom: 2px solid gold;
+.footer-columns .footer-column h3 {
+  border-bottom: 2px solid #d8ac1b; /* Gold underline */
+  color: #ffffff;
   display: inline-block;
   padding-bottom: 5px;
+  margin-bottom: 10px;
 }
 
-.footer-column ul {
-  list-style: none;
+.footer-columns .footer-column ul {
+  list-style: none; /* Remove bullets */
   padding: 0;
   margin: 0;
 }
 
-.footer-column ul li {
-  margin: 5px 0;
+.footer-columns .footer-column ul li {
+  margin: 6px 0;
 }
 
-.footer-column ul li a {
-  color: white;
+.footer-columns .footer-column ul li a {
+  color: #ffffff;
   text-decoration: none;
   transition: color 0.3s;
 }
 
-.footer-column ul li a:hover {
-  color: gold;
+.footer-columns .footer-column ul li a:hover {
+  color: #d8ac1b; /* Gold hover */
 }
 
-/* ========================================
-   FOOTER CREDITS / BOTTOM LINE
-======================================== */
+/* Footer Bottom */
 .footer-bottom {
-  font-size: 12px;
-  color: #aaa;
-  border-top: 1px solid #444;
+  font-size: 13px;
+  color: #ffffff;
+  border-top: 1px solid #d8ac1b; /* Gold line */
   padding-top: 20px;
+  margin-top: 20px;
 }
 
-.arigraphix {
- color: rgb(238, 175, 17);
- font-style: italic;
- margin-top: 5px;
+.footer-bottom .arigraphix {
+  color: #d8ac1b; /* Gold */
+  font-style: italic;
 }
 
-/* ========================================
-   RESPONSIVE DESKTOP LAYOUT
-======================================== */
-@media (min-width: 768px) {
-  /* Align gold box, logo-social, and link columns in a row */
-  .custom-footer {
-    padding: 60px 40px 30px;
-  }
-
-  .contact-box {
-    margin: 0 auto 50px;
-  }
-
-  .social-icons {
-    display: flex;
-  }
-
-.follow-us {
-  font-size: 23px;
-}
-
-.social-icons a {
-  color: white;
-  margin: 0 10px;
-  font-size: 20px;
-  transition: color 0.3s;
-}
-
-
-
-
-
-  .contact-box {
-    flex: 1;
-    max-width: 900px;
-    margin-bottom: 0;
-    margin-top: -120px;
-  }
-
-  .footer-bottom {
-    text-align: center;
-    padding-top: 25px;
-    margin-top: 25px;
-  }
-
-
-/* Base footer styling */
-footer {
-  width: 100vw;
-  position: relative;
-  left: 0;
-  right: 0;
-  margin-left: 0;
-  margin-right: 0;
-  background-color: #1c0730; /* Dark purple */
-  color: white;
-  box-sizing: border-box;
-  padding: 20px 15px;
-  /* No horizontal margin or padding on footer to avoid white space */
-}
-
-/* Desktop styles */
-@media (min-width: 768px) {
-  .custom-footer {
-    display: flex;
-    flex-wrap: wrap;
-    justify-content: space-between;
-    align-items: flex-start;
-    padding: 60px 40px 30px;
-    text-align: left;
-  }
-
-  .contact-box {
-    flex: 1 1 250px;
-    max-width: 350px;
-    margin: 0;
-    margin-left: 120px;
-  }
-
-  .footer-logo-social {
-    flex: 1 1 250px;
-    margin-top: 15px;
-    text-align: center;
-    display: flex;
+/* ===============================
+   RESPONSIVE MOBILE
+================================ */
+@media (max-width: 767px) {
+  .footer-main-row {
     flex-direction: column;
-    align-items: center;
-    font-size: 100px;
-  }  
-  
-.footer-logo {
-  width: 400px;
-  margin-bottom: 10px;
-  margin-top: -20px;
-}
-
+    gap: 30px;
+    text-align: center;
   }
 
   .footer-columns {
-    flex: 2 1 400px;
-    justify-content: flex-start;
-    display: flex;
-    gap: 34px;
-    margin: 0;
-  }
-
-  .footer-column {
-    min-width: 150px;
-    text-align: left;
-  }
-
-  .footer-bottom {
-    flex-basis: 100%;
+    flex-direction: column;
+    gap: 20px;
     text-align: center;
-    padding-top: 30px;
-    font-size: 14px;
-    margin-top: 20px;
   }
 }
 
 
-/* Responsive for smaller screens */
-@media (max-width: 600px) {
-  .contact-box {
-   margin-top: -100px;
+/* ===============================
+   RESPONSIVE MOBILE
+================================ */
+@media (max-width: 767px) {
+  /* Stack main row vertically and center all items */
+  .footer-main-row {
+    flex-direction: column;
+    gap: 30px;
+    text-align: center;
+    align-items: center; /* centers horizontally */
   }
+
+  /* Center columns in quick links */
+  .footer-columns {
+    flex-direction: column;
+    gap: 20px;
+    text-align: center;
+    align-items: center; /* centers horizontally */
+  }
+
+  /* Ensure contact box and logo/social are centered */
+  .footer-contact-box,
+  .footer-logo-social {
+    margin: 0 auto;
+  }
+
+  .footer-visit-us .locations {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+  gap: 70px;
 }
+}
+
+
+
+
+
+
+
 
 
 

@@ -1,15 +1,55 @@
-<!DOCTYPE html>
-<html lang="en">
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1" />
-  <title>DH MINISTRIES</title>
+
+  <!-- Page Title -->
+  <title>Contact Us | Deliverance Healing Ministries | Prophet R.N. Makashe</title>
+
+  <!-- Meta Description -->
+  <meta name="description" content="Reach out to Deliverance Healing Ministries and Prophet R.N. Makashe. Send your prayer requests, inquiries, or book a spiritual session today.">
+
+
+  <!-- Meta Keywords (optional) -->
+  <meta name="keywords" content="Deliverance Healing Ministries, Prophet R.N. Makashe, contact, prayer requests, ministry inquiries, schedule session">
+
+  <!-- Author -->
+  <meta name="author" content="Deliverance Healing Ministries">
+
+  <!-- Canonical URL -->
+  <link rel="canonical" href="https://www.deliverancehealingministries.org/contact">
+
+  <!-- Favicon -->
+  <link rel="icon" href="/favicon.ico" type="image/x-icon">
+
+  <!-- Open Graph / Facebook -->
+  <meta property="og:title" content="Contact Us | Deliverance Healing Ministries | Prophet R.N. Makashe">
+  <meta property="og:description" content="Get in touch with Deliverance Healing Ministries. Send your prayer requests, inquiries, or schedule a session with Prophet R.N. Makashe.">
+  <meta property="og:type" content="website">
+  <meta property="og:url" content="https://www.deliverancehealingministries.org/contact">
+  <meta property="og:image" content="https://www.deliverancehealingministries.org/images/og-contact.jpg">
+  <meta property="og:site_name" content="Deliverance Healing Ministries">
+
+  <!-- Stylesheets -->
   <link rel="stylesheet" href="css/style.css" />
-<link
-  rel="stylesheet"
-  href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css"
-/>
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css" />
+
+  <!-- Structured Data (JSON-LD) -->
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "Organization",
+    "name": "Deliverance Healing Ministries",
+    "url": "https://www.deliverancehealingministries.org",
+    "logo": "https://www.deliverancehealingministries.org/images/logo.png",
+    "sameAs": [
+      "https://web.facebook.com/RNmakashe/",
+      "https://www.instagram.com/YourPage",
+      "https://www.youtube.com/@bishopprophetmakashe9058"
+    ]
+  }
+  </script>
 </head>
+  <!-- SEO OPTIMISED HEADER >>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>Stylesheets -->
 
 
 <body>
@@ -75,131 +115,193 @@
   </div>
 </section>
 
-<!-- =============== PRAYER REQUEST FORM SECTION START =============== -->
-<section class="prayer-request-section">
-  <div class="prayer-request-container">
-    
-    <!-- Warm & Clear Title -->
-    <h2 class="prayer-request-title">Get in Touch / Submit a Prayer Request</h2>
-    <p class="prayer-request-subtitle">
-      Whether you have questions or want us to pray for you, please fill out the form below. We’re here to listen and help.
-    </p>
-    
-    <!-- Prayer Request Form -->
-    <form action="https://formspree.io/f/mqalwrko" method="post" class="prayer-request-form">
-      <label for="prayer-name">Your Name</label>
-      <input type="text" id="prayer-name" name="prayer-name" placeholder="Enter your full name" required>
-      
-      <label for="prayer-email">Email Address</label>
-      <input type="email" id="prayer-email" name="prayer-email" placeholder="Enter your email address" required>
-      
-      <label for="prayer-message">Prayer Request</label>
-      <textarea id="prayer-message" name="prayer-message" placeholder="Write your prayer request here..." rows="6" required></textarea>
-      
-      <button type="submit" class="prayer-submit-btn">Submit Prayer Request</button>
-    </form>
-  </div>
+<!-- Contact Section -->
+<section id="contact-form" class="contact-form-section">
+  <h2>✉️ Send Us a Message</h2>
+  <p>Have a question or prayer request? Fill out the form below and we’ll get back to you.</p>
+  
+  <!-- Formspree form -->
+  <form id="contactForm" action="https://formspree.io/f/mqalwrko" method="POST">
+    <input type="text" name="name" placeholder="Your Name" required>
+    <input type="email" name="email" placeholder="Your Email" required>
+    <input type="text" name="phone" placeholder="Phone (optional)">
+    <textarea name="message" placeholder="Your Message / Prayer Request" required></textarea>
+
+    <!-- reCAPTCHA widget -->
+    <div class="g-recaptcha" data-sitekey="6LeOHKwrAAAAAL_Q_tmPgFNCgaiJFafaC8uixF7k"></div>
+
+    <button type="submit">Send Message</button>
+  </form>
 </section>
-<!-- ================= PRAYER REQUEST FORM SECTION END ================ -->
+
+<!-- Load Google reCAPTCHA script -->
+<script src="https://www.google.com/recaptcha/api.js" async defer></script>
 
 
-<!-- ===== CHURCH INFORMATION SECTION START ===== -->
-<section class="church-info-section">
-    <div class="church-info-container">
-        <h2 class="church-info-title">Visit Us</h2>
-        <div class="church-info-grid">
-            <!-- Church 1 -->
-            <div class="church-card">
-                <h3 class="church-name">Deliverance Healing Ministries - Limpopo (SA)</h3>
-                <p class="church-address">kgapane, mabana Limpopo</p>
-                <p class="church-phone">Phone: +27 83 476 3071</p>
-                <p class="church-email">Email: info@dhministries.org</p>
-            </div>
-            <!-- Church 2 -->
-            <div class="church-card">
-                <h3 class="church-name">Deliverance Healing Ministries - Mpumalanga (SA)</h3>
-                <p class="church-address">Acornhoek,Islington, Mpumlanga</p>
-                <p class="church-phone">Phone: +27 79 129 8789</p>
-                <p class="church-email">Email: info@dhministries.org</p>
-            </div>
-        </div>
+<!-- Booking Section -->
+<section id="booking-form" class="contact-form-section">
+  <h2>📅 Book a Session</h2>
+  <p>Schedule a one-on-one, counseling, or deliverance with Prophet R.N. Makashe. We’ll confirm your booking via email or WhatsApp.</p>
+  
+  <!-- Formspree form -->
+  <form id="bookingForm" action="https://formspree.io/f/mqalwrko" method="POST">
+    <input type="text" name="first_name" placeholder="First Name" required>
+    <input type="text" name="last_name" placeholder="Last Name" required>
+    <input type="email" name="email" placeholder="Your Email" required>
+    <input type="text" name="phone" placeholder="WhatsApp / Phone">
+    
+    <select name="service" required>
+      <option value="" disabled selected>Select Service Type</option>
+      <option>One-on-One with Prophet</option>
+      <option>Counseling</option>
+      <option>Prayer / Deliverance</option>
+      <option>Testimony Recording</option>
+      <option>Other</option>
+    </select>
+    
+    <input type="date" name="preferred_date" required>
+    <input type="time" name="preferred_time">
+    <input type="number" name="people" min="1" placeholder="Number of People">
+    
+    <textarea name="message" placeholder="Additional Notes or Prayer Request"></textarea>
+    
+    <label style="font-size: 0.9rem; color:#444; text-align:left;">
+      <input type="checkbox" name="consent" required>
+      I consent to Deliverance Healing Ministries contacting me about this booking.
+    </label>
+
+    <!-- reCAPTCHA widget -->
+    <div class="g-recaptcha" data-sitekey="6LeOHKwrAAAAAL_Q_tmPgFNCgaiJFafaC8uixF7k"></div>
+
+    <button type="submit">Send Booking Request</button>
+  </form>
+</section>
+
+<!-- Load Google reCAPTCHA script (include only once per page) -->
+<script src="https://www.google.com/recaptcha/api.js" async defer></script>
+
+
+
+
+
+<!-- Contact Information -->
+<div class="contact-section">
+    <h2>Contact Us</h2>
+
+    <!-- Phone numbers -->
+    <div class="contact-item">
+        <i class="fas fa-phone"></i>
+        <span>+27 83 476 3037</span>
     </div>
-</section>
-<!-- ===== CHURCH INFORMATION SECTION END ===== -->
+
+    <div class="contact-item">
+        <i class="fas fa-phone"></i>
+        <span>+27 71 373 3182</span>
+    </div>
+
+    <div class="contact-item">
+        <i class="fas fa-phone"></i>
+        <span>+27 79 129 8789</span>
+    </div>
+
+    <!-- WhatsApp -->
+    <div class="contact-item">
+    <a href="https://wa.me/27736720558" target="_blank" class="whatsapp">WhatsApp Us</a>
+    </div>
+
+    <!-- Email -->
+    <div class="contact-item">
+        <a href="mailto:info@deliverancehealingministries.org">info@deliverancehealingministries.org</a>
+    </div>
+</div>
 
 
-<!-- Map Section -->
-<section class="map-section">
-  <h2>Find Us Here</h2>
+
+
+<!-- Mpumalanga Branch -->
+<section id="mpumalanga-branch" class="branch-map mpumalanga-map">
+  <h2>📍 Mpumalanga Branch</h2>
+  <p>Address: No.20101, Cottondale, Acornhoek  </p>
   <div class="map-container">
-    <iframe
-      src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3542.471999993485!2d30.102659215043483!3d-23.81548838465565!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x1ec744a77d6f7a6d%3A0x4d50b9e0d1d6ed12!2s33%20Adshade%20St%2C%20137%20Vermont%20Flat%2C%20Tzaneen!5e0!3m2!1sen!2sza!4v1691535678901!5m2!1sen!2sza"
-      width="100%"
-      height="400"
-      style="border:0;"
-      allowfullscreen=""
-      loading="lazy"
-      referrerpolicy="no-referrer-when-downgrade"
-      title="Church Location Map"
-    ></iframe>
+    <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d14508.61627265479!2d31.136355029362814!3d-24.618374237825265!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x1ec2eea668332c27%3A0x5ad7856b70143445!2sCottondale%2C%20Acornhoek!5e0!3m2!1sen!2sza!4v1755793959488!5m2!1sen!2sza" 
+      allowfullscreen="" loading="lazy"></iframe>
   </div>
 </section>
+
+<!-- Limpopo Branch -->
+<section id="limpopo-branch" class="branch-map limpopo-map">
+  <h2>📍 Limpopo Branch</h2>
+  <p>Address: 456 Kgapane, Mapaana</p>
+  <div class="map-container">
+    <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d14619.414951724006!2d30.223191500000002!3d-23.6454085!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x1ec41e946d68a291%3A0x4edf6fc80af5b43f!2sGa-Kgapane-A%2C%20Modjadjiskloof%2C%200838!5e0!3m2!1sen!2sza!4v1755794531011!5m2!1sen!2sza" 
+      allowfullscreen="" loading="lazy"></iframe>
+  </div>
+</section>
+
 
 <footer class="custom-footer">
-  <!-- Combined Gold Contact Box with Links -->
-  <div class="contact-box">
-    <a href="contact.html" class="contact-entry">
-      <i class="fas fa-phone-alt"></i>
-      <p>Give us a call</p>
-    </a>
-    <hr />
-    <a href="contact.html" class="contact-entry">
-      <i class="fas fa-envelope"></i>
-      <p>Send us a message</p>
-    </a>
+  <!-- Main Row: Contact | Logo/Social | Quick Links -->
+  <div class="footer-main-row">
+
+    <!-- Contact Box -->
+    <div class="footer-contact-box">
+      <a href="contact.html" class="contact-entry">
+        <i class="fas fa-phone-alt"></i>
+        <p>Give us a call</p>
+      </a>
+      <hr />
+      <a href="contact.html" class="contact-entry">
+        <i class="fas fa-envelope"></i>
+        <p>Send us a message</p>
+      </a>
+    </div>
+
+    <!-- Logo & Social -->
+    <div class="footer-logo-social">
+      <img src="images/web logo.png" alt="Church Logo" class="footer-logo">
+      <p class="follow-us">Follow Us!</p>
+      <div class="social-icons">
+        <a href="https://web.facebook.com/RNmakashe/"><i class="fab fa-facebook-f"></i></a>
+        <a href="https://www.youtube.com/@bishopprophetmakashe9058"><i class="fab fa-youtube"></i></a>
+        <a href="https://www.instagram.com/bishoprnmakashe/"><i class="fab fa-instagram"></i></a>
+        <a href="https://www.tiktok.com/@prophet.r.n.makashe"><i class="fab fa-tiktok"></i></a>
+        
+      </div>
+    </div>
+
+    <!-- Quick Links & Legal -->
+    <div class="footer-columns">
+      <div class="footer-column">
+        <h3>Quick Links</h3>
+        <ul>
+          <li><a href="index.html">Home</a></li>
+          <li><a href="about.html">About</a></li>
+          <li><a href="ministries.html">Ministries</a></li>
+          <li><a href="testimonies.html">Testimonies</a></li>
+          <li><a href="events.html">Events</a></li>
+          <li><a href="contact.html">Contact</a></li>
+        </ul>
+      </div>
+      <div class="footer-column">
+        <h3>Legal</h3>
+        <ul>
+          <li><a href="privacy.html">Privacy Policy</a></li>
+          <li><a href="terms-and-condition.html">Terms & Conditions</a></li>
+          <li><a href="disclaimer.html">Disclaimer</a></li>
+        </ul>
+      </div>
+    </div>
+
   </div>
 
-  <!-- Logo & Social Media Section -->
-  <div class="footer-logo-social">
-    <img src="images/web logo.png" alt="Church Logo" class="footer-logo">
-    <p class="follow-us">Follow Us!</p>
-    <div class="social-icons">
-      <a href="https://www.facebook.com/share/1Rnjbe4Wkd/"><i class="fab fa-facebook-f"></i></a>
-      <a href="https://www.youtube.com/channel/UCvu4K9uA2-YJeRCkD9-a1wQ"><i class="fab fa-youtube"></i></a>
-      <a href="https://www.tiktok.com/@prophet.r.n.makashe"><i class="fab fa-tiktok"></i></a>
-      <a href="#"><i class="fab fa-instagram"></i></a>
-      
-    </div>
-  </div>
-
-  <!-- Links Columns -->
-  <div class="footer-columns">
-    <div class="footer-column">
-      <h3>Quick Links</h3>
-      <ul>
-        <li><a href="index.html">Home</a></li>
-        <li><a href="about.html">About</a></li>
-        <li><a href="ministries.html">Ministries</a></li>
-        <li><a href="testimonies.html">Testimonies</a></li>
-        <li><a href="events.html">Events</a></li>
-        <li><a href="contact.html">Contact</a></li>
-      </ul>
-    </div>
-    <div class="footer-column">
-      <h3>Legal</h3>
-      <ul>
-        <li><a href="privacy.html">Privacy Policy</a></li>
-        <li><a href="terms-and-condition.html">Terms and Conditions</a></li>
-        <li><a href="disclaimer.html">Disclaimer</a></li>
-      </ul>
-    </div>
-  </div>
-
-  <!-- Bottom Line -->
+  <!-- Footer Bottom -->
   <div class="footer-bottom">
-    <p>&copy; 2025 Deliverance Healing Ministries. All rights reserved. | <div class="arigraphix">Developed by Arigraphix</p>
+    <p>&copy; 2025 Deliverance Healing Ministries. All rights reserved. | <span class="arigraphix">Developed by Arigraphix</span></p>
   </div>
+
 </footer>
+</body>
+</html>
 
 
 
