@@ -95,7 +95,7 @@
 
 <section class="give-banner">
   <div class="overlay"></div>
-  <img src="images/seeding.jpg" alt="Giving Banner Image" class="background-image" />
+  <img src="images/seeding.webp" alt="Giving Banner Image" class="background-image" loading="lazy"/>
   <div class="banner-content">
     <h1>SOW A SEED</h1>
     <p>Your generous giving plants the seed for a harvest of blessings. Thank you for partnering with us!</p>
@@ -121,6 +121,47 @@
     </ul>
   </div>
 </section>
+
+
+<!--DONATION FORM   IT HAS A BIT OF JS>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>> -->
+<section id="donation-form" class="donation-form-section">
+  <h2>💛 Donate to Deliverance Healing Ministries</h2>
+  <p>Fill out your details and click Donate. You will be redirected to Yoco to complete your donation securely.</p>
+
+  <form id="donationForm">
+    <input type="text" name="first_name" placeholder="First Name" required>
+    <input type="text" name="last_name" placeholder="Last Name">
+    <input type="email" name="email" placeholder="Email (optional)">
+    <input type="number" name="amount" placeholder="Enter Amount" min="1" required>
+    <button type="submit">Donate Now</button>
+  </form>
+</section>
+
+<script>
+const form = document.getElementById('donationForm');
+form.addEventListener('submit', function(e) {
+  e.preventDefault(); // Prevent default submission
+
+  const formData = new FormData(form);
+
+  // Submit donor info to Formspree (replace with your donation form URL)
+  fetch('https://formspree.io/f/mqalwrko', {
+    method: 'POST',
+    body: formData,
+    headers: { 'Accept': 'application/json' }
+  }).then(() => {
+    // Redirect to Yoco after info is captured
+    const amount = form.amount.value;
+    const yocoURL = `https://pay.yoco.com/YOUR_YOCO_DONATION_LINK?amount=${amount}`;
+    window.open(yocoURL, '_blank');
+  }).catch(error => {
+    alert('Error submitting your donation info. Please try again.');
+    console.error(error);
+  });
+});
+</script>
+
+<!--DONATION FORM DONE     IT HAS A BIT OF JS>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>> -->
 
 
 

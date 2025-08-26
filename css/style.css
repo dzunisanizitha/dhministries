@@ -2033,6 +2033,63 @@ h2 {
   color: white;
 }
 
+
+/* === DONATION FORM SECTION  (but is not yet connected to yoco)   ===?>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>> === */ 
+.donation-form-section {
+  background: #fdf8f0;
+  padding: 3rem 2rem;
+  text-align: center;
+  font-family: 'Roboto', sans-serif;
+}
+
+.donation-form-section h2 {
+  font-family: 'Montserrat', sans-serif;
+  font-weight: 700;
+  color: #6A0DAD;
+  margin-bottom: 0.5rem;
+}
+
+.donation-form-section p {
+  color: #444;
+  margin-bottom: 1.5rem;
+  font-size: 1rem;
+}
+
+.donation-form-section form {
+  max-width: 600px;
+  margin: auto;
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+}
+
+.donation-form-section input {
+  padding: 0.8rem;
+  border-radius: 6px;
+  border: 1px solid #ccc;
+  font-size: 1rem;
+  font-family: 'Roboto', sans-serif;
+}
+
+.donation-form-section button {
+  background: gold;
+  border: none;
+  color: #6A0DAD;
+  padding: 0.9rem;
+  font-size: 1rem;
+  font-weight: bold;
+  border-radius: 6px;
+  cursor: pointer;
+  transition: all 0.3s ease;
+  font-family: 'Montserrat', sans-serif;
+}
+
+.donation-form-section button:hover {
+  background: #6A0DAD;
+  color: white;
+}
+/* === DONATION DONE    WITH BIT OF JS>?>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>> === */
+
 /* === CONTACT CARD SECTION === */
 .contact-section {
   background: #fdf8f0;
@@ -2127,7 +2184,10 @@ h2 {
   transform: scale(1.05);
 }
 
-/* CONTACT PAGE DONE>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>> */
+
+
+
+/* CONTACT PAGE DONE  it also share DONATION FORM STYLE>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>> */
 
 
 
