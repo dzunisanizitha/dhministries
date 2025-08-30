@@ -502,7 +502,7 @@ body {
 
 /* Broadcast Section Container */
 .ari-broadcast-ad {
-  background: linear-gradient(135deg, #2f0755, #5a0fcf);
+  background: linear-gradient(135deg, #2f0755, #2f0755);
   color: white;
   padding: 1.5rem;
   border-radius: 16px;
@@ -530,46 +530,98 @@ body {
   gap: 2rem;
 }
 
-/* Text styling */
+/* ===============================
+   UPDATED TEXT STYLING & ANIMATIONS
+=================================*/
+
+/* Scrolling text styling */
 .ari-anim-text {
   font-weight: 700;
-  font-size: 1.3rem;
-  color: gold;
-  text-shadow: 0 2px 6px rgba(0,0,0,0.4);
+  font-size: 1.4rem;
+  color: #FFD700; /* Gold */
+  text-shadow: 0 3px 8px rgba(0, 0, 0, 0.5);
+  letter-spacing: 1px;
+  transition: color 0.3s ease-in-out;
 }
 
-/* CTA text styling (no button) */
+/* ===============================
+   ENHANCED TEXT & SMOOTH SCROLL
+=================================*/
+
+/* Scrolling text styling */
+.ari-anim-text {
+  font-weight: 700;
+  font-size: 1.4rem;
+  color: #FFD700; /* Gold */
+  text-shadow: 0 3px 8px rgba(0, 0, 0, 0.5);
+  letter-spacing: 1px;
+  transition: color 0.3s ease-in-out, transform 0.3s ease-in-out;
+}
+
+/* CTA text styling */
 .ari-cta-text {
   font-weight: 900;
-  font-size: 1.35rem;
-  color: #ffd700;
-  text-shadow: 0 0 12px gold, 0 0 18px goldenrod;
+  font-size: 1.45rem;
+  color: #ffffff;
   font-family: 'Montserrat', sans-serif;
-  animation: ari-glow 2s ease-in-out infinite alternate;
+  text-transform: uppercase;
+  text-shadow: 0 0 12px #5a0fcf, 0 0 20px #ff00ff, 0 0 30px #5a0fcf, 0 0 40px #ff00ff;
+  animation: ari-glow 1.8s ease-in-out infinite alternate;
+  padding-left: 1rem;
+  border-left: 3px solid #fff;
 }
 
-/* Scroll animation */
+/* Marquee wrapper adjustment for smooth continuous scroll */
+.ari-broadcast-content {
+  display: inline-flex;
+  white-space: nowrap;
+  gap: 2rem;
+  animation: ari-scroll-left 25s linear infinite;
+}
+
+/* Duplicate content to make continuous scroll */
+.ari-broadcast-content::after {
+  content: attr(data-text);
+  display: inline-flex;
+  white-space: nowrap;
+  gap: 2rem;
+}
+
+/* Smooth scroll keyframes */
 @keyframes ari-scroll-left {
-  0% { transform: translateX(100%); }
-  100% { transform: translateX(-100%); }
+  0% { transform: translateX(0); }
+  100% { transform: translateX(-50%); }
 }
 
 /* Glow animation for CTA */
 @keyframes ari-glow {
-  0% { text-shadow: 0 0 8px gold, 0 0 12px goldenrod; }
-  50% { text-shadow: 0 0 18px gold, 0 0 24px goldenrod; }
-  100% { text-shadow: 0 0 8px gold, 0 0 12px goldenrod; }
+  0% {
+    text-shadow: 0 0 12px #9320ff, 0 0 24px #fff, 0 0 36px #9320ff;
+  }
+  50% {
+    text-shadow: 0 0 24px #9320ff, 0 0 48px #9320ff, 0 0 60px #9320ff;
+  }
+  100% {
+    text-shadow: 0 0 12px #9320ff, 0 0 24px #fff, 0 0 36px #9320ff;
+  }
 }
 
-/* Responsive */
+/* Hover effect for scrolling text */
+.ari-anim-text:hover {
+  color: #fffa00;
+  text-shadow: 0 0 15px #fff, 0 0 25px #ffd700, 0 0 35px #ff00ff;
+  transform: scale(1.05);
+}
+
+/* Responsive adjustments */
 @media (max-width: 768px) {
-  .ari-anim-text { font-size: 1rem; }
-  .ari-cta-text { font-size: 1.1rem; }
+  .ari-anim-text { font-size: 1.1rem; }
+  .ari-cta-text { font-size: 1.2rem; padding-left: 0.8rem; }
 }
 
 @media (max-width: 480px) {
-  .ari-anim-text { font-size: 0.85rem; }
-  .ari-cta-text { font-size: 0.95rem; }
+  .ari-anim-text { font-size: 0.9rem; }
+  .ari-cta-text { font-size: 1rem; padding-left: 0.5rem; }
 }
 
 
