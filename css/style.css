@@ -395,105 +395,110 @@ body {
 
 /* PASTOR INTRO SECTION */
 /* ===============================
-   PASTOR INTRO SECTION
-=================================*/
+/* Pastor Intro Section */
 .pastor-intro-wrapper {
-  max-width: 900px;
-  margin: 3rem auto 5rem;
-  padding: 0 20px;
   display: flex;
-  flex-direction: column;
+  flex-wrap: wrap;
   align-items: center;
-  text-align: center;
-  color: #3b0a45; /* dark purple */
+  justify-content: center;
   gap: 2rem;
-  margin-top: 70px;
-  font-family: 'Roboto', sans-serif; /* consistent body font */
+  padding: 3rem 1rem;
+  background-color: #ffffff; /* White background */
+  color: #2f0755; /* Dark purple text */
+  font-family: 'Arial', sans-serif;
 }
 
 /* Pastor Photo */
 .pastor-photo-wrapper {
-  flex-shrink: 0;
+  flex: 1 1 300px;
+  max-width: 400px;
+  text-align: center;
+  margin-bottom: -80px;
 }
 
-.pastor-photo {
-  width: 260px;
-  height: 260px;
-  object-fit: cover;
-  border-radius: 50%;
-  border: 5px solid #d4af37; /* gold */
-  box-shadow: 0 6px 15px rgba(212, 175, 55, 0.6);
-  transition: transform 0.3s ease;
+.pastor-photo-wrapper img {
+  width: 100%;
+  max-width: 400px;
+  height: auto;
+  border-radius: 15px;
+  border: 4px solid #FFD700; /* Gold border */
+  box-shadow: 0 8px 20px rgba(0, 0, 0, 0.1);
 }
 
-.pastor-photo:hover {
-  transform: scale(1.05);
+/* Pastor Description */
+.pastor-description {
+  flex: 2 1 400px;
+  max-width: 700px;
+  text-align: left;
 }
 
-/* Pastor Name in Stylish Box */
+/* Pastor Name Stylish Box */
 .pastor-name-box {
-  display: inline-block;                       /* shrink to content */
-  padding: 2px 4px;                            /* padding inside box */
-  border: 2px solid #d4af37;                  /* gold border */
-  background-color: rgba(47, 7, 85, 2);     /* subtle dark purple background */
-  color: #d4af37;                              /* gold text */
-  font-family: 'Montserrat', sans-serif;       /* consistent heading font */
-  font-size: 1.8rem;                           /* larger font */
-  font-weight: 700;                            /* bold */
-  border-radius: 12px;                         /* rounded corners */
-  margin-bottom: 15px;                         /* spacing from next paragraph */
+  display: inline-block;
+  background-color: #2f0755; /* Dark purple */
+  color: #FFD700; /* Gold text */
+  padding: 0.5rem 1rem;
+  border-radius: 8px;
+  font-size: 2rem;
+  margin-bottom: 1rem;
+  box-shadow: 0 4px 10px rgba(0,0,0,0.2);
 }
 
-/* Pastor Description Paragraphs */
+/* Ministry Paragraphs */
 .pastor-description p {
-  margin-top: 10px;
-  font-size: 1rem;
-  line-height: 1.6;
-  font-family: 'Roboto', sans-serif; /* consistent body font */
-  color: #3b0a45;
+  line-height: 1.7;
+  font-size: 1.1rem;
+  margin-bottom: 1rem;
 }
 
 /* Vision Highlight */
 .vision-highlight {
-  margin-top: 15px;
-  font-size: 1rem;
-  font-weight: 600;
-  font-style: normal;
-  font-family: 'Roboto', sans-serif; /* consistent body font */
+  background-color: #2f0755; /* Dark purple background */
+  color: #ffffff; /* White text */
+  padding: 1rem;
+  border-left: 5px solid #FFD700; /* Gold accent */
+  border-radius: 5px;
+  font-weight: bold;
 }
 
 .vision-highlight a {
-  color: #b68e2e;        /* darker gold for better contrast */
-  font-weight: 600;       /* slightly bolder */
-  text-decoration: underline;
-  transition: color 0.3s ease;
+  color: #FFD700; /* Gold link */
+  text-decoration: none;
+  font-weight: bold;
+  margin-left: 0.5rem;
 }
 
 .vision-highlight a:hover {
-  color: #2f0755; /* dark purple hover */
+  text-decoration: underline;
 }
 
-/* MOBILE STYLING */
-@media (max-width: 600px) {
-  
-  /* Pastor Name Box on Mobile */
-  .pastor-name-box {
-    font-size: 1.4rem;            /* smaller text */
-    padding: 8px 20px;            /* smaller padding */
-    border-radius: 10px;          /* slightly smaller corners */
+/* Responsive Design */
+@media (max-width: 1024px) {
+  .pastor-intro-wrapper {
+    flex-direction: column;
+    padding: 2rem 1rem;
   }
 
-  /* Paragraphs on Mobile */
-  .pastor-description p {
-    font-size: 0.85rem;           /* smaller text for easier reading */
-    line-height: 1.4;             /* tighter line spacing */
+  .pastor-description {
+    text-align: center;
   }
 
-  /* Vision Highlight on Mobile */
   .vision-highlight {
-    font-size: 0.9rem;
+    text-align: center;
   }
 }
+
+@media (max-width: 600px) {
+  .pastor-name-box {
+    font-size: 1.5rem;
+    padding: 0.4rem 0.8rem;
+  }
+
+  .pastor-description p {
+    font-size: 1rem;
+  }
+}
+
 
 
 /* ===============================
