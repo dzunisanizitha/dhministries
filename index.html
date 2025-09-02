@@ -3,6 +3,8 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css" integrity="sha512-MrxV6UOq1Vjq4aKcV6PzLl4NQFqXgqzZ7/U9F6tT45GV4kI+RZ7tG3F3bAxlrYfLxZ+0vW2mH8E2kLz0UJzYKg==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+
   
   <!-- Page Title -->
   <title>Deliverance Healing Ministries | Hope, Healing & Revival</title>
@@ -86,19 +88,27 @@
 
 <body>
   
-<header class="site-header">
-  <div class="container">
-    <div class="header-left">
-      <img src="images/web logo.png" alt="Grace Church Logo" class="logo" />
-      <h1 class="site-name">DELIVERANCE HEALING</h1>
-      <h2 class="site-submenu">MINISTRIES</h2>
-    </div>
+<header class="site-header"> 
+  <!-- Hamburger checkbox -->
+  <input type="checkbox" id="menu-toggle" class="menu-toggle" />
 
-    <input type="checkbox" id="menu-toggle" />
-    <label for="menu-toggle" class="hamburger" aria-label="Toggle menu">&#9776;</label>
+  <div class="container">
+    <!-- Brand -->
+    <a href="index.html" class="brand" aria-label="Home">
+      <img src="images/web logo.png" alt="Grace Church Logo" class="logo" />
+      <div class="brand-text">
+        <span class="site-name">DELIVERANCE HEALING</span>
+        <span class="site-subname">MINISTRIES</span>
+      </div>
+    </a>
+
+    <!-- Hamburger -->
+    <label for="menu-toggle" class="hamburger" aria-label="Toggle menu">
+      <span></span><span></span><span></span>
+    </label>
 
     <!-- Desktop Nav -->
-    <nav class="main-nav">
+    <nav class="main-nav" aria-label="Primary">
       <ul>
         <li><a href="index.html">Home</a></li>
         <li><a href="about.html">About</a></li>
@@ -106,25 +116,46 @@
         <li><a href="ministries.html">Ministries</a></li>
         <li><a href="events.html">Event</a></li>
         <li><a href="contact.html">Contact</a></li>
-      </ul>
-    </nav>
-
-    <!-- Mobile Dropdown Menu -->
-    <nav class="mobile-dropdown-menu">
-      <ul>
-        <li><a href="index.html">Home</a></li>
-        <li><a href="about.html">About</a></li>
-        <li><a href="testimonies.html">Testimonies</a></li>
-        <li><a href="ministries.html">Ministries</a></li>
-        <li><a href="events.html">Event</a></li>
-        <li><a href="contact.html">Contact</a></li>
-        </ul>
-          </details>
-        </li>
       </ul>
     </nav>
   </div>
+
+  <!-- Overlay -->
+  <label for="menu-toggle" class="menu-overlay" aria-hidden="true"></label>
+
+  <!-- Mobile Menu -->
+  <nav class="mobile-sidebar" aria-label="Mobile">
+    <div class="mobile-top">
+      <div class="mobile-brand">
+        <img src="images/web logo.png" alt="" class="logo-sm" />
+        <div class="brand-text">
+          <span class="site-name">DELIVERANCE HEALING</span>
+          <span class="site-subname">MINISTRIES</span>
+        </div>
+      </div>
+      <!-- Close button -->
+      <label for="menu-toggle" class="close-btn" aria-label="Close menu">×</label>
+    </div>
+
+    <ul class="mobile-links">
+      <li><a href="index.html">Home</a></li>
+      <li><a href="about.html">About</a></li>
+      <li><a href="testimonies.html">Testimonies</a></li>
+      <li><a href="ministries.html">Ministries</a></li>
+      <li><a href="events.html">Event</a></li>
+      <li><a href="contact.html">Contact</a></li>
+    </ul>
+
+<div class="mobile-socials">
+  <a href="https://web.facebook.com/RNmakashe/" target="_blank" aria-label="Facebook"><i class="fab fa-facebook-f"></i></a>
+  <a href="https://www.instagram.com/bp.prophet_rn_makashe?igsh=MXhxN2FuOTVwN3hjdg==" target="_blank" aria-label="Instagram"><i class="fab fa-instagram"></i></a>
+  <a href="https://www.youtube.com/@bishopprophetmakashe9058" target="_blank" aria-label="YouTube"><i class="fab fa-youtube"></i></a>
+  <a href="https://www.tiktok.com/@prophet.r.n.makashe" target="_blank" aria-label="TikTok"><i class="fab fa-tiktok"></i></a>
+</div>
+
 </header>
+
+
 
 <section class="hero-slideshow">
   <!-- Slideshow images -->
@@ -231,7 +262,7 @@
   <div class="church-mission-content">
     <h2 class="church-mission-heading">We Bring Hope, Healing & Revival</h2>
     <p class="church-mission-text">
-      Across the nations of the world, we carry the message of salvation, restoration, and transformation.  
+      Impacting South Africa and beyond with the message of salvation, restoration, and transformation. 
       Be part of the move — your time is now.
     </p>
     <a href="about.html" class="church-mission-btn">Discover Our Ministry</a>
