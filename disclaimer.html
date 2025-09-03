@@ -3,34 +3,37 @@
   <meta name="viewport" content="width=device-width, initial-scale=1" />
 
   <!-- Page Title -->
-  <title>Disclaimer | Deliverance Healing Ministries</title>
+   <title>Disclaimer | Deliverance Healing Ministries</title>
 
   <!-- Meta Description -->
-  <meta name="description" content="Read the Disclaimer of Deliverance Healing Ministries. All content is for spiritual guidance and faith-based encouragement only.">
+  <meta name="description" content="Read the Disclaimer for Deliverance Healing Ministries. Important information regarding the use of our website, services, and content.">
 
   <!-- Meta Keywords (optional) -->
-  <meta name="keywords" content="Deliverance Healing Ministries, Disclaimer, spiritual guidance, faith-based information">
+  <meta name="keywords" content="Deliverance Healing Ministries, Prophet R.N. Makashe, healing ministry, spiritual guidance, revival services">
 
   <!-- Author -->
   <meta name="author" content="Deliverance Healing Ministries">
 
   <!-- Canonical URL -->
-  <link rel="canonical" href="https://www.deliverancehealingministries.org/disclaimer">
+  <link rel="canonical" href="https://www.deliverancehealingministries.org/about">
 
   <!-- Favicon -->
   <link rel="icon" href="/favicon.ico" type="image/x-icon">
 
   <!-- Open Graph / Facebook -->
-  <meta property="og:title" content="Disclaimer | Deliverance Healing Ministries">
-  <meta property="og:description" content="Read the Disclaimer of Deliverance Healing Ministries. Information on this site is provided for spiritual guidance and faith-based encouragement only.">
+  <meta property="og:title" content="About Deliverance Healing Ministries | Prophet R.N. Makashe">
+  <meta property="og:description" content="Learn about Deliverance Healing Ministries and the work of Prophet R.N. Makashe, delivering healing, spiritual guidance, and revival services.">
   <meta property="og:type" content="website">
-  <meta property="og:url" content="https://www.deliverancehealingministries.org/disclaimer">
-  <meta property="og:image" content="https://www.deliverancehealingministries.org/images/og-disclaimer.jpg">
+  <meta property="og:url" content="https://www.deliverancehealingministries.org/about">
+  <meta property="og:image" content="https://www.deliverancehealingministries.org/images/og-about.jpg">
   <meta property="og:site_name" content="Deliverance Healing Ministries">
 
   <!-- Stylesheets -->
   <link rel="stylesheet" href="css/style.css" />
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css" />
+  <link href="https://fonts.googleapis.com/css2?family=Roboto&family=Montserrat&display=swap" rel="stylesheet">
+
+  <meta http-equiv="Cache-Control" content="max-age=3600, public">
 
   <!-- Structured Data (JSON-LD) -->
   <script type="application/ld+json">
@@ -42,29 +45,36 @@
     "logo": "https://www.deliverancehealingministries.org/images/logo.png",
     "sameAs": [
       "https://web.facebook.com/RNmakashe/",
-      "https://www.instagram.com/YourInstagramPage",
+      "https://www.instagram.com/YourPage",
       "https://www.youtube.com/@bishopprophetmakashe9058"
     ]
   }
   </script>
 </head>
-<!-- SEO OPTIMISED HEADER >>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>Stylesheets -->
-
-
+  <!-- SEO OPTIMISED HEADER >>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>Stylesheets -->
 <body>
-<header class="site-header">
-  <div class="container">
-    <div class="header-left">
-      <img src="images/web logo.png" alt="Grace Church Logo" class="logo" />
-      <h1 class="site-name">DELIVERANCE HEALING</h1>
-      <h2 class="site-submenu">MINISTRIES</h2>
-    </div>
+  
+<header class="site-header"> 
+  <!-- Hamburger checkbox -->
+  <input type="checkbox" id="menu-toggle" class="menu-toggle" />
 
-    <input type="checkbox" id="menu-toggle" />
-    <label for="menu-toggle" class="hamburger" aria-label="Toggle menu">&#9776;</label>
+  <div class="container">
+    <!-- Brand (Desktop + always visible) -->
+    <a href="index.html" class="brand" aria-label="Home">
+      <img src="images/web logo.webp" alt="Grace Church Logo" class="logo" />
+      <div class="brand-text">
+        <span class="site-name">DELIVERANCE HEALING</span>
+        <span class="site-subname">MINISTRIES</span>
+      </div>
+    </a>
+
+    <!-- Hamburger -->
+    <label for="menu-toggle" class="hamburger" aria-label="Toggle menu">
+      <span></span><span></span><span></span>
+    </label>
 
     <!-- Desktop Nav -->
-    <nav class="main-nav">
+    <nav class="main-nav" aria-label="Primary">
       <ul>
         <li><a href="index.html">Home</a></li>
         <li><a href="about.html">About</a></li>
@@ -72,71 +82,177 @@
         <li><a href="ministries.html">Ministries</a></li>
         <li><a href="events.html">Event</a></li>
         <li><a href="contact.html">Contact</a></li>
-      </ul>
-    </nav>
-
-    <!-- Mobile Dropdown Menu -->
-    <nav class="mobile-dropdown-menu">
-      <ul>
-        <li><a href="index.html">Home</a></li>
-        <li><a href="about.html">About</a></li>
-        <li><a href="testimonies.html">Testimonies</a></li>
-        <li><a href="ministries.html">Ministries</a></li>
-        <li><a href="events.html">Event</a></li>
-        <li><a href="contact.html">Contact</a></li>
-        </ul>
-          </details>
-        </li>
       </ul>
     </nav>
   </div>
+
+  <!-- Overlay -->
+  <label for="menu-toggle" class="menu-overlay" aria-hidden="true"></label>
+
+  <!-- Mobile Menu -->
+  <nav class="mobile-sidebar" aria-label="Mobile">
+    <div class="mobile-top">
+      <div class="mobile-brand">
+        <img src="images/web logo.webp" alt="Grace Church Logo" class="logo-sm" />
+        <div class="mobile-brand-text">
+          <span class="mobile-site-name">DELIVERANCE HEALING</span>
+          <span class="mobile-site-subname">MINISTRIES</span>
+        </div>
+      </div>
+      <!-- Close button -->
+      <label for="menu-toggle" class="close-btn" aria-label="Close menu">×</label>
+    </div>
+
+    <ul class="mobile-links">
+      <li><a href="index.html">Home</a></li>
+      <li><a href="about.html">About</a></li>
+      <li><a href="testimonies.html">Testimonies</a></li>
+      <li><a href="ministries.html">Ministries</a></li>
+      <li><a href="events.html">Event</a></li>
+      <li><a href="contact.html">Contact</a></li>
+    </ul>
+
+    <div class="mobile-socials">
+      <a href="https://web.facebook.com/RNmakashe/" target="_blank" aria-label="Facebook"><i class="fab fa-facebook-f"></i></a>
+      <a href="https://www.instagram.com/bp.prophet_rn_makashe?igsh=MXhxN2FuOTVwN3hjdg==" target="_blank" aria-label="Instagram"><i class="fab fa-instagram"></i></a>
+      <a href="https://www.youtube.com/@bishopprophetmakashe9058" target="_blank" aria-label="YouTube"><i class="fab fa-youtube"></i></a>
+      <a href="https://www.tiktok.com/@prophet.r.n.makashe" target="_blank" aria-label="TikTok"><i class="fab fa-tiktok"></i></a>
+    </div>
+  </nav>
 </header>
 
-<!-- Disclaimer content -->
-  <main class="privacy-main-container">
-    <h1>Disclaimer</h1>
-    <p><em>Last updated: August 2025</em></p>
+<!-- Privacy content -->
+<main class="privacy-main-container">
+  <h1>Disclaimer</h1>
+  <p><em>Last updated: August 2025</em></p>
 
-    <p>
-      The information provided by <span style="font-weight: bold;">Deliverance Healing Ministries</span> on this website is for general informational purposes only.
-      While we strive to keep the information up to date and correct, we make no representations or warranties of any kind, express or implied,
-      about the completeness, accuracy, reliability, suitability, or availability with respect to the website or the information, products, services,
-      or related graphics contained on the website for any purpose.
-    </p>
+  <p>
+    Welcome to <strong>Deliverance Healing Ministries</strong>. This Disclaimer explains how visitors should interpret and use the information on our website. By accessing this site, you acknowledge that you understand these terms.
+  </p>
 
-    <h2>1. No Medical or Professional Advice</h2>
-    <p>
-      The content on this site is provided for spiritual guidance and faith-based encouragement only. 
-      It is not intended to substitute professional medical, legal, financial, or psychological advice. 
-      Always seek the advice of qualified professionals regarding any health, legal, or personal is
-    </p>
+  <h2>1. No Medical or Professional Advice</h2>
+  <p>
+    Content on this website is for spiritual guidance only. It does not replace professional medical, legal, financial, or psychological advice. Always consult qualified professionals for personal matters.
+  </p>
 
-    <h2>2. Limitation of Liability</h2>
-    <p>
-      In no event shall Deliverance Healing Ministries be liable for any loss or damage including without limitation,
-      indirect or consequential loss or damage, or any loss or damage whatsoever arising from loss of data or profits arising out of,
-      or in connection with, the use of this website.
-    </p>
+  <h2>2. Limitation of Liability</h2>
+  <p>
+    Deliverance Healing Ministries is not liable for any loss, damage, or consequences arising from the use of this website, including indirect or consequential loss.
+  </p>
 
-    <h2>3. External Links</h2>
-    <p>
-      Through this website, you may be able to link to other websites which are not under the control of Deliverance Healing Ministries.
-      We have no control over the nature, content, and availability of those sites.
-    </p>
+  <h2>3. External Links</h2>
+  <p>
+    We may link to external websites for additional resources. We do not control these sites and are not responsible for their content, security, or availability.
+  </p>
 
-    <h2>4. Changes to Disclaimer</h2>
-    <p>
-      We reserve the right to update this disclaimer at any time without prior notice.
-      It is your responsibility to review this page regularly.
-    </p>
+  <h2>4. Updates to Disclaimer</h2>
+  <p>
+    We may revise this Disclaimer at any time without notice. Please review this page periodically to stay informed.
+  </p>
 
-    <h2>5. Contact Us</h2>
-    <p>
-      If you have any questions about this disclaimer, please contact us at
-      <a href="mailto:info@deliverancehealingministries.org">info@deliverancehealingministries.org</a> or call +27 83 476 3037.
-    </p>
-  </main>
+  <h2>5. Contact Information</h2>
+  <p>
+    Questions? Contact us at <a href="mailto:info@deliverancehealingministries.org">info@deliverancehealingministries.org</a> or call +27 83 476 3037.
+  </p>
+</main>
+    <!--SOW A SEED  -->
+<a href="give.html" class="sow-seed-btn" aria-label="Sow a Seed">
+  <svg xmlns="http://www.w3.org/2000/svg" class="seed-icon" viewBox="0 0 64 64" width="24" height="24" aria-hidden="true" fill="none" stroke="#2ecc40" stroke-width="3" stroke-linecap="round" stroke-linejoin="round">
+    <!-- Seedling inspired by your image -->
+    <path d="M32 52 C28 44 22 36 28 26" />
+    <path d="M32 52 C36 44 42 36 36 26" />
+    <path d="M32 44 C30 36 24 30 28 24" />
+    <path d="M32 44 C34 36 40 30 36 24" />
+  </svg>
+  Sow a Seed
+</a>
 
+<footer class="custom-footer">
+
+  <!-- Visit Us Section -->
+  <section class="footer-visit-us">
+    <h2 class="visit-title">📍 Visit Us</h2>
+    <p class="visit-intro">We welcome you to join us at any of our church locations.</p>
+
+    <div class="locations">
+      <div class="location-card">
+        <h4>Mpumalanga, Acornhoek</h4>
+        <p>No.20101, Cottondale</p>
+        <a href="https://goo.gl/maps/your-map-link1" target="_blank" rel="noopener" class="map-link">View on Google Maps</a>
+      </div>
+      <div class="location-card">
+        <h4>Limpopo, Tzaneen</h4>
+        <p>214 Mapaana, Ga-kgapane</p>
+        <a href="https://goo.gl/maps/your-map-link2" target="_blank" rel="noopener" class="map-link">View on Google Maps</a>
+      </div>
+    </div>
+
+    <!-- Church Info -->
+    <div class="church-info">
+      <p>Email: <br> <a href="mailto:info@deliverancehealingministries.org">info@deliverancehealingministries.org</a></p>
+      <p>Phone:<br> <a href="tel:+27834763037">+27 83 476 3037</a> | <a href="tel:+27713733182">+27 71 373 3182</a></p>
+    </div>
+  </section>
+
+  <!-- Main Row: Contact | Logo/Social | Quick Links -->
+  <div class="footer-main-row">
+
+    <!-- Contact Box -->
+    <div class="footer-contact-box">
+      <a href="contact.html" class="contact-entry">
+        <i class="fas fa-phone-alt"></i>
+        <p>Give us a call</p>
+      </a>
+      <hr />
+      <a href="contact.html" class="contact-entry">
+        <i class="fas fa-envelope"></i>
+        <p>Send us a message</p>
+      </a>
+    </div>
+
+    <!-- Logo & Social -->
+    <div class="footer-logo-social">
+      <img src="images/web logo.png" alt="Church Logo" class="footer-logo">
+      <p class="follow-us">Follow Us!</p>
+      <div class="social-icons">
+        <a href="https://web.facebook.com/RNmakashe/"><i class="fab fa-facebook-f"></i></a>
+        <a href="https://www.youtube.com/@bishopprophetmakashe9058"><i class="fab fa-youtube"></i></a>
+        <a href="https://www.instagram.com/bishoprnmakashe/"><i class="fab fa-instagram"></i></a>
+        <a href="https://www.tiktok.com/@prophet.r.n.makashe"><i class="fab fa-tiktok"></i></a>
+      </div>
+    </div>
+
+    <!-- Quick Links & Legal -->
+    <div class="footer-columns">
+      <div class="footer-column">
+        <h3>Quick Links</h3>
+        <ul>
+          <li><a href="index.html">Home</a></li>
+          <li><a href="about.html">About</a></li>
+          <li><a href="ministries.html">Ministries</a></li>
+          <li><a href="testimonies.html">Testimonies</a></li>
+          <li><a href="events.html">Events</a></li>
+          <li><a href="contact.html">Contact</a></li>
+        </ul>
+      </div>
+      <div class="footer-column">
+        <h3>Legal</h3>
+        <ul>
+          <li><a href="privacy.html">Privacy Policy</a></li>
+          <li><a href="terms-and-condition.html">Terms & Conditions</a></li>
+          <li><a href="disclaimer.html">Disclaimer</a></li>
+        </ul>
+      </div>
+    </div>
+
+  </div>
+
+  <!-- Footer Bottom -->
+  <div class="footer-bottom">
+    <p>&copy; 2025 Deliverance Healing Ministries. All rights reserved. | <span class="arigraphix">Developed by Arigraphix</span></p>
+  </div>
+
+</footer>
   <!--SOW A SEED  -->
 <a href="give.html" class="sow-seed-btn" aria-label="Sow a Seed">
   <svg xmlns="http://www.w3.org/2000/svg" class="seed-icon" viewBox="0 0 64 64" width="24" height="24" aria-hidden="true" fill="none" stroke="#2ecc40" stroke-width="3" stroke-linecap="round" stroke-linejoin="round">

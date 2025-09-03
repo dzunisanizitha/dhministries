@@ -6,31 +6,34 @@
   <title>Terms & Conditions | Deliverance Healing Ministries</title>
 
   <!-- Meta Description -->
-  <meta name="description" content="Read Deliverance Healing Ministries’ Terms & Conditions to understand website use, services, and policies for all users.">
+  <meta name="description" content="Read the Terms and Conditions for using Deliverance Healing Ministries website and services. Understand your responsibilities and our policies.">
 
   <!-- Meta Keywords (optional) -->
-  <meta name="keywords" content="Deliverance Healing Ministries, Terms & Conditions, website policies, ministry rules, service guidelines">
+  <meta name="keywords" content="Deliverance Healing Ministries, Prophet R.N. Makashe, healing ministry, spiritual guidance, revival services">
 
   <!-- Author -->
   <meta name="author" content="Deliverance Healing Ministries">
 
   <!-- Canonical URL -->
-  <link rel="canonical" href="https://www.deliverancehealingministries.org/terms-and-condition">
+  <link rel="canonical" href="https://www.deliverancehealingministries.org/about">
 
   <!-- Favicon -->
   <link rel="icon" href="/favicon.ico" type="image/x-icon">
 
   <!-- Open Graph / Facebook -->
-  <meta property="og:title" content="Terms & Conditions | Deliverance Healing Ministries">
-  <meta property="og:description" content="Read the Terms & Conditions of Deliverance Healing Ministries, including website use, services, and policies for users.">
+  <meta property="og:title" content="About Deliverance Healing Ministries | Prophet R.N. Makashe">
+  <meta property="og:description" content="Learn about Deliverance Healing Ministries and the work of Prophet R.N. Makashe, delivering healing, spiritual guidance, and revival services.">
   <meta property="og:type" content="website">
-  <meta property="og:url" content="https://www.deliverancehealingministries.org/terms-and-condition">
-  <meta property="og:image" content="https://www.deliverancehealingministries.org/images/og-terms.jpg">
+  <meta property="og:url" content="https://www.deliverancehealingministries.org/about">
+  <meta property="og:image" content="https://www.deliverancehealingministries.org/images/og-about.jpg">
   <meta property="og:site_name" content="Deliverance Healing Ministries">
 
   <!-- Stylesheets -->
   <link rel="stylesheet" href="css/style.css" />
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css" />
+  <link href="https://fonts.googleapis.com/css2?family=Roboto&family=Montserrat&display=swap" rel="stylesheet">
+
+  <meta http-equiv="Cache-Control" content="max-age=3600, public">
 
   <!-- Structured Data (JSON-LD) -->
   <script type="application/ld+json">
@@ -42,30 +45,36 @@
     "logo": "https://www.deliverancehealingministries.org/images/logo.png",
     "sameAs": [
       "https://web.facebook.com/RNmakashe/",
-      "https://www.instagram.com/YourInstagramPage",
+      "https://www.instagram.com/YourPage",
       "https://www.youtube.com/@bishopprophetmakashe9058"
     ]
   }
   </script>
 </head>
-<!-- SEO OPTIMISED HEADER >>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>Stylesheets -->
-
-
+  <!-- SEO OPTIMISED HEADER >>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>Stylesheets -->
 <body>
   
-<header class="site-header">
-  <div class="container">
-    <div class="header-left">
-      <img src="images/web logo.png" alt="Grace Church Logo" class="logo" />
-      <h1 class="site-name">DELIVERANCE HEALING</h1>
-      <h2 class="site-submenu">MINISTRIES</h2>
-    </div>
+<header class="site-header"> 
+  <!-- Hamburger checkbox -->
+  <input type="checkbox" id="menu-toggle" class="menu-toggle" />
 
-    <input type="checkbox" id="menu-toggle" />
-    <label for="menu-toggle" class="hamburger" aria-label="Toggle menu">&#9776;</label>
+  <div class="container">
+    <!-- Brand (Desktop + always visible) -->
+    <a href="index.html" class="brand" aria-label="Home">
+      <img src="images/web logo.webp" alt="Grace Church Logo" class="logo" />
+      <div class="brand-text">
+        <span class="site-name">DELIVERANCE HEALING</span>
+        <span class="site-subname">MINISTRIES</span>
+      </div>
+    </a>
+
+    <!-- Hamburger -->
+    <label for="menu-toggle" class="hamburger" aria-label="Toggle menu">
+      <span></span><span></span><span></span>
+    </label>
 
     <!-- Desktop Nav -->
-    <nav class="main-nav">
+    <nav class="main-nav" aria-label="Primary">
       <ul>
         <li><a href="index.html">Home</a></li>
         <li><a href="about.html">About</a></li>
@@ -73,57 +82,93 @@
         <li><a href="ministries.html">Ministries</a></li>
         <li><a href="events.html">Event</a></li>
         <li><a href="contact.html">Contact</a></li>
-      </ul>
-    </nav>
-
-    <!-- Mobile Dropdown Menu -->
-    <nav class="mobile-dropdown-menu">
-      <ul>
-        <li><a href="index.html">Home</a></li>
-        <li><a href="about.html">About</a></li>
-        <li><a href="testimonies.html">Testimonies</a></li>
-        <li><a href="ministries.html">Ministries</a></li>
-        <li><a href="events.html">Event</a></li>
-        <li><a href="contact.html">Contact</a></li>
-        </ul>
-          </details>
-        </li>
       </ul>
     </nav>
   </div>
+
+  <!-- Overlay -->
+  <label for="menu-toggle" class="menu-overlay" aria-hidden="true"></label>
+
+  <!-- Mobile Menu -->
+  <nav class="mobile-sidebar" aria-label="Mobile">
+    <div class="mobile-top">
+      <div class="mobile-brand">
+        <img src="images/web logo.webp" alt="Grace Church Logo" class="logo-sm" />
+        <div class="mobile-brand-text">
+          <span class="mobile-site-name">DELIVERANCE HEALING</span>
+          <span class="mobile-site-subname">MINISTRIES</span>
+        </div>
+      </div>
+      <!-- Close button -->
+      <label for="menu-toggle" class="close-btn" aria-label="Close menu">×</label>
+    </div>
+
+    <ul class="mobile-links">
+      <li><a href="index.html">Home</a></li>
+      <li><a href="about.html">About</a></li>
+      <li><a href="testimonies.html">Testimonies</a></li>
+      <li><a href="ministries.html">Ministries</a></li>
+      <li><a href="events.html">Event</a></li>
+      <li><a href="contact.html">Contact</a></li>
+    </ul>
+
+    <div class="mobile-socials">
+      <a href="https://web.facebook.com/RNmakashe/" target="_blank" aria-label="Facebook"><i class="fab fa-facebook-f"></i></a>
+      <a href="https://www.instagram.com/bp.prophet_rn_makashe?igsh=MXhxN2FuOTVwN3hjdg==" target="_blank" aria-label="Instagram"><i class="fab fa-instagram"></i></a>
+      <a href="https://www.youtube.com/@bishopprophetmakashe9058" target="_blank" aria-label="YouTube"><i class="fab fa-youtube"></i></a>
+      <a href="https://www.tiktok.com/@prophet.r.n.makashe" target="_blank" aria-label="TikTok"><i class="fab fa-tiktok"></i></a>
+    </div>
+  </nav>
 </header>
 
-  <main class="privacy-main-container">
-    <h1>Terms and Conditions</h1>
-    <p><em>Last updated: August 2025</em></p>
+<main class="privacy-main-container">
+  <h1>Terms and Conditions</h1>
+  <p><em>Last updated: August 2025</em></p>
 
-    <p>Welcome to <span style="font-weight: bold;">Deliverance Healing Ministries</span>. By accessing or using our website and services, you agree to comply with and be bound by the following terms and conditions:</p>
+  <p>
+    Welcome to <strong>Deliverance Healing Ministries</strong>. By accessing our website, you agree to the following Terms and Conditions. Please read them carefully to understand your rights and responsibilities.
+  </p>
 
-    <h2>1. Use of Website</h2>
-    <p>You agree to use the website only for lawful purposes and in a way that does not infringe the rights of, restrict or inhibit anyone else's use and enjoyment of the site.</p>
+  <h2>1. Use of Website</h2>
+  <p>
+    You agree to use this website responsibly, legally, and respectfully, without infringing on the rights of others or disrupting website functionality.
+  </p>
 
-    <h2>2. Donations and Payments</h2>
-    <p>All donations are voluntary. We do not guarantee any specific results from donations. Payment details are processed securely, but Deliverance Healing Ministries is not responsible for any issues arising from third-party payment processors.</p>
+  <h2>2. Donations and Payments</h2>
+  <p>
+    Donations are voluntary. Payment processing is secure, but we are not responsible for issues caused by third-party payment providers.
+  </p>
 
-    <h2>3. Intellectual Property</h2>
-    <p>All content, logos, and materials on this website are the property of Deliverance Healing Ministries and are protected by copyright laws. Unauthorized use is prohibited.</p>
+  <h2>3. Intellectual Property</h2>
+  <p>
+    All content, logos, and resources are owned by Deliverance Healing Ministries and are protected by copyright laws. Unauthorized use is prohibited.
+  </p>
 
-    <h2>4. Limitation of Liability</h2>
-    <p>Deliverance Healing Ministries is not liable for any damages arising from the use or inability to use the website or services.</p>
+  <h2>4. Limitation of Liability</h2>
+  <p>
+    Deliverance Healing Ministries is not responsible for any damages resulting from the use or inability to use this website or its services.
+  </p>
 
-    <h2>5. External Links</h2>
-    <p>Our website may contain links to external sites. We are not responsible for their content or privacy practices.</p>
+  <h2>5. External Links</h2>
+  <p>
+    Our site may link to external websites. We are not responsible for their content, policies, or security.
+  </p>
 
-    <h2>6. Changes to Terms</h2>
-    <p>We reserve the right to update or change these terms at any time without prior notice. It is your responsibility to check this page periodically.</p>
+  <h2>6. Changes to Terms</h2>
+  <p>
+    We may update these Terms and Conditions at any time without notice. It is your responsibility to review them periodically.
+  </p>
 
-    <h2>7. Governing Law</h2>
-    <p>These terms are governed by the laws of South Africa.</p>
+  <h2>7. Governing Law</h2>
+  <p>
+    These terms are governed by the laws of South Africa.
+  </p>
 
-    <h2>8. Contact Us</h2>
-    <p>If you have any questions about these Terms and Conditions, please contact us at <a href="mailto:info@deliverancehealingministries.org">info@deliverancehealingministries.org</a> or call +27 83 476 3071.</p>
-  </main>
-
+  <h2>8. Contact Us</h2>
+  <p>
+    Questions about these Terms? Contact us at <a href="mailto:info@deliverancehealingministries.org">info@deliverancehealingministries.org</a> or call +27 83 476 3071.
+  </p>
+</main>
     <!--SOW A SEED  -->
 <a href="give.html" class="sow-seed-btn" aria-label="Sow a Seed">
   <svg xmlns="http://www.w3.org/2000/svg" class="seed-icon" viewBox="0 0 64 64" width="24" height="24" aria-hidden="true" fill="none" stroke="#2ecc40" stroke-width="3" stroke-linecap="round" stroke-linejoin="round">
