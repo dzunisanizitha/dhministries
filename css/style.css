@@ -272,7 +272,7 @@
 .mobile-site-subname {
   color: var(--gold);
   font-size: 0.7rem;
-  letter-spacing: 0.73rem;
+  letter-spacing: 0.70rem;
   opacity: 0.9;
   margin-left: 9px;
   margin-top: 3px;
@@ -942,9 +942,10 @@
     margin-bottom: 150px;
   }
 }
-
 /* END OF HOME PAGE STYLING>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>> */
-/* ===== PASTOR SLIDESHOW SECTION ===== */
+
+
+/* ===== ABOUT PAGE- PASTOR SLIDESHOW SECTION ===== */
 .pastor-slideshow-section {
   display: flex;
   flex-direction: column;
