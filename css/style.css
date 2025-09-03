@@ -773,7 +773,7 @@
     height: 200px; /* slightly taller on small screens */
   }
 }
-
+/* VIDEO GALLERY  HOMEPAGE STYLING   DONE>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>*/ 
 
 
 /* WE BRING HEALING , HOMEPAGE STYLING */
@@ -789,7 +789,6 @@
   align-items: center;
 }
 
-/* ===== Slideshow ===== */
 .church-mission-slideshow {
   position: relative;
   width: 100%;
@@ -798,49 +797,57 @@
   overflow: hidden;
   margin-bottom: 40px;
   border-radius: 10px;
-  box-shadow: 0px 4px 15px rgba(0, 0, 0, 0.9);
+  box-shadow: 0 4px 15px rgba(0,0,0,0.9);
 }
 
+/* All slides stacked horizontally */
 .church-mission-slideshow .slide {
   position: absolute;
   width: 100%;
   height: 100%;
+  top: 0;
+  left: 100%; /* Start off screen right */
   opacity: 0;
-  animation: crossfade 16s infinite;
+  transform: scale(1.1); /* slight zoom-in */
+  animation: slideZoom 28s infinite;
 }
+
+/* Slide delays for 7 slides */
+.church-mission-slideshow .slide:nth-child(1) { animation-delay: 0s; }
+.church-mission-slideshow .slide:nth-child(2) { animation-delay: 4s; }
+.church-mission-slideshow .slide:nth-child(3) { animation-delay: 8s; }
+.church-mission-slideshow .slide:nth-child(4) { animation-delay: 12s; }
+.church-mission-slideshow .slide:nth-child(5) { animation-delay: 16s; }
+.church-mission-slideshow .slide:nth-child(6) { animation-delay: 20s; }
+.church-mission-slideshow .slide:nth-child(7) { animation-delay: 24s; }
 
 .church-mission-slideshow .slide img {
   width: 100%;
   height: 100%;
   object-fit: cover;
   display: block;
-  border-radius: 10px;
 }
-
-/* Slide delays */
-.church-mission-slideshow .slide:nth-child(1) { animation-delay: 0s; }
-.church-mission-slideshow .slide:nth-child(2) { animation-delay: 4s; }
-.church-mission-slideshow .slide:nth-child(3) { animation-delay: 8s; }
-.church-mission-slideshow .slide:nth-child(4) { animation-delay: 12s; }
 
 /* Overlay */
 .slideshow-overlay {
   position: absolute;
-  top: 0;
-  left: 0;
-  width: 100%;
-  height: 100%;
-  background: rgba(128, 0, 128, 0.2); /* semi-transparent purple */
+  top: 0; left: 0;
+  width: 100%; height: 100%;
+  background: rgba(128,0,128,0.2);
   z-index: 1;
   pointer-events: none;
   border-radius: 10px;
 }
 
-/* Crossfade animation */
-@keyframes crossfade {
-  0%, 33.33% { opacity: 1; }
-  33.34%, 100% { opacity: 0; }
+/* Sliding + fading + zoom */
+@keyframes slideZoom {
+  0% { left: 100%; opacity: 0; transform: scale(1.1); }
+  5% { left: 0%; opacity: 1; transform: scale(1); }
+  19% { left: 0%; opacity: 1; transform: scale(1); }
+  24% { left: -100%; opacity: 0; transform: scale(1.1); }
+  100% { left: -100%; opacity: 0; transform: scale(1.1); }
 }
+
 
 /* ===== Text Content ===== */
 .church-mission-content {
