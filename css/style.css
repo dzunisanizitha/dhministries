@@ -235,14 +235,15 @@
 @media (max-width: 900px) {
   .main-nav { display: none; }
   .hamburger { display: block; margin-right: -5px; }
-  .site-subname {font-size: 0.6rem !important;  margin-left: -20px !important;}
+  .site-name { letter-spacing: 0.02rem;}
+  .site-subname {font-size: 0.6rem !important;  margin-left: -20px ;  }
   .mobile-links a { padding: 10px 6px; font-size: 1.04rem; }
 }
 
 @media (max-width: 480px) {
   .logo { height: 30px; margin-left: -50px; }
   .site-name { font-size: .80rem; margin-left: -20px; margin-top: 7px; }
-  .site-subname { font-size: .75rem; letter-spacing: 1.080em !important; margin-left: -14px; margin-top: 5px; }
+  .site-subname { font-size: .75rem; letter-spacing: 1.080em ; margin-right: -200px !important; margin-top: 4px; }
 }
 
 @media (min-width: 901px) {
@@ -251,6 +252,32 @@
   .hamburger { display: none; }
   .main-nav { display: flex; }
 }
+
+
+
+/* Mobile brand  SITEBAR THE DARK PURPLE PART WITH SOCIAL MEDIA LINKS*/
+.mobile-brand-text {
+  display: flex;
+  flex-direction: column;
+  line-height: 1.05;
+}
+
+.mobile-site-name {
+  color: var(--gold);
+  font-size: 0.9rem;
+  font-weight: 700;
+  margin-left: 8px;
+}
+
+.mobile-site-subname {
+  color: var(--gold);
+  font-size: 0.7rem;
+  letter-spacing: 1em;
+  opacity: 0.9;
+  margin-left: 9px;
+  margin-top: 3px;
+}
+
 
 /* HEADER STYLING DONE!>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>> */
 /* HERO SLIDESHOW SECTION */
