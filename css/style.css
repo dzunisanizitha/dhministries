@@ -1,17 +1,17 @@
 /* ========== Variables ========== */
-:root{
-  --purple:#2f0755;
-  --gold:gold;
-  --text:#2f0755;
-  --header-bg:#fff;
-  --shadow:0 8px 20px rgba(0,0,0,.06);
+:root {
+  --purple: #2f0755;
+  --gold: gold;
+  --text: #2f0755;
+  --header-bg: #fff;
+  --shadow: 0 8px 20px rgba(0,0,0,.06);
 }
 
-/* Reset box-sizing */
+/* Reset */
 .site-header * { box-sizing: border-box; }
 
 /* Header shell */
-.site-header{
+.site-header {
   background: var(--header-bg);
   border-bottom: 3px solid var(--gold);
   position: sticky;
@@ -19,290 +19,238 @@
   z-index: 1000;
 }
 
-.menu-toggle{ display:none; }
+.menu-toggle { display: none; }
 
-.container{
-  max-width:1100px;
-  margin:0 auto;
-  padding:10px 16px;
-  display:flex;
-  align-items:center;
-  justify-content:space-between;
-  gap:16px;
+.container {
+  max-width: 1100px;
+  margin: 0 auto;
+  padding: 10px 16px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 16px;
 }
 
 /* Brand */
-.brand{
-  display:flex;
-  align-items:center;
-  gap:12px;
-  text-decoration:none;
+.brand {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  text-decoration: none;
 }
 
-@media (min-width: 540px) and (max-width: 720px){
-    .brand {
-    display: flex;
-    align-items: center;
-    gap: 0;
-  }
-  .site-name {
-    font-size: 0.95rem !important;
-    margin-left: 12px !important;
-    letter-spacing: 0.02em !important;
-  }
-
-  .site-subname {
-  font-size: 0.85rem !important;
-  letter-spacing: 0.73rem  !important;
-  margin-left: 11px !important;
-  }
-    
-  .logo {
-   height: 37px !important;
-   margin-left: -50px !important;
-  }
-}
-
-
-/* Tablet-specific adjustments >>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>*/
-@media (min-width: 768px) and (max-width: 1366px)  {
-  .brand {
-    display: flex;
-    align-items: center;
-    gap: 10px;
-  }
-
-  .logo {
-    height: 37px !important;  /* force override */
-    width: auto !important;
-    margin-left: -50px;
-  }
-
-  .brand-text {
-    display: flex;
-    flex-direction: column;
-    align-items: flex-start;
-    line-height: 1.1;
-    margin-left: 0 !important; /* cancel any inherited margin */
-  }
-
-  .site-name {
-    font-size: 1rem !important;
-    margin-left: 5px !important;
-    letter-spacing: 0.02em !important;
-  }
-
-  .site-subname {
-    font-size: 0.85rem !important;
-    margin-left: 5px !important;       /* remove negative margin */
-    letter-spacing: 1em !important;  /* adjust spacing */
-    opacity: 0.9 !important;
-  }
-}
-/* Tablet-specific adjustments >>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>*/
-
-.logo{
-  height:50px;
-  width:auto;
+.logo {
+  height: 50px;
+  width: auto;
   display: flex;
 }
 
-.brand-text{
-  display:flex;
-  flex-direction:column;
-  line-height:1.05;
+.brand-text {
+  display: flex;
+  flex-direction: column;
+  line-height: 1.05;
 }
 
-.site-name{
-  font-size:1.05rem;
-  font-weight:700;
-  color:var(--text);
-  letter-spacing:.02em;
-
+.site-name {
+  font-size: 1.05rem;
+  font-weight: 700;
+  color: var(--text);
+  letter-spacing: .02em;
 }
 
-.site-subname{
-  font-size:.95rem;
-  color:var(--text);
-  letter-spacing:1.05rem;
-  opacity:.9;
+.site-subname {
+  font-size: .95rem;
+  color: var(--text);
+  letter-spacing: 1.05rem;
+  opacity: .9;
   margin-left: -27px;
 }
 
 /* Desktop nav */
-.main-nav ul{
-  list-style:none;
-  display:flex;
-  gap:26px;
-  margin:0;
-  padding:0;
-  align-items:center;
+.main-nav ul {
+  list-style: none;
+  display: flex;
+  gap: 26px;
+  margin: 0;
+  padding: 0;
+  align-items: center;
 }
 
-.main-nav a{
-  color:var(--purple);
-  text-decoration:none;
-  font-weight:700;
-  font-size:1rem;
-  padding:8px 0;
-  border-bottom:2px solid transparent;
-  transition:border-color .25s ease;
+.main-nav a {
+  color: var(--purple);
+  text-decoration: none;
+  font-weight: 700;
+  font-size: 1rem;
+  padding: 8px 0;
+  border-bottom: 2px solid transparent;
+  transition: border-color .25s ease;
 }
 
 .main-nav a:hover,
-.main-nav a:focus{
-  border-bottom-color:var(--gold);
-  outline:none;
+.main-nav a:focus {
+  border-bottom-color: var(--gold);
+  outline: none;
 }
 
 /* Hamburger */
-.hamburger{
-  display:none;
-  width:36px; height:28px;
-  position:relative;
-  cursor:pointer;
+.hamburger {
+  display: none;
+  width: 36px; height: 28px;
+  position: relative;
+  cursor: pointer;
 }
-.hamburger span{
-  position:absolute; left:0; right:0;
-  height:3px; background:var(--purple);
-  border-radius:2px;
-  transition:transform .3s ease, opacity .2s ease, top .3s ease;
+.hamburger span {
+  position: absolute; left: 0; right: 0;
+  height: 3px; background: var(--purple);
+  border-radius: 2px;
+  transition: transform .3s ease, opacity .2s ease, top .3s ease;
 }
-.hamburger span:nth-child(1){ top:3px; }
-.hamburger span:nth-child(2){ top:12px; }
-.hamburger span:nth-child(3){ top:21px; }
+.hamburger span:nth-child(1) { top: 3px; }
+.hamburger span:nth-child(2) { top: 12px; }
+.hamburger span:nth-child(3) { top: 21px; }
 
-#menu-toggle:checked ~ .container .hamburger span:nth-child(1){
-  top:12px; transform:rotate(45deg);
+#menu-toggle:checked ~ .container .hamburger span:nth-child(1) {
+  top: 12px; transform: rotate(45deg);
 }
-#menu-toggle:checked ~ .container .hamburger span:nth-child(2){
-  opacity:0;
+#menu-toggle:checked ~ .container .hamburger span:nth-child(2) {
+  opacity: 0;
 }
-#menu-toggle:checked ~ .container .hamburger span:nth-child(3){
-  top:12px; transform:rotate(-45deg);
+#menu-toggle:checked ~ .container .hamburger span:nth-child(3) {
+  top: 12px; transform: rotate(-45deg);
 }
 
 /* Mobile overlay */
-.menu-overlay{
-  position:fixed;
-  inset:0;
-  background:rgba(0,0,0,.85);
-  opacity:0; pointer-events:none;
-  transition:opacity .3s ease;
-  z-index:998;
+.menu-overlay {
+  position: fixed;
+  inset: 0;
+  background: rgba(0,0,0,.85);
+  opacity: 0; pointer-events: none;
+  transition: opacity .3s ease;
+  z-index: 998;
 }
-#menu-toggle:checked ~ .menu-overlay{
-  opacity:1; pointer-events:auto;
+#menu-toggle:checked ~ .menu-overlay {
+  opacity: 1; pointer-events: auto;
 }
 
-/* Mobile sidebar (full screen) */
-.mobile-sidebar{
-  position:fixed;
-  top:0; left:-100vw; right:0;
-  width:100vw; height:100vh;
-  background:var(--purple);
-  display:flex; flex-direction:column;
-  padding:20px 16px;
-  transition:left .35s ease;
-  z-index:999;
+/* Mobile sidebar */
+.mobile-sidebar {
+  position: fixed;
+  top: 0; left: -100vw; right: 0;
+  width: 100vw; height: 100vh;
+  background: var(--purple);
+  display: flex; flex-direction: column;
+  padding: 20px 16px 60px;
+  transition: left .35s ease;
+  z-index: 999;
   box-shadow: var(--shadow);
-  overflow-x:hidden;
-  overflow-y:auto;
+  overflow-x: hidden;
+  overflow-y: auto;
 }
-#menu-toggle:checked ~ .mobile-sidebar{
-  left:0;
+#menu-toggle:checked ~ .mobile-sidebar {
+  left: 0;
 }
 
-/* Mobile top (brand + close)>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>> */
-.mobile-top{
-  display:flex; align-items:center; justify-content:space-between;
-  padding-bottom:20px;
-  border-bottom:1px solid rgba(255,215,0,.35);
+/* Mobile top */
+.mobile-top {
+  display: flex; align-items: center; justify-content: space-between;
+  padding-bottom: 20px;
+  border-bottom: 1px solid rgba(255,215,0,.35);
 }
-/* Mobile brand text colors */
+
 .mobile-brand .site-name {
-  color: gold;      /* your choice for site name */
+  color: var(--gold);
   font-size: 0.9rem;
   font-weight: 700;
   margin-left: 8px;
 }
 
 .mobile-brand .site-subname {
-  color: gold;             /* different color for subname */
+  color: var(--gold);
   font-size: 0.7rem;
   letter-spacing: 1.1em;
   opacity: 0.9;
   margin-left: 9px;
 }
 
-
-
-.logo-sm{ height:40px; width:auto; margin-left: 40px;         }
-.close-btn{
-  font-size:2.9rem; line-height:1; color:var(--gold);
-  cursor:pointer; padding:4px 10px; border-radius:8px;
+.logo-sm { height: 40px; width: auto; margin-left: 40px; }
+.close-btn {
+  font-size: 2.9rem; line-height: 1; color: var(--gold);
+  cursor: pointer; padding: 4px 10px; border-radius: 8px;
 }
-.close-btn:hover{ background:rgba(255,255,255,.1); }
+.close-btn:hover { background: rgba(255,255,255,.1); }
 
 /* Mobile links */
-.mobile-links{
-  list-style:none; margin:20px 0; padding:0;
-  flex:1;
+.mobile-links {
+  list-style: none; margin: 20px 0; padding: 0;
+  flex: 1;
 }
-.mobile-links li{ border-bottom:1px solid rgba(255,215,0,.35); }
-.mobile-links li:last-child{ border-bottom:none; }
-.mobile-links a{
-  display:block; padding:16px 6px;
-  color:#fff; text-decoration:none;
-  font-weight:800; font-size:1.2rem;
+.mobile-links li { border-bottom: 1px solid rgba(255,215,0,.35); }
+.mobile-links li:last-child { border-bottom: none; }
+.mobile-links a {
+  display: block; padding: 16px 6px;
+  color: #fff; text-decoration: none;
+  font-weight: 800; font-size: 1.2rem;
 }
-.mobile-links a:hover{ color:var(--gold); }
+.mobile-links a:hover { color: var(--gold); }
 
 /* Social icons */
 .mobile-socials {
   display: flex;
-  justify-content: center;  /* center horizontally */
+  justify-content: center;
   gap: 18px;
   padding-top: 14px;
   border-top: 1px solid rgba(255,215,0,.35);
-  margin-top: auto;         /* push to bottom */
 }
 
 .mobile-socials a {
-  color: #fff;              /* make icons white */
-  font-size: 1.6rem;        /* adjust size */
+  color: #fff;
+  font-size: 1.6rem;
   transition: transform .25s ease, color .25s ease;
 }
-
 .mobile-socials a:hover {
   transform: scale(1.2);
-  color: var(--gold);       /* optional hover effect */
+  color: var(--gold);
 }
 
+/* ================= Media Queries ================= */
 
-
-/* Responsive rules */
-@media (max-width: 900px){
-  .main-nav{ display:none; }
-  .hamburger{ display:block; }
-  .site-subname{ letter-spacing:.28em; font-size:.8rem; }
+/* Small tablets */
+@media (min-width: 540px) and (max-width: 720px) {
+  .brand { gap: 0; }
+  .site-name { font-size: 0.95rem !important; margin-left: 12px !important; }
+  .site-subname { font-size: 0.85rem !important; letter-spacing: 0.73rem !important; margin-left: 11px !important; }
+  .logo { height: 37px !important; margin-left: -50px !important; }
 }
 
-@media (max-width: 480px){
-  .logo{ height:30px; margin-left:-50px;}
-
-  .site-name{ font-size:.80rem; margin-left: -20px;  margin-top: 7px;}
-  .site-subname{ font-size:.75rem; letter-spacing:.76em; margin-left: -20px; margin-top: 5px;}
+/* Tablets */
+@media (min-width: 768px) and (max-width: 1366px) {
+  .brand { gap: 10px; }
+  .logo { height: 37px !important; width: auto !important; margin-left: -50px; }
+  .brand-text { flex-direction: column; align-items: flex-start; line-height: 1.1; margin-left: 0 !important; }
+  .site-name { font-size: 1rem !important; margin-left: 5px !important; }
+  .site-subname { font-size: 0.85rem !important; margin-left: 5px !important; letter-spacing: 1em !important; }
 }
 
-@media (min-width: 901px){
-  .logo { margin-top:5px !important;}
-  .menu-overlay, .mobile-sidebar{ display:none; }
-  .hamburger{ display:none; }
-  .main-nav{ display:flex; }
+/* Responsive */
+@media (max-width: 900px) {
+  .main-nav { display: none; }
+  .hamburger { display: block; margin-right: -5px; }
+  .site-subname { letter-spacing: .28em; font-size: .8rem; }
+  .mobile-links a { padding: 15px 6px; font-size: 1.03rem; }
 }
 
+@media (max-width: 480px) {
+  .logo { height: 30px; margin-left: -50px; }
+  .site-name { font-size: .80rem; margin-left: -20px; margin-top: 7px; }
+  .site-subname { font-size: .75rem; letter-spacing: .74em; margin-left: -19px; margin-top: 5px; }
+}
 
+@media (min-width: 901px) {
+  .logo { margin-top: 5px !important; }
+  .menu-overlay, .mobile-sidebar { display: none; }
+  .hamburger { display: none; }
+  .main-nav { display: flex; }
+}
 
 /* HEADER STYLING DONE!>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>> */
 /* HERO SLIDESHOW SECTION */
@@ -831,7 +779,7 @@
   width: 100%;
   height: 100%;
   opacity: 0;
-  animation: crossfade 12s infinite;
+  animation: crossfade 16s infinite;
 }
 
 .church-mission-slideshow .slide img {
@@ -846,6 +794,7 @@
 .church-mission-slideshow .slide:nth-child(1) { animation-delay: 0s; }
 .church-mission-slideshow .slide:nth-child(2) { animation-delay: 4s; }
 .church-mission-slideshow .slide:nth-child(3) { animation-delay: 8s; }
+.church-mission-slideshow .slide:nth-child(4) { animation-delay: 12s; }
 
 /* Overlay */
 .slideshow-overlay {
@@ -1437,7 +1386,7 @@ h2 {
 }
 
 
-/* ===== Testimony Scripture Section (Responsive) ===== */
+/* ===== Testimony Scripture Section (Responsive) ===== >>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>*/
 .verse-section {
   position: relative;
   /* Replace with your image */
@@ -1632,32 +1581,42 @@ h2 {
     margin-bottom: 120px; /* less margin for mobile */
   }
 }
-/* TESTIMONY PAGE STYLING DONE>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>> */
+/* TESTIMONY PAGE STYLING DONE>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>> */
 
 /* =====================================================
-   MINISTRIES PAGE — BANNER SECTION STYLING
+   MINISTRIES PAGE CSS — FULL RESPONSIVE STYLING
    ===================================================== */
 
-/* Ministries Banner Container */
-/* Banner container */
+body, p {
+  font-family: 'Roboto', sans-serif;
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+h1, h2 {
+  font-family: 'Montserrat', sans-serif;
+  margin: 0;
+}
+
+/* =====================================================
+   BANNER SECTION
+   ===================================================== */
 .ministries-banner {
   position: relative;
   width: 100%;
-  height: 150px; /* default desktop height */
+  height: 150px; /* desktop default */
   overflow: hidden;
-  font-family: 'Roboto', sans-serif; /* default body font */
 }
 
-/* Banner image */
 .ministries-banner-img {
   width: 100%;
   height: 100%;
   object-fit: cover;
-  opacity: 0.7;
   display: block;
+  opacity: 0.7;
 }
 
-/* Overlay */
 .overlay {
   position: absolute;
   inset: 0;
@@ -1665,7 +1624,6 @@ h2 {
   z-index: 1;
 }
 
-/* Text container */
 .ministries-banner-text {
   position: absolute;
   top: 50%;
@@ -1676,179 +1634,129 @@ h2 {
   white-space: nowrap;
 }
 
-/* Title */
 .ministries-banner-title {
-  font-family: 'Montserrat', sans-serif; /* heading font */
-  font-size: 2.8rem; /* desktop */
+  font-size: 2.8rem;
   color: #dbb22c; /* gold */
-  margin: 0 0 10px 0;
   font-weight: 700;
   line-height: 1.1;
   text-transform: uppercase;
 }
 
-/* Subtitle */
 .ministries-banner-subtitle {
-  font-family: 'Roboto', sans-serif; /* body font */
   font-size: 1.25rem;
   color: #ffffff;
-  margin: 0;
-  line-height: 1.3;
   font-weight: 500;
 }
 
-/* Responsive adjustments */
+/* Banner Responsive */
 @media (max-width: 992px) {
   .ministries-banner {
     height: 180px;
   }
-  .ministries-banner-title {
-    font-size: 2.2rem;
-  }
-  .ministries-banner-subtitle {
-    font-size: 1.1rem;
-  }
+  .ministries-banner-title { font-size: 2.2rem; }
+  .ministries-banner-subtitle { font-size: 1.1rem; }
 }
 
 @media (max-width: 576px) {
   .ministries-banner {
     height: 140px;
   }
-  .ministries-banner-title {
-    font-size: 1.6rem;
-  }
-  .ministries-banner-subtitle {
-    font-size: 0.95rem;
-  }
+  .ministries-banner-title { font-size: 1.6rem; }
+  .ministries-banner-subtitle { font-size: 0.95rem; }
   .ministries-banner-text p {
-    text-align: center;
     white-space: normal;
     font-size: 0.95rem;
   }
 }
 
-
 /* =====================================================
-   MINISTRIES PAGE — OUTREACH MINISTRY (REVIVALS) STYLING
+   OUTREACH MINISTRY INTRO
    ===================================================== */
-
 .outreach-ministry-container {
   display: flex;
   align-items: center;
   gap: 40px;
   max-width: 1200px;
-  margin: 40px auto 0 auto;
+  margin: 40px auto;
   padding: 0 15px;
-  flex-wrap: wrap; /* allow wrapping on small screens */
-  font-family: 'Roboto', sans-serif; /* default body font */
-}
-
-.outreach-ministry-image {
-  flex: 0 0 550px; /* fixed width for image container */
+  flex-wrap: wrap;
 }
 
 .outreach-ministry-image img {
   width: 100%;
   border-radius: 12px;
-  box-shadow: 0 8px 20px rgba(59, 10, 69, 0.3);
   object-fit: cover;
+  box-shadow: 0 8px 20px rgba(59, 10, 69, 0.3);
 }
 
-.outreach-ministry-text {
-  flex: 1;
-  min-width: 250px; /* prevent text from shrinking too much */
-}
-
-/* Heading */
 .outreach-ministry-text h2 {
-  font-family: 'Montserrat', sans-serif; /* heading font */
-  font-size: 2.5rem; /* desktop */
-  color: var(--brand-dark-purple);
+  font-size: 2.2rem;
+  color: #3b0066;
   margin-bottom: 15px;
-  font-weight: 700;
 }
 
-/* Paragraph */
 .outreach-ministry-text p {
-  font-family: 'Roboto', sans-serif; /* body font */
   font-size: 1.1rem;
   line-height: 1.7;
   color: #333;
 }
 
-/* Responsive adjustments */
+/* Outreach Mobile */
 @media (max-width: 768px) {
   .outreach-ministry-container {
     flex-direction: column;
     align-items: flex-start;
   }
 
-  .outreach-ministry-image {
-    flex: none;
-    width: 100%;
-    max-width: 100%;
-    margin-bottom: 20px;
-  }
-
   .outreach-ministry-text {
-    width: 100%;
-    margin-top: -60px;
+    margin-top: 15px;
   }
 
   .outreach-ministry-text h2 {
     font-size: 1.7rem;
-    margin-top: 5px;
-    text-align: left;
   }
 
   .outreach-ministry-text p {
-    margin-top: 5px;
-    text-align: left;
-    font-size: 0.90rem;
+    font-size: 0.95rem;
   }
 }
 
-/* OUTREACH MINISTRIES DONE>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>> */
-
-/* ==========================================================
+/* =====================================================
    DELIVERANCE & HEALING MINISTRIES
-   ========================================================== */
+   ===================================================== */
 .deliverance-healing-wrapper {
   max-width: 1200px;
   margin: 40px auto;
   padding: 0 15px;
   display: flex;
   gap: 30px;
-  flex-wrap: nowrap;
-  margin-bottom: 90px;
+  flex-wrap: wrap;
 }
 
 .deliverance-ministry-box,
 .healing-ministry-box {
-  background-color: var(--brand-dark-purple);
-  border: 4px solid var(--brand-gold);
+  background-color: #3b0066;
+  border: 4px solid #dbb22c;
   border-radius: 16px;
-  color: var(--brand-white);
-  box-shadow: 0 0 20px rgba(212, 175, 55, 0.4);
+  color: #fff;
   flex: 1 1 48%;
   display: flex;
   flex-direction: column;
-  padding: 40px 25px;
+  padding: 25px;
+  box-shadow: 0 0 20px rgba(212, 175, 55, 0.4);
 }
 
 .deliverance-ministry-content,
 .healing-ministry-content {
   display: flex;
   gap: 30px;
-  align-items: center;
-  flex-wrap: nowrap;
+  align-items: flex-start;
 }
 
 .deliverance-ministry-text h2,
 .healing-ministry-text h2 {
-  font-family: 'Montserrat', sans-serif; /* heading font */
   font-size: 2.3rem;
-  color: var(--brand-gold);
+  color: #dbb22c;
   margin-bottom: 20px;
   font-weight: 400;
 }
@@ -1857,9 +1765,9 @@ h2 {
 .healing-ministry-text p {
   font-size: 1rem;
   line-height: 1.6;
-  margin-bottom: 30px;
 }
 
+/* Video Styling */
 .deliverance-ministry-video,
 .healing-ministry-video {
   flex: 1 1 50%;
@@ -1875,55 +1783,50 @@ h2 {
   border-radius: 12px;
 }
 
-/* ==========================================================
+/* =====================================================
    PROPHECY & WORD MINISTRIES
-   ========================================================== */
+   ===================================================== */
 .prophecy-word-wrapper {
   max-width: 1200px;
   margin: 40px auto;
   padding: 0 15px;
   display: flex;
   gap: 30px;
-  flex-wrap: nowrap;
-  margin-bottom: 90px;
+  flex-wrap: wrap;
 }
 
 .prophecy-ministry-box,
 .word-ministry-box {
-  background-color: var(--brand-dark-purple);
-  border: 4px solid var(--brand-gold);
+  background-color: #3b0066;
+  border: 4px solid #dbb22c;
   border-radius: 16px;
-  color: var(--brand-white);
-  box-shadow: 0 0 20px rgba(212, 175, 55, 0.4);
+  color: #fff;
   flex: 1 1 48%;
   display: flex;
   flex-direction: column;
-  padding: 40px 25px;
-  
+  padding: 25px;
+  box-shadow: 0 0 20px rgba(212, 175, 55, 0.4);
 }
 
 .prophecy-ministry-content,
 .word-ministry-content {
   display: flex;
   gap: 30px;
-  align-items: center;
-  flex-wrap: nowrap;
+  align-items: flex-start;
 }
 
 .prophecy-ministry-text h2,
 .word-ministry-text h2 {
   font-size: 2.3rem;
-  color: var(--brand-gold);
+  color: #dbb22c;
   margin-bottom: 20px;
   font-weight: 400;
-  font-family: 'Montserrat', sans-serif; /* heading font */
 }
 
 .prophecy-ministry-text p,
 .word-ministry-text p {
   font-size: 1rem;
   line-height: 1.6;
-  margin-bottom: 30px;
 }
 
 .prophecy-ministry-video,
@@ -1941,41 +1844,46 @@ h2 {
   border-radius: 12px;
 }
 
-/* ==========================================================
-   RESPONSIVE DESIGN
-   ========================================================== */
-@media (max-width: 900px) {
-  .deliverance-healing-wrapper,
-  .prophecy-word-wrapper {
-    flex-wrap: wrap;
-  }
+/* =====================================================
+   RESPONSIVE — TABLET & MOBILE
+   ===================================================== */
+@media (max-width: 992px) {
+  /* Optional tablet adjustments */
+  .ministries-banner-title { font-size: 2.2rem; }
+  .ministries-banner-subtitle { font-size: 1.1rem; }
+}
 
-  .deliverance-ministry-box,
-  .healing-ministry-box,
-  .prophecy-ministry-box,
-  .word-ministry-box {
-    flex: 1 1 100%;
-    margin-bottom: 15px;
-  }
-
+@media (max-width: 768px) {
+  /* Stack videos under text for all ministries */
   .deliverance-ministry-content,
   .healing-ministry-content,
   .prophecy-ministry-content,
   .word-ministry-content {
     flex-direction: column;
-    gap: 0px;
   }
 
-  .deliverance-ministry-video iframe,
-  .healing-ministry-video iframe,
-  .prophecy-ministry-video iframe,
-  .word-ministry-video iframe {
-    height: 130px;
+  .deliverance-ministry-video,
+  .healing-ministry-video,
+  .prophecy-ministry-video,
+  .word-ministry-video {
+    flex: 1 1 100%;
+    margin-top: 15px;
+    height: 200px; /* adjust as needed */
+  }
+
+  /* Outreach stack text under image */
+  .outreach-ministry-container {
+    flex-direction: column;
+    align-items: flex-start;
   }
 }
-  
-/* MINISTRIES SECTION PAGE DONE ..it share styling with event BANNER>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>> */
 
+@media (max-width: 576px) {
+  .ministries-banner-title { font-size: 1.6rem; }
+  .ministries-banner-subtitle { font-size: 0.95rem; }
+  .ministries-banner-text p { font-size: 0.95rem; }
+}
+/* === MINISTRY SECTION DONE>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>> === */
 
 /* === EVENT SECTION CONTAINER === */
 .events-section {
@@ -2737,7 +2645,6 @@ h2 {
   }
 }
   
-
 /* Church Info Section */
 .church-info {
   margin-top: 30px;
@@ -2879,24 +2786,6 @@ h2 {
    RESPONSIVE MOBILE
 ================================ */
 @media (max-width: 767px) {
-  .footer-main-row {
-    flex-direction: column;
-    gap: 30px;
-    text-align: center;
-  }
-
-  .footer-columns {
-    flex-direction: column;
-    gap: 20px;
-    text-align: center;
-  }
-}
-
-
-/* ===============================
-   RESPONSIVE MOBILE
-================================ */
-@media (max-width: 767px) {
   /* Stack main row vertically and center all items */
   .footer-main-row {
     flex-direction: column;
@@ -2918,13 +2807,8 @@ h2 {
   .footer-logo-social {
     margin: 0 auto;
   }
+}
 
-  .footer-visit-us .locations {
-  display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
-  gap: 70px;
-}
-}
 
 /* FOOTER STYLING DONE!>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>> */
 
