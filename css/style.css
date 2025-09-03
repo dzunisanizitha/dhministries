@@ -236,7 +236,7 @@
   .main-nav { display: none; }
   .hamburger { display: block; margin-right: -5px; }
   .site-subname { letter-spacing: .28em; font-size: .8rem; }
-  .mobile-links a { padding: 15px 6px; font-size: 1.03rem; }
+  .mobile-links a { padding: 11px 6px; font-size: 1.03rem; }
 }
 
 @media (max-width: 480px) {
