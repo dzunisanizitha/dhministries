@@ -235,14 +235,14 @@
 @media (max-width: 900px) {
   .main-nav { display: none; }
   .hamburger { display: block; margin-right: -5px; }
-  .site-subname { letter-spacing: .28em; font-size: .8rem; }
-  .mobile-links a { padding: 11px 6px; font-size: 1.03rem; }
+  .site-subname {font-size: 0.6rem !important;  margin-left: -20px !important;}
+  .mobile-links a { padding: 10px 6px; font-size: 1.04rem; }
 }
 
 @media (max-width: 480px) {
   .logo { height: 30px; margin-left: -50px; }
   .site-name { font-size: .80rem; margin-left: -20px; margin-top: 7px; }
-  .site-subname { font-size: .75rem; letter-spacing: .74em; margin-left: -19px; margin-top: 5px; }
+  .site-subname { font-size: .75rem; letter-spacing: 1.080em !important; margin-left: -14px; margin-top: 5px; }
 }
 
 @media (min-width: 901px) {
