@@ -3,6 +3,11 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1" />
+
+  <!-- Preload critical fonts -->
+<link rel="preload" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/webfonts/fa-solid-900.woff2" as="font" type="font/woff2" crossorigin>
+<link rel="preload" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/webfonts/fa-brands-400.woff2" as="font" type="font/woff2" crossorigin>
+
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css" integrity="sha512-MrxV6UOq1Vjq4aKcV6PzLl4NQFqXgqzZ7/U9F6tT45GV4kI+RZ7tG3F3bAxlrYfLxZ+0vW2mH8E2kLz0UJzYKg==" crossorigin="anonymous" referrerpolicy="no-referrer" />
 
   
@@ -164,7 +169,11 @@
   <!-- Slideshow images -->
   <div class="slideshow-container">
     <div class="slide">
-      <img src="images/2.webp" alt=" preaching at the altar" loading="lazy">
+     <img src="images/2.webp" 
+     alt="preaching at the altar" 
+     loading="eager" 
+     fetchpriority="high">
+
     </div>
     <div class="slide">
       <img src="images/worship1.webp" alt="Prophet entering the church" loading="lazy">
