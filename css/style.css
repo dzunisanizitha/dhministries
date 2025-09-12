@@ -2590,6 +2590,121 @@ h1, h2 {
 /* =PRIVACY POLICY, terms and condition and disclaimer uses one styling.... PAGE DONE >>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>===== */
 
 /* ===============================
+   MY BLOG STYLING
+================================ */
+/* Blog Container */
+.blog-container {
+  max-width: 900px;
+  margin: 20px auto;
+  font-family: 'Arial', sans-serif;
+  line-height: 1.6;
+  color: #ffffff;
+  background: #2c003e; /* dark purple background */
+  padding: 20px;
+  border-radius: 10px;
+  box-shadow: 0 4px 15px rgba(0,0,0,0.3);
+}
+
+/* Preview Snippet */
+.blog-snippet {
+  max-height: 120px;
+  overflow: hidden;
+}
+
+/* Read More Label */
+.read-more-toggle {
+  display: none;
+}
+
+.read-more-label {
+  display: inline-block;
+  margin-top: 10px;
+  color: #ffd700; /* gold */
+  cursor: pointer;
+  font-weight: bold;
+}
+
+.read-more-label:hover {
+  text-decoration: underline;
+}
+
+/* Full Blog Content */
+.full-blog {
+  max-height: 0;
+  overflow: hidden;
+  transition: max-height 0.5s ease;
+  margin-top: 10px;
+}
+
+.read-more-toggle:checked ~ .full-blog {
+  max-height: 5000px; /* large enough for full content */
+}
+
+/* Headings */
+h1, h2, h3 {
+  color: #ffd700; /* gold headings */
+}
+
+h2 {
+  margin-top: 20px;
+}
+
+h3 {
+  margin-top: 15px;
+  font-size: 1.1em;
+}
+
+/* Links */
+a {
+  color: #ffd700;
+  text-decoration: none;
+}
+
+a:hover {
+  text-decoration: underline;
+}
+
+/* Responsive */
+@media (max-width: 768px) {
+  .blog-container {
+    padding: 15px;
+  }
+
+  h1 {
+    font-size: 1.6em;
+  }
+
+  h2 {
+    font-size: 1.3em;
+  }
+
+  h3 {
+    font-size: 1.1em;
+  }
+
+  .read-more-label {
+    font-size: 0.95em;
+  }
+}
+
+@media (max-width: 480px) {
+  h1 {
+    font-size: 1.4em;
+  }
+
+  h2 {
+    font-size: 1.2em;
+  }
+
+  h3 {
+    font-size: 1em;
+  }
+}
+
+
+
+
+/* ===============================
    FOOTER BASE STYLING
 ================================ */
 .custom-footer {
