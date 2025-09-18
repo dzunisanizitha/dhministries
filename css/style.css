@@ -465,22 +465,6 @@ html, body {
   font-family: 'Arial', sans-serif;
 }
 
-/* Pastor Photo */
-.pastor-photo-wrapper {
-  flex: 1 1 300px;
-  max-width: 400px;
-  text-align: center;
-  margin-bottom: -80px;
-}
-
-.pastor-photo-wrapper img {
-  width: 100%;
-  max-width: 400px;
-  height: auto;
-  border-radius: 15px;
-  border: 4px solid #FFD700; /* Gold border */
-  box-shadow: 0 8px 20px rgba(0, 0, 0, 0.1);
-}
 
 /* Pastor Description */
 .pastor-description {
@@ -948,10 +932,19 @@ html, body {
     margin-bottom: 150px;
   }
 }
-/* END OF HOME PAGE STYLING>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>> */
+/* END OF HOME PAGE STYLING>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>> */
 
 
 /* ===== ABOUT PAGE- PASTOR SLIDESHOW SECTION ===== */
+.about-banner { position:relative; width:100%; height:200px; overflow:hidden; }
+.about-banner-img { width:100%; height:100%; object-fit:cover; display:block; opacity:0.85; }
+.about-banner .overlay { position:absolute; inset:0; background-color:rgba(59,0,102,0.6); z-index:1; }
+.about-banner-text { position:absolute; top:50%; left:50%; transform:translate(-50%,-50%); text-align:center; z-index:2; }
+.about-banner-title { font-family:'Montserrat',sans-serif; font-size:3rem; color:gold; font-weight:700; text-transform:uppercase; }
+@media (max-width:992px) { .about-banner { height:250px; } .about-banner-title { font-size:2.5rem; } }
+@media (max-width:576px) { .about-banner { height:180px; } .about-banner-title { font-size:1.5rem; } }
+
+
 .pastor-slideshow-section {
   display: flex;
   flex-direction: column;
@@ -1198,9 +1191,6 @@ h2 {
 }
 
 
-
-
-
 /* SAW A SEED   button STYLING>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>> */
 .sow-seed-btn {
   position: fixed;
@@ -1400,7 +1390,7 @@ h2 {
   font-size: 2.5rem;
   margin-bottom: 0.5rem;
   font-weight: bold;
-  color: goldenrod;
+  color: gold;
   text-transform: uppercase;
 }
 
@@ -1418,11 +1408,7 @@ h2 {
   }
 
   .testimony-banner h2 {
-    font-size: 1.4rem;
-  }
-
-  .testimony-banner p {
-    font-size: 0.85rem;
+    font-size: 1.5rem;
   }
 }
 
@@ -1460,7 +1446,7 @@ h2 {
   border-right: 3px solid #d8ac1b;
 
   /* Subtle backdrop to lift text from image (optional) */
-  background: rgba(0, 0, 0, 0.08);
+  background:  #5b406e;
   border-radius: 12px;
   box-shadow: 0 10px 30px rgba(0,0,0,0.25);
 }
@@ -1470,7 +1456,7 @@ h2 {
   font-size: 1.7rem;
   line-height: 1.2;
   margin: 0 0 14px;
-  color: #d8ac1b;            /* Gold */
+  color: gold;            /* Gold */
   font-weight: 800;
   letter-spacing: 0.3px;
 }
@@ -1666,11 +1652,17 @@ h1, h2 {
   left: 50%;
   transform: translate(-50%, -50%);
   text-align: center;
-  color: #dbb22c;
+  color: gold;
 }
 
-.banner-text h1 { font-size: 3rem; font-weight: 700; }
+.banner-text h1 { font-size: 2.5rem; font-weight: 700; }
 .banner-text p { font-size: 1.3rem; color: #fff; }
+
+/* For tablets and large phones (≤ 768px wide) */
+@media (max-width: 768px) {
+ .banner-text h1 { font-size: 1.5rem !important;}
+}
+
 
 
 /* OUTREACH MINISTRY SECTION - GOLD BACKGROUND */
@@ -1768,111 +1760,63 @@ h1, h2 {
   .ministry-video iframe,
   .ministry-video img { height: 200px; }
 }
-
 /* === MINISTRY SECTION DONE>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>> === */
 
-/* === EVENT SECTION CONTAINER === */
-.events-section {
-  max-width: 1200px;          /* Max width to center content */
-  margin: 40px auto;          /* Vertical margin + center horizontally */
-  padding: 0 15px;            /* Side padding */
-  color: #3b0066;             /* Dark purple text */
-  font-family: 'Roboto', sans-serif; /* consistent body font */
-}
-
-/* Section Title Styling */
-.events-section h2 {
-  font-family: 'Montserrat', sans-serif; /* heading font */
-  text-align: center;
-  color: #d4af37;             /* Gold */
-  font-size: 2.5rem;
-  margin-bottom: 2rem;
-  font-weight: 700;
-  letter-spacing: 2px;
-}
 
 
-/* Flex Container for Event Cards */
-.events-container {
-  display: flex;
-  gap: 20px;                 /* Space between cards */
-  flex-wrap: wrap;           /* Wrap cards on smaller screens */
-  justify-content: center;   /* Center cards horizontally */
-}
+/* === EVENT BANNER === */
+.event-banner { position:relative; width:100%; height:200px; overflow:hidden; }
+.event-banner-img { width:100%; height:100%; object-fit:cover; display:block; opacity:0.85; }
+.event-banner .overlay { position:absolute; inset:0; background-color:rgba(59,0,102,0.6); z-index:1; }
+.event-banner-text { position:absolute; top:50%; left:50%; transform:translate(-50%,-50%); text-align:center; z-index:2; }
+.event-banner-title { font-family:'Montserrat',sans-serif; font-size:3rem; color:gold; font-weight:700; text-transform:uppercase; }
+@media (max-width:992px) { .event-banner { height:250px; } .event-banner-title { font-size:2.5rem; } }
+@media (max-width:576px) { .event-banner { height:180px; } .event-banner-title { font-size:1.5rem; } }
 
-/* Individual Event Card Styling */
-.event-card {
-  background: #f9f7f1;        /* Light background */
-  border: 2px solid #3b0066; /* Dark purple border */
+/* === EVENTS SECTION === */
+.events-section { max-width:1200px; margin:40px auto; padding:0 15px; color:#3b0066; font-family:'Roboto',sans-serif; }
+.events-section h2 { font-family:'Montserrat',sans-serif; text-align:center; color:#cca219; font-size:2.5rem; margin-bottom:1rem; font-weight:700; letter-spacing:2px; }
+.intro-text { text-align:center; max-width:800px; margin:0 auto 2rem; font-size:1.1rem; color:#3b0066; line-height:1.6; }
+
+/* Events Container */
+.events-container { display:flex; gap:20px; flex-wrap:wrap; justify-content:center; }
+
+/* Event Card */
+.event-card { background:#f9f7f1; border:2px solid #3b0066; border-radius:8px; overflow:hidden; width:18%; min-width:220px; box-shadow:0 2px 8px rgba(0,0,0,0.1); display:flex; flex-direction:column; transition:transform 0.3s ease; margin-bottom:40px; }
+.event-card:hover { transform:scale(1.05); }
+.event-flyer { width:100%; height:auto; object-fit:cover; display:block; }
+.event-info { padding:15px; flex-grow:1; }
+.event-info h3 { margin:0 0 10px; color:#3b0066; font-size:1.2rem; }
+.event-date-time { font-weight:bold; color:#313131; margin-bottom:10px; font-size:0.9rem; }
+
+
+/* Call to Action Box */
+.cta-box { text-align:center; margin-top:40px; background:#3b0066; color:#fff; padding:30px; border-radius:8px; box-shadow:0 2px 8px rgba(0,0,0,0.2); }
+.cta-box h3 { font-size:1.8rem; margin-bottom:10px; color:gold; }
+.cta-box p { font-size:1rem; margin-bottom:20px; }
+.cta-button { display:inline-block; background:gold; color:#3b0066; padding:12px 25px; border-radius:5px; text-decoration:none; font-weight:bold; transition:background 0.3s; }
+.cta-button:hover { background:#fff; color:#3b0066; }
+
+.calendar-embed {
+  position: relative;
+  z-index: 2; 
+  width: 100%;
+  max-width: 1000px;
+  margin: 0 auto;
   border-radius: 8px;
   overflow: hidden;
-  width: 18%;                /* About A5 size width on desktop */
-  min-width: 220px;          /* Prevent too narrow */
-  box-shadow: 0 2px 8px rgba(0,0,0,0.1);
-  display: flex;
-  flex-direction: column;    /* Stack flyer and info vertically */
-  transition: transform 0.3s ease; /* Hover zoom effect */
-  margin-bottom:  50px;
+  box-shadow: 0 4px 12px rgba(0,0,0,0.2);
 }
+.event-banner { position:relative; width:100%; height:auto; overflow:hidden; } .event-banner .overlay { position:absolute; inset:0; background-color:rgba(59,0,102,0.6); z-index:1; } .event-banner-text { position:absolute; top:10px; left:50%; transform:translateX(-50%); text-align:center; z-index:2; } .event-banner-title { font-family:'Montserrat',sans-serif; font-size:3rem; color:gold; font-weight:700; text-transform:uppercase; margin:0; } @media (max-width:992px) { .event-banner-title { font-size:2.5rem; } } @media (max-width:576px) { .event-banner-title { font-size:1.5rem; } } .calendar-embed { position:relative; z-index:2; width:100%; max-width:900px; margin:20px auto; border-radius:12px; overflow:hidden; box-shadow:0 4px 15px rgba(0,0,0,0.25); }
 
-/* Hover Zoom Effect on Event Cards */
-.event-card:hover {
-  transform: scale(1.05);
-}
 
-/* Flyer Image Styling */
-.event-flyer {
-  width: 100%;
-  height: auto;
-  object-fit: cover;
-  display: block;
-}
+/* Responsive */
+@media (max-width:1024px) { .event-card { width:45%; min-width:unset; } }
+@media (max-width:600px) { .event-card { width:100%; } }
 
-/* Event Info Container */
-.event-info {
-  padding: 15px;
-  flex-grow: 1; /* Take up remaining space */
-}
-
-/* Event Title */
-.event-info h3 {
-  margin: 0 0 10px;
-  color: #3b0066;
-  font-size: 1.2rem;
-}
-
-/* Event Date and Time */
-.event-date-time {
-  font-weight: bold;
-  color: #d4af37;
-  margin-bottom: 10px;
-  font-size: 0.9rem;
-}
-
-/* Event Description */
-.event-description {
-  font-size: 0.95rem;
-  line-height: 1.3;
-  color: #3b0066;
-}
-
-/* === Responsive Styles === */
-
-/* Tablet and smaller: 2 cards per row */
-@media (max-width: 1024px) {
-  .event-card {
-    width: 45%;
-    min-width: unset;
-  }
-}
-
-/* Mobile: Full width cards stacked */
-@media (max-width: 600px) {
-  .event-card {
-    width: 100%;
-  }
-}
 /* EVENT PAGE DONE >>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>> */
+
+
 /* === CONTACT FORM SECTION === */
 .contact-form-section {
   background: #fdf8f0;
@@ -2287,7 +2231,7 @@ h1, h2 {
 
 /* ===== Partner Section ===== */
 .ari-partner-section {
-  background-color: #2f0755; /* Dark purple */
+  background-color:  #5b406e; /* Dark purple */
   padding: 40px 20px;
   text-align: center;
 }
@@ -2298,7 +2242,7 @@ h1, h2 {
   border: 2px solid gold;
   border-radius: 10px;
   padding: 25px;
-  box-shadow: 0 0 15px rgba(255, 215, 0, 0.5);
+  box-shadow: 0 0 15px rgba(255, 208, 0, 0.6);
 }
 
 .ari-partner-container h2 {
@@ -2396,7 +2340,7 @@ h1, h2 {
 .privacy-main-container {
   max-width: 900px;
   margin: 3rem auto;
-  background-color: rgba(28, 7, 48, 0.9); /* dark purple low opacity */
+  background-color: #5b406e; /* dark purple low opacity */
   padding: 2.5rem 3rem;
   border-radius: 10px;
   box-shadow: 0 6px 20px rgba(212, 175, 55, 0.5); /* gold shadow */
@@ -2407,7 +2351,7 @@ h1, h2 {
 
 .privacy-main-container h1,
 .privacy-main-container h2 {
-  color: #d4af37; /* gold */
+  color: gold; /* gold */
 }
 
 .privacy-main-container h1 {
@@ -2420,7 +2364,7 @@ h1, h2 {
 }
 
 .privacy-main-container a {
-  color: #d4af37; /* gold */
+  color: gold; /* gold */
   text-decoration: underline;
 }
 
@@ -2444,16 +2388,18 @@ h1, h2 {
   font-family: 'Arial', sans-serif;
   line-height: 1.6;
   color: #ffffff;
-  background: #2c003e; /* dark purple background */
+  background: #5b406e; /* dark purple background */
   padding: 20px;
   border-radius: 10px;
   box-shadow: 0 4px 15px rgba(0,0,0,0.3);
+  
 }
 
 /* Preview Snippet */
 .blog-snippet {
   max-height: 120px;
   overflow: hidden;
+  
 }
 
 /* Read More Label */
@@ -2464,7 +2410,7 @@ h1, h2 {
 .read-more-label {
   display: inline-block;
   margin-top: 10px;
-  color: #ffd700; /* gold */
+  color: gold; /* gold */
   cursor: pointer;
   font-weight: bold;
 }
@@ -2487,7 +2433,7 @@ h1, h2 {
 
 /* Headings */
 h1, h2, h3 {
-  color: #ffd700; /* gold headings */
+  color: gold; /* gold headings */
 }
 
 h2 {
@@ -2501,7 +2447,7 @@ h3 {
 
 /* Links */
 a {
-  color: #ffd700;
+  color: gold;
   text-decoration: none;
 }
 
