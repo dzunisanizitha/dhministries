@@ -1675,17 +1675,17 @@ h1, h2 {
 
 /* OUTREACH MINISTRY SECTION - GOLD BACKGROUND */
 .ministry.outreach-ministry { background-color:#bb9721; color:#3b0066; padding:25px; border-radius:16px; display:flex; gap:30px; align-items:flex-start; box-shadow:0 10px 25px rgba(0,0,0,0.25); overflow:hidden; }
-.ministry.outreach-ministry .ministry-text h2 { color:#3b0066; font-size:2rem; margin-bottom:15px; font-weight: 900; }
-.ministry.outreach-ministry .ministry-text p { color:#3b0066; font-size:1rem; line-height:1.6; }
+.ministry.outreach-ministry .ministry-text h2 { color:#54018f; font-size:2rem; margin-bottom:15px; font-weight: 900; }
+.ministry.outreach-ministry .ministry-text p { color:#54018f; font-size:1rem; line-height:1.6; }
 .ministry.outreach-ministry .ministry-video { flex:1; max-width:50%; }
 .ministry.outreach-ministry .ministry-video img { width:100%; border-radius:12px; object-fit:cover; aspect-ratio:16/9; box-shadow: 0 10px 12px rgba(8, 0, 10, 0.25);}
 @media (max-width:992px) { .ministry.outreach-ministry { flex-direction:column; align-items:center; } .ministry.outreach-ministry .ministry-video { max-width:100%; margin-top:20px; } }
 
 /* CALL TO ACTION -MINISTRY SECTION - GOLD BACKGROUND */
-.ministries-cta { background-color:#5b406e; color:#dbb22c; text-align:center; padding:50px 20px;  box-shadow:0 10px 25px rgba(0,0,0,0.25); margin-top:60px; }
+.ministries-cta { background-color:#5b406e; color:gold; text-align:center; padding:50px 20px;  box-shadow:0 10px 25px rgba(0,0,0,0.25); margin-top:60px; }
 .ministries-cta .cta-content h2 { font-size:2.2rem; margin-bottom:20px; }
 .ministries-cta .cta-content p { font-size:1rem; line-height:1.6; margin-bottom:30px; color:#fff; }
-.ministries-cta .cta-button { display:inline-block; padding:15px 30px; background-color:#dbb22c; color:#3b0066; font-weight:700; text-decoration:none; border-radius:8px; transition:all 0.3s ease; }
+.ministries-cta .cta-button { display:inline-block; padding:15px 30px; background-color:gold; color:#3b0066; font-weight:700; text-decoration:none; border-radius:8px; transition:all 0.3s ease; }
 .ministries-cta .cta-button:hover { background-color:#f1c74a; transform:translateY(-3px); box-shadow:0 8px 20px rgba(0,0,0,0.3); }
 @media (max-width:768px) { .ministries-cta .cta-content h2 { font-size:1.8rem; } .ministries-cta .cta-content p { font-size:0.95rem; } .ministries-cta .cta-button { padding:12px 25px; font-size:0.95rem; } }
 
@@ -1726,7 +1726,7 @@ h1, h2 {
   justify-content: center;
 }
 
-.ministry-text h2 { font-size: 2rem; margin-bottom: 15px; color: #dbb22c; }
+.ministry-text h2 { font-size: 2rem; margin-bottom: 15px; color: gold; }
 .ministry-text p { font-size: 1rem; margin-bottom: 10px; }
 
 .video-summary {
