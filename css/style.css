@@ -1513,31 +1513,43 @@ h2 {
   .verse-text  { font-size: 1.2rem; }
 }
 
+.cta-title {
+  font-size: 2.5rem;
+  font-weight: 900;
+  text-align: center;
+  color: var(--brand-dark-purple);
+  margin-bottom: 2rem;
+  line-height: 1.2;
+  text-transform: uppercase; /* optional for more emphasis */
+}
+
+
 
 .testimonies-videos {
   display: flex;
-  gap: 2rem;
-  justify-content: center;
   flex-wrap: wrap;
-  margin-top:  50px;
-  margin-bottom: -50px;
+  justify-content: center;
+  gap: 2rem; /* clean spacing between videos */
+  margin-top: 50px;
+  margin-bottom: 50px;
 }
 
 /* Base styles for all videos */
 .testimony-video {
-  flex: 1 1 320px;
-  max-width: 320px;
+  flex: 1 1 320px;  /* flexible but min width 320px */
+  max-width: 340px;
   padding: 1rem;
   border-radius: 12px;
   color: var(--brand-dark-purple);
   display: flex;
   flex-direction: column;
   align-items: center;
+  background: var(--brand-white);
 }
 
 .testimony-video iframe {
   width: 100%;
-  height: 180px;
+  height: 200px;
   border-radius: 8px;
   margin-bottom: 0.75rem;
 }
@@ -1548,26 +1560,15 @@ h2 {
   font-style: italic;
 }
 
-/* Video 1: Dark purple bg, gold border, white text */
+/* Video variations */
 .video-style-1 {
-  background-color: var(--brand-white);
-  border: 3px solid var(--brand-dark-purple);
-  color: var(--brand-white);
-  box-shadow: 0 6px 20px rgba(212, 175, 55, 0.3);
-  margin-bottom: 120px;
+  border: 3px solid var(--brand-gold);
+  box-shadow: 0 6px 20px rgba(59, 10, 69, 0.5);
 }
 
-.video-style-1 iframe {
-  border-radius: 8px;
-  box-shadow: 0 0 10px var(--brand-dark-purple);
-}
-
-/* Video 2: White bg, gold drop shadow, dark purple border */
 .video-style-2 {
-  background-color: var(--brand-white);
-  border: 3px solid var(--brand-dark-purple);
-  box-shadow: 0 6px 20px rgba(212, 175, 55, 0.6);
-  margin-bottom: 120px;
+  border: 3px solid var(--brand-gold);
+  box-shadow: 0 6px 20px rgba(59, 10, 69, 0.5);
 }
 
 .video-style-2 iframe {
@@ -1575,355 +1576,196 @@ h2 {
   box-shadow: 0 0 12px var(--brand-dark-purple);
 }
 
-/* Video 3: Gold bg, dark purple border, white text */
 .video-style-3 {
-  background-color: var(--brand-white);
   border: 3px solid var(--brand-gold);
-  color: var(--brand-white);
   box-shadow: 0 6px 20px rgba(59, 10, 69, 0.5);
-  margin-bottom: 120px;
 }
 
 /* Responsive */
 @media (max-width: 900px) {
-  .testimonies-videos {
-    flex-direction: column;
-    align-items: center;
-  }
   .testimony-video {
-    max-width: 90%;
+    max-width: 90%; /* full width on tablets */
   }
 }
 
-/* Make videos mobile-friendly */
 @media (max-width: 768px) {
-  .video-style-1,
-  .video-style-2,
-  .video-style-3 {
-    margin-bottom: 10px; /* less margin for mobile */
+  .testimonies-videos {
+    flex-direction: column;
+    gap: 1.5rem; /* smaller gap for mobile */
   }
 
   .testimony-page-title {
-  font-size: 2.5rem;
-  font-weight: 900;
-}
+    font-size: 2.5rem;
+    font-weight: 900;
+  }
 
-.testimony-subtitle {
-  font-size: 1.8rem;
-}
+  .testimony-subtitle {
+    font-size: 1.8rem;
+  }
 
-.testimony-description {
-  font-size: 1rem;
-}
-}
-
-@media (max-width: 768px) {
-  .video-style-3 {
-    margin-bottom: 120px; /* less margin for mobile */
+  .testimony-description {
+    font-size: 1rem;
   }
 }
+
 /* TESTIMONY PAGE STYLING DONE>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>> */
 
 /* =====================================================
    MINISTRIES PAGE CSS — FULL RESPONSIVE STYLING
-   ===================================================== */
-
-body, p {
+/* ------------------------------
+  GENERAL SETTINGS
+------------------------------ */
+body {
   font-family: 'Roboto', sans-serif;
-  margin: 0;
-  padding: 0;
-  box-sizing: border-box;
+  color: #333;
+  line-height: 1.6;
 }
 
 h1, h2 {
   font-family: 'Montserrat', sans-serif;
-  margin: 0;
 }
 
-/* =====================================================
-   BANNER SECTION
-   ===================================================== */
+.ministries-section {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 40px 15px;
+  display: flex;
+  flex-direction: column;
+  gap: 60px;
+}
+
+/* ------------------------------
+  BANNER (FULL WIDTH)
+------------------------------ */
 .ministries-banner {
   position: relative;
-  width: 100%;
-  height: 150px; /* desktop default */
+  width: 100vw;
+  margin-left: calc(-50vw + 50%);
+  height: 210px; /* taller for desktop */
   overflow: hidden;
+  margin-top: -50px;
 }
 
-.ministries-banner-img {
+.ministries-banner img {
   width: 100%;
   height: 100%;
   object-fit: cover;
   display: block;
-  opacity: 0.7;
+  opacity: 0.75;
 }
 
-.overlay {
+.banner-overlay {
   position: absolute;
   inset: 0;
-  background-color: rgba(59, 0, 102, 0.7);
-  z-index: 1;
+  background: rgba(59,0,102,0.7);
 }
 
-.ministries-banner-text {
+.banner-text {
   position: absolute;
   top: 50%;
   left: 50%;
   transform: translate(-50%, -50%);
-  z-index: 5;
   text-align: center;
-  white-space: nowrap;
+  color: #dbb22c;
 }
 
-.ministries-banner-title {
-  font-size: 2.8rem;
-  color: #dbb22c; /* gold */
-  font-weight: 700;
-  line-height: 1.1;
-  text-transform: uppercase;
-}
+.banner-text h1 { font-size: 3rem; font-weight: 700; }
+.banner-text p { font-size: 1.3rem; color: #fff; }
 
-.ministries-banner-subtitle {
-  font-size: 1.25rem;
-  color: #ffffff;
-  font-weight: 500;
-}
 
-/* Banner Responsive */
-@media (max-width: 992px) {
-  .ministries-banner {
-    height: 180px;
-  }
-  .ministries-banner-title { font-size: 2.2rem; }
-  .ministries-banner-subtitle { font-size: 1.1rem; }
-}
+/* OUTREACH MINISTRY SECTION - GOLD BACKGROUND */
+.ministry.outreach-ministry { background-color:#bb9721; color:#3b0066; padding:25px; border-radius:16px; display:flex; gap:30px; align-items:flex-start; box-shadow:0 10px 25px rgba(0,0,0,0.25); overflow:hidden; }
+.ministry.outreach-ministry .ministry-text h2 { color:#3b0066; font-size:2rem; margin-bottom:15px; font-weight: 900; }
+.ministry.outreach-ministry .ministry-text p { color:#3b0066; font-size:1rem; line-height:1.6; }
+.ministry.outreach-ministry .ministry-video { flex:1; max-width:50%; }
+.ministry.outreach-ministry .ministry-video img { width:100%; border-radius:12px; object-fit:cover; aspect-ratio:16/9; box-shadow: 0 10px 12px rgba(8, 0, 10, 0.25);}
+@media (max-width:992px) { .ministry.outreach-ministry { flex-direction:column; align-items:center; } .ministry.outreach-ministry .ministry-video { max-width:100%; margin-top:20px; } }
 
-@media (max-width: 576px) {
-  .ministries-banner {
-    height: 140px;
-  }
-  .ministries-banner-title { font-size: 1.6rem; }
-  .ministries-banner-subtitle { font-size: 0.95rem; }
-  .ministries-banner-text p {
-    white-space: normal;
-    font-size: 0.95rem;
-  }
-}
+/* CALL TO ACTION -MINISTRY SECTION - GOLD BACKGROUND */
+.ministries-cta { background-color:#5b406e; color:#dbb22c; text-align:center; padding:50px 20px;  box-shadow:0 10px 25px rgba(0,0,0,0.25); margin-top:60px; }
+.ministries-cta .cta-content h2 { font-size:2.2rem; margin-bottom:20px; }
+.ministries-cta .cta-content p { font-size:1rem; line-height:1.6; margin-bottom:30px; color:#fff; }
+.ministries-cta .cta-button { display:inline-block; padding:15px 30px; background-color:#dbb22c; color:#3b0066; font-weight:700; text-decoration:none; border-radius:8px; transition:all 0.3s ease; }
+.ministries-cta .cta-button:hover { background-color:#f1c74a; transform:translateY(-3px); box-shadow:0 8px 20px rgba(0,0,0,0.3); }
+@media (max-width:768px) { .ministries-cta .cta-content h2 { font-size:1.8rem; } .ministries-cta .cta-content p { font-size:0.95rem; } .ministries-cta .cta-button { padding:12px 25px; font-size:0.95rem; } }
 
-/* =====================================================
-   OUTREACH MINISTRY INTRO
-   ===================================================== */
-.outreach-ministry-container {
+
+/* ------------------------------
+  MINISTRY SECTIONS (HORIZONTAL)
+------------------------------ */
+.ministry {
   display: flex;
-  align-items: center;
-  gap: 40px;
-  max-width: 1200px;
-  margin: 40px auto;
-  padding: 0 15px;
-  flex-wrap: wrap;
+  gap: 30px;
+  align-items: flex-start;
+  border-radius: 16px;
+  padding: 25px;
+  background: #5b406e; /* dark purple base */
+  color: #fff;
+  box-shadow: 0 10px 25px rgba(0,0,0,0.25);
+  overflow: hidden;
 }
 
-.outreach-ministry-image img {
+/* Ensure videos/images share equal width/height */
+.ministry-video {
+  flex: 1;
+  max-width: 50%;
+}
+
+.ministry-video iframe,
+.ministry-video img {
   width: 100%;
+  aspect-ratio: 16/9; /* keep all videos/images same ratio */
   border-radius: 12px;
   object-fit: cover;
-  box-shadow: 0 8px 20px rgba(59, 10, 69, 0.3);
 }
 
-.outreach-ministry-text h2 {
-  font-size: 2.2rem;
-  color: #3b0066;
-  margin-bottom: 15px;
-}
-
-.outreach-ministry-text p {
-  font-size: 1.1rem;
-  line-height: 1.7;
-  color: #333;
-}
-
-/* Outreach Mobile */
-@media (max-width: 768px) {
-  .outreach-ministry-container {
-    flex-direction: column;
-    align-items: flex-start;
-  }
-
-  .outreach-ministry-text {
-    margin-top: 15px;
-  }
-
-  .outreach-ministry-text h2 {
-    font-size: 1.7rem;
-  }
-
-  .outreach-ministry-text p {
-    font-size: 0.95rem;
-  }
-}
-
-/* =====================================================
-   DELIVERANCE & HEALING MINISTRIES
-   ===================================================== */
-.deliverance-healing-wrapper {
-  max-width: 1200px;
-  margin: 40px auto;
-  padding: 0 15px;
-  display: flex;
-  gap: 30px;
-  flex-wrap: wrap;
-}
-
-.deliverance-ministry-box,
-.healing-ministry-box {
-  background-color: #3b0066;
-  border: 4px solid #dbb22c;
-  border-radius: 16px;
-  color: #fff;
-  flex: 1 1 48%;
+.ministry-text {
+  flex: 1;
   display: flex;
   flex-direction: column;
-  padding: 25px;
-  box-shadow: 0 0 20px rgba(212, 175, 55, 0.4);
+  justify-content: center;
 }
 
-.deliverance-ministry-content,
-.healing-ministry-content {
-  display: flex;
-  gap: 30px;
-  align-items: flex-start;
-}
+.ministry-text h2 { font-size: 2rem; margin-bottom: 15px; color: #dbb22c; }
+.ministry-text p { font-size: 1rem; margin-bottom: 10px; }
 
-.deliverance-ministry-text h2,
-.healing-ministry-text h2 {
-  font-size: 2.3rem;
-  color: #dbb22c;
-  margin-bottom: 20px;
-  font-weight: 400;
-}
-
-.deliverance-ministry-text p,
-.healing-ministry-text p {
-  font-size: 1rem;
-  line-height: 1.6;
-}
-
-/* Video Styling */
-.deliverance-ministry-video,
-.healing-ministry-video {
-  flex: 1 1 50%;
-  border-radius: 12px;
-  overflow: hidden;
-  box-shadow: 0 8px 20px rgba(212, 175, 55, 0.6);
-}
-
-.deliverance-ministry-video iframe,
-.healing-ministry-video iframe {
-  width: 100%;
-  height: 250px;
-  border-radius: 12px;
-}
-
-/* =====================================================
-   PROPHECY & WORD MINISTRIES
-   ===================================================== */
-.prophecy-word-wrapper {
-  max-width: 1200px;
-  margin: 40px auto;
-  padding: 0 15px;
-  display: flex;
-  gap: 30px;
-  flex-wrap: wrap;
-}
-
-.prophecy-ministry-box,
-.word-ministry-box {
-  background-color: #3b0066;
-  border: 4px solid #dbb22c;
-  border-radius: 16px;
+.video-summary {
+  margin-top: 10px;
+  font-size: 0.95rem;
+  text-align: center;
   color: #fff;
-  flex: 1 1 48%;
-  display: flex;
-  flex-direction: column;
-  padding: 25px;
-  box-shadow: 0 0 20px rgba(212, 175, 55, 0.4);
 }
 
-.prophecy-ministry-content,
-.word-ministry-content {
-  display: flex;
-  gap: 30px;
-  align-items: flex-start;
+/* ------------------------------
+  RESPONSIVE DESKTOP/TABLET
+------------------------------ */
+@media (max-width: 1200px) {
+  .ministries-banner { height: 250px; }
+  .banner-text h1 { font-size: 2.5rem; }
+  .banner-text p { font-size: 1.2rem; }
 }
 
-.prophecy-ministry-text h2,
-.word-ministry-text h2 {
-  font-size: 2.3rem;
-  color: #dbb22c;
-  margin-bottom: 20px;
-  font-weight: 400;
-}
-
-.prophecy-ministry-text p,
-.word-ministry-text p {
-  font-size: 1rem;
-  line-height: 1.6;
-}
-
-.prophecy-ministry-video,
-.word-ministry-video {
-  flex: 1 1 50%;
-  border-radius: 12px;
-  overflow: hidden;
-  box-shadow: 0 8px 20px rgba(212, 175, 55, 0.6);
-}
-
-.prophecy-ministry-video iframe,
-.word-ministry-video iframe {
-  width: 100%;
-  height: 250px;
-  border-radius: 12px;
-}
-
-/* =====================================================
-   RESPONSIVE — TABLET & MOBILE
-   ===================================================== */
 @media (max-width: 992px) {
-  /* Optional tablet adjustments */
-  .ministries-banner-title { font-size: 2.2rem; }
-  .ministries-banner-subtitle { font-size: 1.1rem; }
-}
-
-@media (max-width: 768px) {
-  /* Stack videos under text for all ministries */
-  .deliverance-ministry-content,
-  .healing-ministry-content,
-  .prophecy-ministry-content,
-  .word-ministry-content {
+  .ministry {
     flex-direction: column;
+    align-items: center;
   }
-
-  .deliverance-ministry-video,
-  .healing-ministry-video,
-  .prophecy-ministry-video,
-  .word-ministry-video {
-    flex: 1 1 100%;
-    margin-top: 15px;
-    height: 200px; /* adjust as needed */
-  }
-
-  /* Outreach stack text under image */
-  .outreach-ministry-container {
-    flex-direction: column;
-    align-items: flex-start;
+  .ministry-video {
+    max-width: 100%;
+    margin-top: 20px;
   }
 }
 
 @media (max-width: 576px) {
-  .ministries-banner-title { font-size: 1.6rem; }
-  .ministries-banner-subtitle { font-size: 0.95rem; }
-  .ministries-banner-text p { font-size: 0.95rem; }
+  .ministries-banner { height: 180px; }
+  .banner-text h1 { font-size: 1.8rem; }
+  .banner-text p { font-size: 0.9rem; }
+  .ministry-text h2 { font-size: 1.5rem; }
+  .ministry-text p { font-size: 0.9rem; }
+  .ministry-video iframe,
+  .ministry-video img { height: 200px; }
 }
+
 /* === MINISTRY SECTION DONE>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>> === */
 
 /* === EVENT SECTION CONTAINER === */
