@@ -1715,9 +1715,12 @@ h1, h2 {
 .ministry-video img {
   width: 100%;
   aspect-ratio: 16/9; /* keep all videos/images same ratio */
-  border-radius: 12px;
   object-fit: cover;
+  border-radius: 15px 15px 15px 15px; /* round corners */
+  box-shadow: 5px 5px 10px rgba(238, 196, 7, 0.2); /* x-offset, y-offset, blur, color */
 }
+
+
 
 .ministry-text {
   flex: 1;
