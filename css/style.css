@@ -601,7 +601,7 @@ html, body {
 
 
 /* =============================== Broadcast Announcement Section =============================== */
-.ari-broadcast-ad { background: #2f0755; color: #ffffff; padding: 1rem 1.5rem; border-radius: 16px; max-width: 100%; margin: 3rem auto; overflow: hidden; position: relative; font-family: 'Roboto', sans-serif; box-shadow: 0 12px 30px rgba(0,0,0,0.3); }
+.ari-broadcast-ad { background: #2f0755; color: #ffffff; padding: 1rem 1.5rem; border-radius: none; max-width: 100%; margin: 3rem auto; overflow: hidden; position: relative; font-family: 'Roboto', sans-serif; box-shadow: 0 12px 30px rgba(0,0,0,0.3); }
 
 .ari-broadcast-wrapper { display: flex; align-items: center; gap: 20px; }
 
