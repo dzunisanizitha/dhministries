@@ -452,38 +452,180 @@ html, body {
 
 
 /* ABOUT PAGE BEGINS HERE......./>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>*?
-/* =============================== Pastor Intro Section =============================== */
-body { font-family:'Roboto',sans-serif; margin:0; padding:0; color:#333; }
-.pastor-section { background-color:#fff; padding:60px 20px; font-family:'Roboto',sans-serif; }
-.pastor-container { max-width:1200px; margin:0 auto; display:grid; grid-template-columns:1fr 1.3fr; gap:50px; align-items:center; text-align:left; font-family:'Roboto',sans-serif; }
-.pastor-photo img { width:100%; max-width:450px; border-radius:20px; box-shadow:0 12px 25px rgba(0,0,0,0.2); display:block; margin:0 auto; transition: transform 0.3s ease; }
-.pastor-photo img:hover { transform:scale(1.03); }
-.pastor-info { display:flex; flex-direction:column; gap:20px; font-family:'Roboto',sans-serif; }
-.pastor-name { font-size:2.4rem; font-weight:700; color: #2f0755 !important;; border-left:6px solid #d4af37; padding-left:14px; text-transform:uppercase; letter-spacing:1px; margin:0; font-family:'Roboto',sans-serif; }
-.pastor-intro { font-size:1.1rem; line-height:1.8; font-style:italic; color:#444; font-family:'Roboto',sans-serif; }
-.pastor-mission { font-size:1.05rem; line-height:1.75; color:#2f0755; font-weight:500; background:#f4f0fa; padding:18px 22px; border-left:5px solid #d4af37; border-radius:12px; box-shadow:0 4px 10px rgba(0,0,0,0.1); font-family:'Roboto',sans-serif; }
-.pastor-info strong { color:#2f0755; font-family:'Roboto',sans-serif; }
-.vision-box { margin-top:20px; background:#f9f9f9; padding:22px; border-left:6px solid #d4af37; border-radius:12px; box-shadow:0 4px 12px rgba(0,0,0,0.2); font-size:1rem; font-family:'Roboto',sans-serif; }
-.vision-box a { display:inline-block; margin-top:10px; color:#2f0755; font-weight:bold; text-decoration:none; transition:color 0.3s; font-family:'Roboto',sans-serif; }
-.vision-box a:hover { color:#2f0755; }
+/* =============================== Pastor Unified Section =============================== */
+/* =============================== Pastor Unified Section =============================== */
+.pastor-section {
+  background: linear-gradient(135deg, #faf8ff 0%, #fff 100%);
+  padding: 70px 20px;
+  display: flex;
+  justify-content: center;
+  font-family: 'Roboto', sans-serif;
+}
 
-@media(max-width:1024px){.pastor-container{grid-template-columns:1fr;text-align:center;gap:40px;font-family:'Roboto',sans-serif;}.pastor-name{border-left:none;border-bottom:4px solid #d4af37;display:inline-block;padding:0 0 8px 0;font-family:'Roboto',sans-serif;}.pastor-mission,.vision-box{text-align:left;padding:15px 18px;font-family:'Roboto',sans-serif;}}
-@media(max-width:600px){.pastor-section{padding:40px 15px;font-family:'Roboto',sans-serif;}.pastor-name{font-size:2rem;font-family:'Roboto',sans-serif;}.pastor-intro,.pastor-mission{font-size:1rem;line-height:1.6;font-family:'Roboto',sans-serif;}.pastor-photo img{max-width:100%;}}
+.pastor-card {
+  display: grid;
+  grid-template-columns: 1fr 1.3fr;
+  gap: 40px;
+  max-width: 1200px;
+  background: #fff;
+  border-radius: 20px;
+  padding: 40px;
+  box-shadow: 0 10px 30px rgba(0,0,0,0.15);
+  align-items: center;
+}
+
+/* Pastor Photo */
+.pastor-photo img {
+  width: 100%;
+  max-width: 420px;
+  border-radius: 15px;
+  box-shadow: 0 10px 20px rgba(0,0,0,0.15);
+  display: block;
+  margin: 0 auto;
+  transition: transform 0.3s ease;
+}
+.pastor-photo img:hover {
+  transform: scale(1.03);
+}
+
+/* Pastor Info */
+.pastor-info {
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+  text-align: left; /* desktop text left-aligned */
+}
+
+.pastor-name {
+  font-size: 2.4rem;
+  font-weight: 700;
+  color: #2f0755;
+  border-left: 6px solid #d4af37;
+  padding-left: 14px;
+  text-transform: uppercase;
+  margin: 0;
+}
+
+/* Intro paragraph */
+.pastor-intro {
+  font-size: 1.1rem;
+  line-height: 1.8;
+  font-style: italic;
+  color: #444;
+}
+
+/* Mission + Vision Box */
+.mission-vision-box {
+  margin-top: 10px;
+  background: #f4f0fa;
+  padding: 25px;
+  border-left: 6px solid #d4af37;
+  border-radius: 14px;
+  box-shadow: 0 4px 12px rgba(0,0,0,0.15);
+}
+.mission-vision-box .mv-item {
+  margin-bottom: 20px;
+}
+.mission-vision-box h3 {
+  margin: 0 0 8px 0;
+  color: #2f0755;
+  font-size: 1.3rem;
+  display: flex;
+  align-items: center;
+  gap: 10px;
+}
+.mission-vision-box h3 i {
+  color: #d4af37;
+  font-size: 1.4rem;
+}
+.mission-vision-box p {
+  margin: 0;
+  color: #333;
+  font-size: 1rem;
+  line-height: 1.6;
+}
+
+/* Read More Button */
+.mv-btn {
+  display: inline-block;
+  margin-top: 8px;
+  background: #2f0755;
+  color: #fff;
+  font-weight: bold;
+  padding: 10px 18px;
+  border-radius: 8px;
+  text-decoration: none;
+  transition: background 0.3s;
+}
+.mv-btn:hover {
+  background: #d4af37;
+  color: #2f0755;
+}
+
+/* =============================== Responsive =============================== */
+@media(max-width: 1024px) {
+  .pastor-card {
+    grid-template-columns: 1fr;
+    gap: 30px;
+    padding: 30px;
+  }
+
+  /* Center only the photo */
+  .pastor-photo {
+    text-align: center;
+  }
+
+  /* Center only the name */
+  .pastor-name {
+    text-align: center;
+    border-left: none;
+    border-bottom: 4px solid #d4af37;
+    display: inline-block;
+    padding-bottom: 8px;
+  }
+
+  /* Text content remains left-aligned */
+  .pastor-intro,
+  .mission-vision-box {
+    text-align: center;
+  }
+}
+
+@media(max-width: 600px) {
+  .pastor-section { padding: 40px 15px; }
+  .pastor-card { padding: 20px; }
+  .pastor-name { font-size: 2rem; }
+  .pastor-intro, .mission-vision-box p { font-size: 1rem; line-height: 1.6; }
+  .mission-vision-box h3 { font-size: 1.1rem; }
+  .mission-vision-box h3 i { font-size: 1.2rem; }
+}
+
+
 
 
 /* =============================== Broadcast Announcement Section =============================== */
-.ari-broadcast-ad { background:linear-gradient(135deg,#2f0755,#2f0755); color:white; padding:1.5rem; border-radius:16px; max-width:100%; margin:3rem auto; overflow:hidden; position:relative; font-family:'Roboto',sans-serif; box-shadow:0 12px 30px rgba(0,0,0,0.3); }
-.ari-broadcast-marquee { display:flex; overflow:hidden; position:relative; }
-.ari-broadcast-content { display:inline-flex; white-space:nowrap; animation:ari-scroll-left 25s linear infinite; align-items:center; gap:2rem; }
-.ari-anim-text { font-weight:700; font-size:1.4rem; color:#FFD700; text-shadow:0 3px 8px rgba(0,0,0,0.5); letter-spacing:1px; }
-.ari-cta-text { font-weight:900; font-size:1.45rem; color:#ffffff; font-family:'Montserrat',sans-serif; text-transform:uppercase; text-shadow:0 0 12px #5a0fcf,0 0 20px #ff00ff,0 0 30px #5a0fcf,0 0 40px #ff00ff; padding-left:1rem; border-left:3px solid #fff; }
+.ari-broadcast-ad { background: #2f0755; color: #ffffff; padding: 1rem 1.5rem; border-radius: 16px; max-width: 100%; margin: 3rem auto; overflow: hidden; position: relative; font-family: 'Roboto', sans-serif; box-shadow: 0 12px 30px rgba(0,0,0,0.3); }
 
-/* =============================== Responsive Broadcast =============================== */
-@media (max-width:768px) { .ari-anim-text{ font-size:1.1rem; } .ari-cta-text{ font-size:1.2rem; padding-left:0.8rem; } }
-@media (max-width:480px) { .ari-anim-text{ font-size:0.9rem; } .ari-cta-text{ font-size:1rem; padding-left:0.5rem; } }
+.ari-broadcast-wrapper { display: flex; align-items: center; gap: 20px; }
 
-/* =============================== Scroll Keyframes =============================== */
-@keyframes ari-scroll-left { 0% { transform:translateX(0); } 100% { transform:translateX(-50%); } }
+.ari-broadcast-logo img { width: 60px; height: auto; border-radius: 8px; box-shadow: 0 4px 12px rgba(0,0,0,0.2); }
+
+.ari-broadcast-marquee { flex: 1; overflow: hidden; position: relative; }
+
+.ari-broadcast-content { display: inline-flex; white-space: nowrap; animation: ari-scroll-left 25s linear infinite; align-items: center; gap: 3rem; }
+
+.ari-anim-text { font-weight: 700; font-size: 1.4rem; color: #FFD700; text-shadow: 0 2px 5px rgba(0,0,0,0.5); letter-spacing: 1px; }
+
+.ari-cta-text { font-weight: 900; font-size: 1.45rem; color: #FFD700; font-family: 'Montserrat', sans-serif; text-transform: uppercase; text-shadow: 0 0 12px #FFD700, 0 0 20px #FFD700, 0 0 30px #FFD700; padding-left: 1rem; border-left: 3px solid #FFD700; animation: pulse 1.5s infinite alternate; }
+
+@keyframes ari-scroll-left { 0% { transform: translateX(0); } 100% { transform: translateX(-50%); } }
+
+@keyframes pulse { 0% { transform: scale(1); } 100% { transform: scale(1.05); } }
+
+@media(max-width: 768px) { .ari-anim-text { font-size: 1.1rem; } .ari-cta-text { font-size: 1.2rem; padding-left: 0.8rem; } .ari-broadcast-logo img { width: 50px; } }
+
+@media(max-width: 480px) { .ari-anim-text { font-size: 0.9rem; } .ari-cta-text { font-size: 1rem; padding-left: 0.5rem; } .ari-broadcast-wrapper { flex-direction: column; gap: 15px; align-items: center; } .ari-broadcast-logo img { width: 45px; } .ari-broadcast-content { justify-content: center; animation: ari-scroll-left 20s linear infinite; } }
+
 
 
 
@@ -1784,10 +1926,6 @@ h1, h2 {
   border-color: goldenrod;
   transform: scale(1.05);
 }
-
-
-
-
 /* CONTACT PAGE DONE  it also share DONATION FORM STYLE>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>> */
 
 
@@ -2308,6 +2446,43 @@ a:hover {
   }
 }
 
+
+/* BLOG SLIDESHOW ONLY */
+.blog-slideshow {
+  position: relative;
+  width: 100%;
+  max-width: 100%;
+  height: 400px; /* adjust as needed */
+  margin: 15px 0;
+  border-radius: 10px;
+  overflow: hidden;
+  box-shadow: 0 4px 15px rgba(0,0,0,0.3);
+}
+
+.blog-slideshow img {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;  
+  object-position: center;
+  border-radius: 10px;
+  opacity: 0;
+  animation: blogCrossfade 16s infinite;
+}
+
+.blog-slideshow img:nth-child(1) { animation-delay: 0s; }
+.blog-slideshow img:nth-child(2) { animation-delay: 4s; }
+.blog-slideshow img:nth-child(3) { animation-delay: 8s; }
+.blog-slideshow img:nth-child(4) { animation-delay: 12s; }
+
+@keyframes blogCrossfade {
+  0%, 100% { opacity: 1; }   /* keep first image visible during loop */
+  5%       { opacity: 1; }   /* fade in */
+  25%      { opacity: 1; }   /* hold */
+  30%      { opacity: 1; }   /* fade out */
+}
 
 
 
