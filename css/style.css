@@ -453,24 +453,23 @@ html, body {
 
 /* ABOUT PAGE BEGINS HERE......./>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>*?
 /* =============================== Pastor Unified Section =============================== */
-/* =============================== Pastor Unified Section =============================== */
+/* =============================== Pastor Section Redesigned =============================== */
 .pastor-section {
-  background: linear-gradient(135deg, #faf8ff 0%, #fff 100%);
+  background: #faf8ff;
   padding: 70px 20px;
-  display: flex;
-  justify-content: center;
   font-family: 'Roboto', sans-serif;
 }
 
 .pastor-card {
   display: grid;
-  grid-template-columns: 1fr 1.3fr;
-  gap: 40px;
+  grid-template-columns: 1fr 1.5fr;
+  gap: 50px;
   max-width: 1200px;
+  margin: 0 auto;
+  padding: 40px;
   background: #fff;
   border-radius: 20px;
-  padding: 40px;
-  box-shadow: 0 10px 30px rgba(0,0,0,0.15);
+  box-shadow: 0 12px 30px rgba(0,0,0,0.15);
   align-items: center;
 }
 
@@ -493,7 +492,7 @@ html, body {
   display: flex;
   flex-direction: column;
   gap: 20px;
-  text-align: left; /* desktop text left-aligned */
+  text-align: left;
 }
 
 .pastor-name {
@@ -506,7 +505,6 @@ html, body {
   margin: 0;
 }
 
-/* Intro paragraph */
 .pastor-intro {
   font-size: 1.1rem;
   line-height: 1.8;
@@ -516,16 +514,18 @@ html, body {
 
 /* Mission + Vision Box */
 .mission-vision-box {
-  margin-top: 10px;
+  margin-top: 20px;
   background: #f4f0fa;
   padding: 25px;
   border-left: 6px solid #d4af37;
   border-radius: 14px;
   box-shadow: 0 4px 12px rgba(0,0,0,0.15);
 }
+
 .mission-vision-box .mv-item {
   margin-bottom: 20px;
 }
+
 .mission-vision-box h3 {
   margin: 0 0 8px 0;
   color: #2f0755;
@@ -534,10 +534,12 @@ html, body {
   align-items: center;
   gap: 10px;
 }
+
 .mission-vision-box h3 i {
   color: #d4af37;
   font-size: 1.4rem;
 }
+
 .mission-vision-box p {
   margin: 0;
   color: #333;
@@ -548,11 +550,11 @@ html, body {
 /* Read More Button */
 .mv-btn {
   display: inline-block;
-  margin-top: 8px;
+  margin-top: 10px;
   background: #2f0755;
   color: #fff;
   font-weight: bold;
-  padding: 10px 18px;
+  padding: 10px 20px;
   border-radius: 8px;
   text-decoration: none;
   transition: background 0.3s;
@@ -570,32 +572,27 @@ html, body {
     padding: 30px;
   }
 
-  /* Center only the photo */
+  /* Keep photo centered */
   .pastor-photo {
     text-align: center;
   }
 
-  /* Center only the name */
-  .pastor-name {
-    text-align: center;
-    border-left: none;
-    border-bottom: 4px solid #d4af37;
-    display: inline-block;
-    padding-bottom: 8px;
-  }
-
-  /* Text content remains left-aligned */
+  /* ALL text stays left-aligned for mobile readability */
+  .pastor-name,
   .pastor-intro,
-  .mission-vision-box {
-    text-align: center;
+  .mission-vision-box,
+  .mission-vision-box p,
+  .mission-vision-box h3 {
+    text-align: left !important;
   }
 }
-
 @media(max-width: 600px) {
   .pastor-section { padding: 40px 15px; }
-  .pastor-card { padding: 20px; }
+  .pastor-card { padding: 20px; gap: 25px; }
+
+  /* Font adjustments */
   .pastor-name { font-size: 2rem; }
-  .pastor-intro, .mission-vision-box p { font-size: 1rem; line-height: 1.6; }
+  .pastor-intro, .mission-vision-box p { font-size: 1rem; line-height: 1.5; }
   .mission-vision-box h3 { font-size: 1.1rem; }
   .mission-vision-box h3 i { font-size: 1.2rem; }
 }
