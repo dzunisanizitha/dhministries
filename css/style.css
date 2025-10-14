@@ -1168,6 +1168,20 @@ h2 {
   font-size: 1rem;
 }
 
+/* WHO ARE WE>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>> */
+.about-extra { background-color:#3e1b5f; color:#ffffff; text-align:center; padding:80px 20px; position:relative; overflow:hidden; } 
+.about-extra .sub-section { max-width:900px; margin:0 auto; } 
+.about-extra h2 { font-family:'Montserrat',sans-serif; font-size:2.5rem; color:#d4af37; text-transform:uppercase; margin-bottom:20px; letter-spacing:1px; } 
+.about-extra h2::after { content:""; display:block; width:80px; height:3px; background-color:#d4af37; margin:10px auto 30px auto; border-radius:3px; } 
+.about-extra p { font-family:'Roboto',sans-serif; font-size:1.1rem; line-height:1.8; color:#ffffff; opacity:0.95; margin:0 auto; max-width:850px; } 
+.about-extra::before { content:""; position:absolute; top:-100px; left:-100px; width:300px; height:300px; background:radial-gradient(circle,rgba(212,175,55,0.25) 0%,transparent 70%); filter:blur(100px); z-index:0; } 
+.about-extra::after { content:""; position:absolute; bottom:-100px; right:-100px; width:300px; height:300px; background:radial-gradient(circle,rgba(255,255,255,0.15) 0%,transparent 70%); filter:blur(120px); z-index:0; } 
+.about-extra * { position:relative; z-index:1; } 
+@media (max-width:768px) { .about-extra { padding:60px 20px; text-align:left; } .about-extra h2::after { margin:10px 0 30px 0; } .about-extra h2 { font-size:2rem; } .about-extra p { font-size:1rem; } }
+
+
+
+
 
 /* SAW A SEED   button STYLING>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>> */
 .sow-seed-btn {
