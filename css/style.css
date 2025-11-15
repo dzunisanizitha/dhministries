@@ -255,13 +255,18 @@ body { font-family: Arial, sans-serif; }
 /* ===== NORMAL MOBILE ===== */
 @media (max-width: 520px) {
   .logo { height: 30px; }
-  .site-name { font-size: 0.80rem; }
+  .site-name { font-size: 0.80rem; margin-left: -15px;}
   .container { padding: 8px 10px; }
 
-  .site-subname, .mobile-site-subname {
+  .site-subname  {
     font-size: 0.58rem;
-    letter-spacing: 0.65rem;
+    letter-spacing: 0.50rem;
+    margin-left: -15px;
   }
+
+  .mobile-site-subname{     
+    font-size: 0.58rem;
+    letter-spacing: 0.50rem;}
 }
 
 /* ===== SMALL MOBILE (FULL RESPONSIVE CONTROL) ===== */
