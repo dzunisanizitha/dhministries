@@ -255,18 +255,16 @@ body { font-family: Arial, sans-serif; }
 /* ===== NORMAL MOBILE ===== */
 @media (max-width: 520px) {
   .logo { height: 30px; }
-  .site-name { font-size: 0.92rem; margin-left: -15px;}
+  .site-name { font-size: 0.80rem; margin-left: -15px;}
   .container { padding: 8px 10px; }
 
   .site-subname  {
-    font-size: 0.57rem;
-    letter-spacing: 0.55rem;
+    font-size: 0.58rem;
     margin-left: -15px;
   }
 
   .mobile-site-subname{     
-    font-size: 0.57rem;
-    letter-spacing: 0.55rem;}
+    font-size: 0.58rem;}
 }
 
 /* ===== SMALL MOBILE (FULL RESPONSIVE CONTROL) ===== */
@@ -315,6 +313,7 @@ body { font-family: Arial, sans-serif; }
   }
   .logo {  margin-bottom: 18px;}
 }
+
 
 
 
