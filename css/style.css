@@ -121,6 +121,7 @@ body { font-family: Arial, sans-serif; }
   height: 24px;
   position: relative;
   cursor: pointer;
+
 }
 .hamburger span {
   position: absolute;
@@ -176,15 +177,20 @@ body { font-family: Arial, sans-serif; }
 .logo-sm { height:40px; width:auto; }
 
 .mobile-brand-text { display:flex; flex-direction: column; }
-.mobile-site-name { color:var(--gold); font-weight:800; font-size:0.95rem; white-space:nowrap; }
+.mobile-site-name { color:var(--gold); font-weight:800; font-size:0.80rem; white-space:nowrap; }
 .mobile-site-subname {
   font-size: 0.55rem; /* smaller letters */
+  color: gold;
   text-transform: uppercase;
   letter-spacing: 0.35rem; /* spacing to match site name width */
   text-align: justify;
   white-space: nowrap;
   display: inline-block;
+  white-space: nowrap !important;
+  overflow: visible !important;  
 }
+
+
 .mobile-site-subname::after { content:""; display:inline-block; width:100%; }
 
 /* MOBILE LINKS */
@@ -195,7 +201,7 @@ body { font-family: Arial, sans-serif; }
 
 /* SOCIAL ICONS AT BOTTOM */
 .mobile-socials { display:flex; justify-content:center; gap:15px; margin-bottom:15px; flex-shrink:0; }
-.mobile-socials a { color:var(--gold); font-size:1.5rem; transition:.3s; }
+.mobile-socials a { color:var(--gold); font-size:1.5rem; transition:.3s; margin-bottom: 15px; }
 .mobile-socials a:hover { transform:scale(1.2); color:var(--white); }
 
 /* ===== TABLETS / SMALL LAPTOPS ===== */
