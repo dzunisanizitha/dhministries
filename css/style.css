@@ -29,13 +29,14 @@ body { font-family: Arial, sans-serif; }
   gap: 15px;
 }
 
-/* BRAND */
+/* BRAND - move further left */
 .brand {
   display: flex;
   align-items: center;
   gap: 8px;
   flex-shrink: 0;
   min-width: 0;
+  margin-left: -25px; /* move left as requested */
 }
 
 .logo { height: 36px; flex-shrink: 0; }
@@ -48,57 +49,32 @@ body { font-family: Arial, sans-serif; }
   align-items: flex-start;
 }
 
-/* SITE NAME */
+/* BASE - default for desktop */
 .site-name {
-  font-size: 0.95rem;
+  font-size: 0.70rem;
   font-weight: 800;
   color: var(--purple);
   white-space: nowrap;
   overflow: hidden;
 }
 
-/* SITE SUBNAME - RESPONSIVE STRETCH */
 .site-subname, .mobile-site-subname {
-  font-weight: 600;
+  font-size: 0.60rem;
   color: var(--purple);
+  text-transform: uppercase;
   white-space: nowrap;
   overflow: hidden;
   display: inline-block;
   width: 100%;
-  text-align: left;
+  text-align: justify;
+  letter-spacing: 0.50rem; /* default spacing */
 }
 
-/* Letter spacing for different devices */
-/* Desktop */
-@media (min-width:901px){
-  .site-subname, .mobile-site-subname {
-    font-size: 0.6rem;
-    letter-spacing: calc((100% - 7ch) / 11); /* 7 letters? Adjust to letters in MINISTRIES */
-  }
-}
-
-/* Tablet */
-@media (max-width:900px) and (min-width:521px){
-  .site-subname, .mobile-site-subname {
-    font-size: 0.55rem;
-    letter-spacing: calc((100% - 7ch) / 11);
-  }
-}
-
-/* Small screens */
-@media (max-width:520px) and (min-width:401px){
-  .site-subname, .mobile-site-subname {
-    font-size: 0.5rem;
-    letter-spacing: calc((100% - 7ch) / 11);
-  }
-}
-
-/* Extra small screens */
-@media (max-width:400px){
-  .site-subname, .mobile-site-subname {
-    font-size: 0.45rem;
-    letter-spacing: calc((100% - 7ch) / 11);
-  }
+/* Trick for stretching last line */
+.site-subname::after, .mobile-site-subname::after {
+  content: "";
+  display: inline-block;
+  width: 100%;
 }
 
 /* DESKTOP NAV */
@@ -108,16 +84,34 @@ body { font-family: Arial, sans-serif; }
   gap: 20px;
   list-style: none;
 }
+/* DESKTOP MENU – MODERN HOVER EFFECT (NO LINES) */
 .main-nav a {
+  position: relative;
   color: var(--purple);
-  text-decoration: none;
   font-weight: 700;
   font-size: 0.95rem;
-  padding: 6px 0;
-  border-bottom: 2px solid transparent;
-  transition: 0.25s;
+  padding: 6px 8px;
+  text-decoration: none;
+  transition: 0.25s ease;
 }
-.main-nav a:hover { border-bottom-color: var(--gold); }
+/* DESKTOP MENU – MODERN HOVER EFFECT (NO LINES) */
+.main-nav a {
+  position: relative;
+  color: var(--purple);
+  font-weight: 700;
+  font-size: 0.95rem;
+  padding: 6px 8px;
+  text-decoration: none;
+  transition: 0.25s ease;
+}
+
+/* Remove underline completely */
+.main-nav a:hover {
+  color: rgb(197, 156, 209);                      /* soft color change */
+  transform: translateY(-1px);             /* slight lift */
+}
+
+
 
 /* HAMBURGER */
 .menu-toggle { display: none; }
@@ -183,6 +177,15 @@ body { font-family: Arial, sans-serif; }
 
 .mobile-brand-text { display:flex; flex-direction: column; }
 .mobile-site-name { color:var(--gold); font-weight:800; font-size:0.95rem; white-space:nowrap; }
+.mobile-site-subname {
+  font-size: 0.55rem; /* smaller letters */
+  text-transform: uppercase;
+  letter-spacing: 0.35rem; /* spacing to match site name width */
+  text-align: justify;
+  white-space: nowrap;
+  display: inline-block;
+}
+.mobile-site-subname::after { content:""; display:inline-block; width:100%; }
 
 /* MOBILE LINKS */
 .mobile-links { list-style:none; padding:0; margin-top:20px; flex-grow:1; }
@@ -195,29 +198,88 @@ body { font-family: Arial, sans-serif; }
 .mobile-socials a { color:var(--gold); font-size:1.5rem; transition:.3s; }
 .mobile-socials a:hover { transform:scale(1.2); color:var(--white); }
 
-/* RESPONSIVE BREAKPOINTS */
+/* ===== TABLETS / SMALL LAPTOPS ===== */
+@media (max-width: 900px) {
+  .main-nav { display: none; }
+  .hamburger { display: flex; }
+  .logo { height: 34px; }
 
-/* TABLET / MOBILE NAV */
-@media (max-width:900px){
-  .main-nav{display:none;}
-  .hamburger{display:flex;}
-  .logo{height:34px;}
-  .site-name{font-size:0.9rem;}
+  .site-name { font-size: 0.85rem; }
+  .site-subname, .mobile-site-subname {
+    font-size: 0.50rem;
+    letter-spacing: 0.97rem;
+  }
 }
 
-/* SMALL SCREENS */
-@media (max-width:520px){
-  .logo{height:30px;}
-  .site-name{font-size:0.85rem;}
-  .container { padding:8px 10px; }
+/* ===== LARGE MOBILE / PHABLETS ===== */
+@media (max-width: 768px) {
+  .logo { height: 32px; }
+  .site-name { font-size: 0.82rem; }
+
+  .site-subname, .mobile-site-subname {
+    font-size: 0.48rem;
+    letter-spacing: 0.85rem;
+  }
 }
 
-/* EXTRA SMALL SCREENS */
-@media (max-width:400px){
-  .logo{height:28px;}
-  .site-name{font-size:0.8rem;}
-  .container { padding:6px 8px; }
+/* ===== NORMAL MOBILE ===== */
+@media (max-width: 520px) {
+  .logo { height: 30px; }
+  .site-name { font-size: 0.80rem; }
+  .container { padding: 8px 10px; }
+
+  .site-subname, .mobile-site-subname {
+    font-size: 0.58rem;
+    letter-spacing: 0.82rem;
+  }
 }
+
+/* ===== SMALL MOBILE (FULL RESPONSIVE CONTROL) ===== */
+@media (max-width: 400px) {
+  .logo { height: 28px; }
+  .site-name { font-size: 0.85rem; }
+  .container { padding: 6px 8px; }
+
+  .site-subname, .mobile-site-subname {
+    font-size: 0.42rem;
+    letter-spacing: 0.95rem;
+  }
+}
+
+/* ===== iPHONE-SE / 360–375 width ===== */
+@media (max-width: 375px) {
+  .site-name { font-size: 0.70rem; }
+
+  .site-subname, .mobile-site-subname {
+    font-size: 0.45rem;
+    letter-spacing: 0.74rem;
+  }
+}
+
+/* ===== SUPER SMALL / 320px AND BELOW ===== */
+@media (max-width: 320px) {
+  .site-name { font-size: 0.68rem; }
+
+  .site-subname, .mobile-site-subname {
+    font-size: 0.40rem;
+    letter-spacing: 0.60rem;
+  }
+}
+
+@media (min-width: 1151px) {
+  .brand-text {
+    width: auto;          /* allow natural width */
+    min-width: 200px;     /* give the subname more room */
+  }
+
+  .site-subname {
+    margin-left: -28px;   /* your alignment value */
+    letter-spacing: 1.099rem;
+    overflow: visible;    /* critical: stop cutting the S */
+  }
+  .logo {  margin-bottom: 18px;}
+}
+
 
 
 /* HEADER STYLING DONE!>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>> */
