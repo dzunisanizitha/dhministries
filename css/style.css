@@ -20,98 +20,57 @@ body { font-family: Arial, sans-serif; }
 
 /* CONTAINER */
 .container {
-  max-width: 1150px;
-  margin: 0 auto;
-  padding: 8px 15px;
-  display: flex;
-  align-items: center;
-  justify-content: space-between;
-  gap: 15px;
+    display: flex;
+    align-items: center;       /* vertical center everything */
+    justify-content: space-between; /* push brand left, nav right */
+    padding: 8px 40px;         /* add extra horizontal padding */
 }
 
-/* BRAND - move further left */
+/* BRAND */
 .brand {
   display: flex;
   align-items: center;
-  gap: 8px;
+  gap: 10px;
   flex-shrink: 0;
   min-width: 0;
-  margin-left: -25px; /* move left as requested */
+  margin-left: 0;     
 }
 
-.logo { height: 36px; flex-shrink: 0; }
+.logo { height: 50px; flex-shrink: 0; margin-bottom: 15px; }
 
 .brand-text {
   display: flex;
   flex-direction: column;
   line-height: 1;
-  min-width: 0;
   align-items: flex-start;
 }
 
-/* BASE - default for desktop */
+/* SITE NAME */
 .site-name {
-  font-size: 0.70rem;
   font-weight: 800;
   color: var(--purple);
   white-space: nowrap;
   overflow: hidden;
 }
 
-.site-subname, .mobile-site-subname {
-  font-size: 0.60rem;
-  color: var(--purple);
-  text-transform: uppercase;
-  white-space: nowrap;
-  overflow: hidden;
-  display: inline-block;
-  width: 100%;
-  text-align: justify;
-  letter-spacing: 0.50rem; /* default spacing */
-}
-
-/* Trick for stretching last line */
-.site-subname::after, .mobile-site-subname::after {
-  content: "";
-  display: inline-block;
-  width: 100%;
-}
+.desktop-name { display: inline; }
+.mobile-name { display: none; }
 
 /* DESKTOP NAV */
 .main-nav { margin-left: auto; }
-.main-nav ul {
-  display: flex;
-  gap: 20px;
-  list-style: none;
-}
-/* DESKTOP MENU – MODERN HOVER EFFECT (NO LINES) */
+.main-nav ul { display: flex; gap: 25px; list-style: none; }
 .main-nav a {
-  position: relative;
   color: var(--purple);
   font-weight: 700;
-  font-size: 0.95rem;
+  font-size: 1rem;
   padding: 6px 8px;
   text-decoration: none;
   transition: 0.25s ease;
 }
-/* DESKTOP MENU – MODERN HOVER EFFECT (NO LINES) */
-.main-nav a {
-  position: relative;
-  color: var(--purple);
-  font-weight: 700;
-  font-size: 0.95rem;
-  padding: 6px 8px;
-  text-decoration: none;
-  transition: 0.25s ease;
-}
-
-/* Remove underline completely */
 .main-nav a:hover {
-  color: rgb(197, 156, 209);                      /* soft color change */
-  transform: translateY(-1px);             /* slight lift */
+  color: rgb(197, 156, 209);
+  transform: translateY(-1px);
 }
-
-
 
 /* HAMBURGER */
 .menu-toggle { display: none; }
@@ -121,7 +80,6 @@ body { font-family: Arial, sans-serif; }
   height: 24px;
   position: relative;
   cursor: pointer;
-
 }
 .hamburger span {
   position: absolute;
@@ -135,7 +93,6 @@ body { font-family: Arial, sans-serif; }
 .hamburger span:nth-child(1){top:2px;} 
 .hamburger span:nth-child(2){top:10px;} 
 .hamburger span:nth-child(3){top:18px;}
-
 #menu-toggle:checked ~ .container .hamburger span:nth-child(1){transform: translateY(8px) rotate(45deg);}
 #menu-toggle:checked ~ .container .hamburger span:nth-child(2){opacity:0;}
 #menu-toggle:checked ~ .container .hamburger span:nth-child(3){transform: translateY(-8px) rotate(-45deg);}
@@ -169,53 +126,25 @@ body { font-family: Arial, sans-serif; }
 #menu-toggle:checked ~ .mobile-sidebar { left:0; }
 
 /* MOBILE TOP */
-.mobile-top {
-  display:flex;
-  align-items:center;
-  justify-content:space-between;
-}
+.mobile-top { display:flex; align-items:center; justify-content:space-between; }
 .logo-sm { height:40px; width:auto; }
-
 .mobile-brand-text { display:flex; flex-direction: column; }
-.mobile-site-name { color:var(--gold); font-weight:800; font-size:0.75rem; white-space:nowrap; }
-.mobile-site-subname {
-  font-size: 0.55rem; /* smaller letters */
-  color: gold;
-  text-transform: uppercase;
-  letter-spacing: 0.35rem; /* spacing to match site name width */
-  text-align: justify;
-  white-space: nowrap;
-  display: inline-block;
-  white-space: nowrap !important;
-  overflow: visible !important;  
-}
+.mobile-site-name { color: var(--gold); font-weight:800; font-size:0.75rem; white-space: nowrap; }
 
-
-.mobile-site-subname::after { content:""; display:inline-block; width:100%; }
-
-/* ===== MOBILE SIDEBAR CLOSE BUTTON ===== */
+/* CLOSE BUTTON */
 .close-btn {
-  font-size: 2.2rem;       /* bigger X for better UX */
-  color: var(--gold);       /* visible against purple sidebar */
+  font-size: 2.2rem;
+  color: var(--gold);
   font-weight: bold;
   cursor: pointer;
   line-height: 1;
-  padding: 10px 12px;      /* larger clickable area */
+  padding: 10px 12px;
   transition: transform 0.2s ease, color 0.2s ease;
 }
-
-/* Hover effect for better feedback */
 .close-btn:hover {
   color: var(--white);
   transform: scale(1.2);
 }
-
-/* Optional: adjust position inside mobile-top */
-.mobile-top .close-btn {
-  position: relative;       
-  z-index: 1001;            
-}
-
 
 /* MOBILE LINKS */
 .mobile-links { list-style:none; padding:0; margin-top:20px; flex-grow:1; }
@@ -223,96 +152,29 @@ body { font-family: Arial, sans-serif; }
 .mobile-links a { display:block; color:var(--white); padding:12px 4px; font-size:1rem; font-weight:700; text-decoration:none; }
 .mobile-links a:hover { color:var(--gold); }
 
-/* SOCIAL ICONS AT BOTTOM */
-.mobile-socials { display:flex; justify-content:center; gap:15px; margin-bottom:15px; flex-shrink:0; }
-.mobile-socials a { color:var(--gold); font-size:1.5rem; transition:.3s; margin-bottom: 15px; }
+/* SOCIAL ICONS */
+.mobile-socials { display:flex; justify-content:center; gap:15px; margin-bottom:15px; }
+.mobile-socials a { color:var(--gold); font-size:1.5rem; transition:.3s; }
 .mobile-socials a:hover { transform:scale(1.2); color:var(--white); }
 
-/* ===== TABLETS / SMALL LAPTOPS ===== */
+/* ===== RESPONSIVE ===== */
 @media (max-width: 900px) {
   .main-nav { display: none; }
   .hamburger { display: flex; }
-  .logo { height: 34px; }
-
-  .site-name { font-size: 0.85rem; }
-  .site-subname, .mobile-site-subname {
-    font-size: 0.50rem;
-    letter-spacing: 0.97rem;
-  }
+  .desktop-name { display: none; }
+  .mobile-name { display: inline; }
+  .logo { height: 34px; margin-bottom: 3px;}
 }
 
-/* ===== LARGE MOBILE / PHABLETS ===== */
-@media (max-width: 768px) {
-  .logo { height: 32px; }
-  .site-name { font-size: 0.82rem; }
+@media (max-width: 768px) { .logo { height: 32px; } }
 
-  .site-subname, .mobile-site-subname {
-    font-size: 0.48rem;
-    letter-spacing: 0.85rem;
-  }
+@media (max-width: 520px) { 
+  .logo { height: 30px; } 
+  .container { padding: 13px 15px; } 
+  .mobile-site-name { font-size: 1.1rem; }
 }
 
-/* ===== NORMAL MOBILE ===== */
-@media (max-width: 520px) {
-  .logo { height: 30px; }
-  .site-name { font-size: 0.80rem; margin-left: -15px;}
-  .container { padding: 8px 10px; }
-
-  .site-subname  {
-    font-size: 0.58rem;
-    margin-left: -15px;
-  }
-
-  .mobile-site-subname{     
-    font-size: 0.58rem;}
-}
-
-/* ===== SMALL MOBILE (FULL RESPONSIVE CONTROL) ===== */
-@media (max-width: 400px) {
-  .logo { height: 28px; }
-  .site-name { font-size: 0.85rem; }
-  .container { padding: 6px 8px; }
-
-  .site-subname, .mobile-site-subname {
-    font-size: 0.42rem;
-    letter-spacing: 0.95rem;
-  }
-}
-
-
-/* ===== iPHONE-SE / 360–375 width ===== */
-@media (max-width: 375px) {
-  .site-name { font-size: 0.70rem; }
-
-  .site-subname, .mobile-site-subname {
-    font-size: 0.45rem;
-    letter-spacing: 0.74rem;
-  }
-}
-
-/* ===== SUPER SMALL / 320px AND BELOW ===== */
-@media (max-width: 320px) {
-  .site-name { font-size: 0.68rem; }
-
-  .site-subname, .mobile-site-subname {
-    font-size: 0.40rem;
-    letter-spacing: 0.60rem;
-  }
-}
-
-@media (min-width: 1151px) {
-  .brand-text {
-    width: auto;          /* allow natural width */
-    min-width: 200px;     /* give the subname more room */
-  }
-
-  .site-subname {
-    margin-left: -28px;   /* your alignment value */
-    letter-spacing: 1.099rem;
-    overflow: visible;    /* critical: stop cutting the S */
-  }
-  .logo {  margin-bottom: 18px;}
-}
+@media (max-width: 400px) { .logo { height: 28px; } }
 
 
 
