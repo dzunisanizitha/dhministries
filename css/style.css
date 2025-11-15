@@ -177,7 +177,7 @@ body { font-family: Arial, sans-serif; }
 .logo-sm { height:40px; width:auto; }
 
 .mobile-brand-text { display:flex; flex-direction: column; }
-.mobile-site-name { color:var(--gold); font-weight:800; font-size:0.80rem; white-space:nowrap; }
+.mobile-site-name { color:var(--gold); font-weight:800; font-size:0.75rem; white-space:nowrap; }
 .mobile-site-subname {
   font-size: 0.55rem; /* smaller letters */
   color: gold;
@@ -192,6 +192,30 @@ body { font-family: Arial, sans-serif; }
 
 
 .mobile-site-subname::after { content:""; display:inline-block; width:100%; }
+
+/* ===== MOBILE SIDEBAR CLOSE BUTTON ===== */
+.close-btn {
+  font-size: 2.2rem;       /* bigger X for better UX */
+  color: var(--gold);       /* visible against purple sidebar */
+  font-weight: bold;
+  cursor: pointer;
+  line-height: 1;
+  padding: 10px 12px;      /* larger clickable area */
+  transition: transform 0.2s ease, color 0.2s ease;
+}
+
+/* Hover effect for better feedback */
+.close-btn:hover {
+  color: var(--white);
+  transform: scale(1.2);
+}
+
+/* Optional: adjust position inside mobile-top */
+.mobile-top .close-btn {
+  position: relative;       
+  z-index: 1001;            
+}
+
 
 /* MOBILE LINKS */
 .mobile-links { list-style:none; padding:0; margin-top:20px; flex-grow:1; }
@@ -252,6 +276,7 @@ body { font-family: Arial, sans-serif; }
   }
 }
 
+
 /* ===== iPHONE-SE / 360–375 width ===== */
 @media (max-width: 375px) {
   .site-name { font-size: 0.70rem; }
@@ -285,6 +310,8 @@ body { font-family: Arial, sans-serif; }
   }
   .logo {  margin-bottom: 18px;}
 }
+
+
 
 
 
