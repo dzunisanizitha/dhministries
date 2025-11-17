@@ -12,7 +12,7 @@ body { font-family:Arial, sans-serif; }
 
 .brand-text { display:flex; flex-direction:column; line-height:1; align-items:flex-start; }
 
-.site-name { font-weight:800; color:var(--purple); white-space:nowrap; overflow:hidden; }
+.site-name { font-weight:700; color:var(--purple); white-space:nowrap; overflow:hidden; }
 
 .desktop-name { display:inline; }
 .mobile-name { display:none; }
@@ -174,95 +174,16 @@ body { font-family:Arial, sans-serif; }
 /* ===============================
    VIDEO GALLERY SECTION HOMEPAGE YOUTUBE VIDEOS
 ================================ */
-.video-gallery-section {
-  max-width: 1100px;
-  margin: 4rem auto 6rem;
-  padding: 0 20px;
-  color: #1c0730; /* dark purple */
-  text-align: center;
-  line-height: 1.6;
-  font-family: 'Roboto', sans-serif; /* consistent body font */
-}
-
-.video-gallery-title {
-  font-family: 'Montserrat', sans-serif; /* consistent heading font */
-  font-size: 2rem;
-  color: #2f0755; /* dark purple */
-  margin-bottom: 0.5rem;
-  font-weight: 700;
-  line-height: 1.3;
-}
-
-.video-gallery-intro {
-  font-family: 'Roboto', sans-serif; /* consistent body font */
-  font-size: 1rem;
-  color: #3b0a45; /* slightly lighter purple */
-  margin-bottom: 2rem;
-  line-height: 1.5;
-}
-
-/* ===============================
-   VIDEO CARDS
-================================ */
-.video-gallery-list {
-  display: flex;
-  flex-wrap: wrap;
-  justify-content: center;
-  gap: 30px; /* spacing between cards */
-}
-
-.video-card {
-  background-color: #f9f9f9; /* optional card background */
-  border-radius: 12px;
-  overflow: hidden;
-  max-width: 320px;
-  width: 100%;
-  box-shadow: 0px 6px 20px rgba(0,0,0,0.1);
-  text-align: center;
-  transition: transform 0.3s;
-  font-family: 'Roboto', sans-serif; /* consistent body font */
-}
-
-.video-card:hover {
-  transform: translateY(-5px);
-}
-
-.video-card iframe {
-  width: 100%;
-  height: 180px; /* adjusts automatically on desktop */
-  border: none;
-}
-
-.video-title {
-  font-family: 'Montserrat', sans-serif; /* consistent heading font */
-  color: #1c0730; /* dark purple */
-  font-size: 1.2rem;
-  margin: 12px 0 6px;
-  font-weight: 600;
-}
-
-.video-description {
-  font-family: 'Roboto', sans-serif; /* consistent body font */
-  color: #3b0a45; /* slightly lighter purple */
-  font-size: 1rem;
-  padding: 0 10px 15px;
-  line-height: 1.5;
-}
-
-/* ===============================
-   RESPONSIVE MOBILE
-================================ */
-@media (max-width: 767px) {
-  .video-gallery-list {
-    flex-direction: column;
-    align-items: center;
-    gap: 20px;
-  }
-
-  .video-card iframe {
-    height: 200px; /* slightly taller on small screens */
-  }
-}
+.video-gallery-section { max-width: 1100px; margin: 4rem auto 6rem; padding: 0 20px; color: #1c0730; text-align: center; line-height: 1.6; font-family: 'Roboto', sans-serif; }
+.video-gallery-title { font-family: 'Montserrat', sans-serif; font-size: 2rem; color: #2f0755; margin-bottom: 0.5rem; font-weight: 700; line-height: 1.3; }
+.video-gallery-intro { font-family: 'Roboto', sans-serif; font-size: 1rem; color: #3b0a45; margin-bottom: 2rem; line-height: 1.5; }
+.video-gallery-list { display: flex; flex-wrap: wrap; justify-content: center; gap: 30px; }
+.video-card { background-color: #f9f9f9; border-radius: 12px; overflow: hidden; max-width: 320px; width: 100%; box-shadow: 0px 6px 20px rgba(0,0,0,0.1); text-align: center; transition: transform 0.3s; font-family: 'Roboto', sans-serif; }
+.video-card:hover { transform: translateY(-5px); }
+.video-card iframe { width: 100%; height: 180px; border: none; }
+.video-title { font-family: 'Montserrat', sans-serif; color: #1c0730; font-size: 1.2rem; margin: 12px 0 6px; font-weight: 600; }
+.video-description { font-family: 'Roboto', sans-serif; color: #3b0a45; font-size: 1rem; padding: 0 10px 15px; line-height: 1.5; }
+@media (max-width: 767px) { .video-gallery-list { flex-direction: column; align-items: center; gap: 20px; } .video-card iframe { height: 200px; } }
 
 
 
@@ -289,41 +210,9 @@ body { font-family:Arial, sans-serif; }
 
 /* WE BRING HEALING , HOMEPAGE STYLING */
 /* ===== Church Mission Section ===== */
-.church-mission {
-  position: relative;
-  background-color: rgb(199, 185, 211);
-  padding: 60px 20px;
-  color: white;
-  font-family: 'Roboto', sans-serif; /* consistent body font */
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-}
-
-.church-mission-slideshow {
-  position: relative;
-  width: 100%;
-  max-width: 1000px;
-  height: 400px;
-  overflow: hidden;
-  margin-bottom: 40px;
-  border-radius: 10px;
-  box-shadow: 0 4px 15px rgba(0,0,0,0.9);
-}
-
-/* All slides stacked horizontally */
-.church-mission-slideshow .slide {
-  position: absolute;
-  width: 100%;
-  height: 100%;
-  top: 0;
-  left: 100%; /* Start off screen right */
-  opacity: 0;
-  transform: scale(1.1); /* slight zoom-in */
-  animation: slideZoom 28s infinite;
-}
-
-/* Slide delays for 7 slides */
+.church-mission { position: relative; background-color: rgb(199, 185, 211); padding: 60px 20px; color: white; font-family: 'Roboto', sans-serif; display: flex; flex-direction: column; align-items: center; }
+.church-mission-slideshow { position: relative; width: 100%; max-width: 1000px; height: 400px; overflow: hidden; margin-bottom: 40px; border-radius: 10px; box-shadow: 0 4px 15px rgba(0,0,0,0.9); }
+.church-mission-slideshow .slide { position: absolute; width: 100%; height: 100%; top: 0; left: 100%; opacity: 0; transform: scale(1.1); animation: slideZoom 28s infinite; }
 .church-mission-slideshow .slide:nth-child(1) { animation-delay: 0s; }
 .church-mission-slideshow .slide:nth-child(2) { animation-delay: 4s; }
 .church-mission-slideshow .slide:nth-child(3) { animation-delay: 8s; }
@@ -331,385 +220,86 @@ body { font-family:Arial, sans-serif; }
 .church-mission-slideshow .slide:nth-child(5) { animation-delay: 16s; }
 .church-mission-slideshow .slide:nth-child(6) { animation-delay: 20s; }
 .church-mission-slideshow .slide:nth-child(7) { animation-delay: 24s; }
-
-.church-mission-slideshow .slide img {
-  width: 100%;
-  height: 100%;
-  object-fit: cover;
-  display: block;
-}
-
-/* Overlay */
-.slideshow-overlay {
-  position: absolute;
-  top: 0; left: 0;
-  width: 100%; height: 100%;
-  background: rgba(128,0,128,0.2);
-  z-index: 1;
-  pointer-events: none;
-  border-radius: 10px;
-}
-
-/* Sliding + fading + zoom */
-@keyframes slideZoom {
-  0% { left: 100%; opacity: 0; transform: scale(1.1); }
-  5% { left: 0%; opacity: 1; transform: scale(1); }
-  19% { left: 0%; opacity: 1; transform: scale(1); }
-  24% { left: -100%; opacity: 0; transform: scale(1.1); }
-  100% { left: -100%; opacity: 0; transform: scale(1.1); }
-}
+.church-mission-slideshow .slide img { width: 100%; height: 100%; object-fit: cover; display: block; }
+.slideshow-overlay { position: absolute; top: 0; left: 0; width: 100%; height: 100%; background: rgba(128,0,128,0.2); z-index: 1; pointer-events: none; border-radius: 10px; }
+@keyframes slideZoom { 0% { left: 100%; opacity: 0; transform: scale(1.1); } 5% { left: 0%; opacity: 1; transform: scale(1); } 19% { left: 0%; opacity: 1; transform: scale(1); } 24% { left: -100%; opacity: 0; transform: scale(1.1); } 100% { left: -100%; opacity: 0; transform: scale(1.1); } }
+.church-mission-content { max-width: 700px; text-align: center; background-color: #5b406e; padding: 30px; border-radius: 10px; opacity: 0; animation: textFadeIn 2s ease forwards; animation-delay: 1s; font-family: 'Roboto', sans-serif; }
+@keyframes textFadeIn { 0% { opacity: 0; transform: translateY(20px); } 100% { opacity: 1; transform: translateY(0); } }
+.church-mission-heading { font-family: 'Montserrat', sans-serif; font-size: 2rem; color: goldenrod; margin-bottom: 20px; font-weight: 700; }
+.church-mission-text { font-family: 'Roboto', sans-serif; font-size: 1rem; line-height: 1.6; margin-bottom: 25px; font-weight: 400; }
+.church-mission-btn { display: inline-block; padding: 12px 25px; background-color: goldenrod; color: #1a0a3c; text-decoration: none; font-family: 'Roboto', sans-serif; font-weight: 600; font-size: 1rem; border-radius: 5px; transition: all 0.3s ease; }
+.church-mission-btn:hover { background-color: white; transform: translateY(-3px); }
+@media (max-width: 992px) { .church-mission-slideshow { height: 300px; } .church-mission-content { padding: 20px; } }
+@media (max-width: 576px) { .church-mission-slideshow { height: 200px; } .church-mission-heading { font-size: 1.6rem; } .church-mission-text { font-size: 0.95rem; } .church-mission-btn { font-size: 0.95rem; padding: 10px 20px; } }
+@media (max-width: 480px) { .map-container { height: 300px; margin-bottom: 150px; } }
 
 
-/* ===== Text Content ===== */
-.church-mission-content {
-  max-width: 700px;
-  text-align: center;
-  background-color: #5b406e; /* translucent background */
-  padding: 30px;
-  border-radius: 10px;
-  opacity: 0;
-  animation: textFadeIn 2s ease forwards;
-  animation-delay: 1s; /* fade after slideshow starts */
-  font-family: 'Roboto', sans-serif; /* consistent body font */
-}
 
-/* Text fade-in animation */
-@keyframes textFadeIn {
-  0% { opacity: 0; transform: translateY(20px); }
-  100% { opacity: 1; transform: translateY(0); }
-}
 
-/* Heading */
-.church-mission-heading {
-  font-family: 'Montserrat', sans-serif; /* consistent heading font */
-  font-size: 2rem;
-  color: goldenrod;
-  margin-bottom: 20px;
-  font-weight: 700;
-}
+/* ==========================
+   TESTIMONIALS SECTION IN THE HOMEPAGE
+=========================== */
+.testimonials-section { background: #f9f9f9; padding: 60px 20px; text-align: center; }
+.section-header h2 { font-size: clamp(1.8rem, 3.5vw, 2.5rem); color: #4a176d; margin-bottom: 10px; }
+.section-header p { font-size: clamp(1rem, 2.5vw, 1.2rem); color: #222; margin-bottom: 40px; }
+.testimonial-carousel { overflow: hidden; position: relative; }
+.testimonial-track { display: flex; gap: 20px; animation: scroll-testimonials 30s linear infinite; }
+.testimonial-card { flex: 0 0 300px; background: #fff; border-left: 4px solid #d4af37; border-radius: 12px; padding: 25px 20px; box-shadow: 0 6px 18px rgba(0,0,0,0.1); font-style: italic; color: #222; }
+.testimonial-author { display: block; margin-top: 15px; font-weight: 600; color: #4a176d; }
+@keyframes scroll-testimonials { 0% { transform: translateX(0); } 100% { transform: translateX(-50%); } }
+@media (max-width: 1024px) { .testimonial-card { flex: 0 0 250px; } .testimonial-track { animation-duration: 20s; } }
+@media (max-width: 768px) { .testimonial-card { flex: 0 0 70%; } .testimonial-track { animation-duration: 12s; } }
+@media (max-width: 480px) { .testimonial-card { flex: 0 0 80%; } .testimonial-track { animation-duration: 7s; } }
 
-/* Paragraph */
-.church-mission-text {
-  font-family: 'Roboto', sans-serif; /* consistent body font */
-  font-size: 1rem;
-  line-height: 1.6;
-  margin-bottom: 25px;
-  font-weight: 400;
-}
 
-/* Button */
-.church-mission-btn {
-  display: inline-block;
-  padding: 12px 25px;
-  background-color: goldenrod;
-  color: #1a0a3c;
-  text-decoration: none;
-  font-family: 'Roboto', sans-serif;
-  font-weight: 600;
-  font-size: 1rem;
-  border-radius: 5px;
-  transition: all 0.3s ease;
-}
-
-.church-mission-btn:hover {
-  background-color: white;
-  transform: translateY(-3px);
-}
-
-/* ===== Responsive ===== */
-@media (max-width: 992px) {
-  .church-mission-slideshow {
-    height: 300px;
-  }
-
-  .church-mission-content {
-    padding: 20px;
-  }
-}
-
-@media (max-width: 576px) {
-  .church-mission-slideshow {
-    height: 200px;
-  }
-
-  .church-mission-heading {
-    font-size: 1.6rem;
-  }
-
-  .church-mission-text {
-    font-size: 0.95rem;
-  }
-
-  .church-mission-btn {
-    font-size: 0.95rem;
-    padding: 10px 20px;
-  }
-}
-
-/* Responsive height for smaller screens */
-@media (max-width: 480px) {
-  .map-container {
-    height: 300px;
-    margin-bottom: 150px;
-  }
-}
 /* END OF HOME PAGE STYLING>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>> */
 
 
 /* ===== ABOUT PAGE- PASTOR SLIDESHOW SECTION ===== */
-.about-banner { position:relative; width:100%; height:200px; overflow:hidden; }
-.about-banner-img { width:100%; height:100%; object-fit:cover; display:block; opacity:0.85; }
-.about-banner .overlay { position:absolute; inset:0; background-color:rgba(59,0,102,0.6); z-index:1; }
-.about-banner-text { position:absolute; top:50%; left:50%; transform:translate(-50%,-50%); text-align:center; z-index:2; }
-.about-banner-title { font-family:'Montserrat',sans-serif; font-size:3rem; color:gold; font-weight:700; text-transform:uppercase; }
-@media (max-width:992px) { .about-banner { height:250px; } .about-banner-title { font-size:2.5rem; } }
-@media (max-width:576px) { .about-banner { height:180px; } .about-banner-title { font-size:1.5rem; } }
+/* ============================
+   UNIVERSAL BANNER STYLE
+   (About Page Version)
+============================ */
+.about-banner { position: relative; width: 100%; height: clamp(150px, 35vw, 230px); overflow: hidden; border-radius: 10px; }
+.about-banner img, .about-banner-img { width: 100%; height: 100%; object-fit: cover; object-position: center; display: block; }
+.about-banner .overlay, .overlay { position: absolute; inset: 0; background: rgba(34, 8, 49, 0.8); }
+.about-banner-text { position: absolute; top: 50%; left: 50%; transform: translate(-50%, -50%); text-align: center; color: white; padding: 0 16px; }
+.about-banner-title { font-size: clamp(1.4rem, 4vw, 2.5rem); font-weight: 700; margin: 0; line-height: 1.2; }
+@media (max-width: 480px) { .about-banner { border-radius: 8px; } }
+.pastor-slideshow-section { display: flex; flex-direction: column; align-items: center; padding: 2rem 1rem; font-family: 'Roboto', sans-serif; }
+.pastor-photo-frame { width: 320px; aspect-ratio: 4/5; border: 6px solid white; box-shadow: 0 4px 10px rgba(0,0,0,0.15); overflow: hidden; position: relative; background: #fff; margin-bottom: 0.9rem; }
+.pastor-photo-slide { display: flex; width: 300%; height: 100%; animation: pastorSlide 18s infinite; transition: none; }
+.pastor-photo-slide img { width: 33.3333%; height: 100%; object-fit: cover; }
+@keyframes pastorSlide { 0% { transform: translateX(0); } 25% { transform: translateX(0); } 30% { transform: translateX(-33.3333%); } 55% { transform: translateX(-33.3333%); } 60% { transform: translateX(-66.6666%); } 90% { transform: translateX(-66.6666%); } 95% { transform: translateX(0); } 100% { transform: translateX(0); } }
+.pastor-info h2 { font-family: 'Montserrat', sans-serif; font-size: 1.5rem; color: #4B006E; margin: 0.3rem 0; text-align: center; margin-top: 5px; }
+.pastor-info p { font-family: 'Roboto', sans-serif; font-size: 1rem; color: #555; text-align: center; margin: 0; margin-top: -5px; line-height: 1.5; }
+@media (max-width: 480px) { .pastor-photo-frame { width: 250px; } .pastor-info h2 { font-size: 1.3rem; } .pastor-info p { font-size: 0.9rem; } }
+@media (min-width: 769px) { .pastor-photo-slide { width: 200%; animation: pastorSlideDesktop 24s infinite; } .pastor-photo-slide img { width: 50%; } }
+@keyframes pastorSlideDesktop { 0% { transform: translateX(0); } 40% { transform: translateX(0); } 45% { transform: translateX(-50%); } 85% { transform: translateX(-50%); } 90% { transform: translateX(0); } 100% { transform: translateX(0); } }
 
-
-.pastor-slideshow-section {
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  padding: 2rem 1rem;
-  font-family: 'Roboto', sans-serif; /* consistent body font */
-}
-
-/* ===== PHOTO FRAME WITH WHITE BORDER ===== */
-.pastor-photo-frame {
-  width: 320px;
-  aspect-ratio: 4 / 5; /* portrait style */
-  border: 6px solid white; /* white border */
-  box-shadow: 0 4px 10px rgba(0,0,0,0.15);
-  overflow: hidden;
-  position: relative;
-  background: #fff;
-  margin-bottom: 0.9rem;
-}
-
-/* ===== PHOTO SLIDE CONTAINER ===== */
-.pastor-photo-slide {
-  display: flex;
-  width: 300%; /* 3 images */
-  height: 100%;
-  animation: pastorSlide 18s infinite;
-  transition: none; /* reset for desktop */
-}
-
-/* ===== EACH IMAGE IN SLIDE ===== */
-.pastor-photo-slide img {
-  width: 33.3333%; /* 1/3 of container */
-  height: 100%;
-  object-fit: cover;
-}
-
-/* ===== SLIDE ANIMATION ===== */
-@keyframes pastorSlide {
-  0%   { transform: translateX(0); }
-  25%  { transform: translateX(0); }
-  30%  { transform: translateX(-33.3333%); }
-  55%  { transform: translateX(-33.3333%); }
-  60%  { transform: translateX(-66.6666%); }
-  90%  { transform: translateX(-66.6666%); }
-  95%  { transform: translateX(0); }
-  100% { transform: translateX(0); }
-}
-
-/* ===== PASTOR INFO TEXT ===== */
-.pastor-info h2 {
-  font-family: 'Montserrat', sans-serif; /* consistent heading font */
-  font-size: 1.5rem;
-  color: #4B006E; /* dark purple */
-  margin: 0.3rem 0;
-  text-align: center;
-  margin-top: 5px;
-}
-
-.pastor-info p {
-  font-family: 'Roboto', sans-serif; /* consistent body font */
-  font-size: 1rem;
-  color: #555;
-  text-align: center;
-  margin: 0;
-  margin-top: -5px;
-  line-height: 1.5;
-}
-
-/* ===== MOBILE ===== */
-@media (max-width: 480px) {
-  .pastor-photo-frame {
-    width: 250px;  /* smaller width on mobile */
-  }
-  
-  .pastor-info h2 {
-    font-size: 1.3rem;
-  }
-  
-  .pastor-info p {
-    font-size: 0.9rem;
-  }
-}
-
-/* ===== DESKTOP: SHOW 2 IMAGES SIDE BY SIDE ===== */
-@media (min-width: 769px) {
-  .pastor-photo-slide {
-    width: 200%; /* only 2 images visible width */
-    animation: pastorSlideDesktop 24s infinite;
-  }
-  
-  .pastor-photo-slide img {
-    width: 50%; /* 2 images fit */
-  }
-}
-
-/* ===== DESKTOP SLIDE ANIMATION ===== */
-@keyframes pastorSlideDesktop {
-  0%   { transform: translateX(0); }
-  40%  { transform: translateX(0); }
-  45%  { transform: translateX(-50%); }
-  85%  { transform: translateX(-50%); }
-  90%  { transform: translateX(0); }
-  100% { transform: translateX(0); }
-}
 
 
 
 /* ===== CORE BELIEFS CONTAINER ===== */
 /* ====== GLOBAL STYLING ====== */
-body {
-  font-family: 'Roboto', sans-serif; /* consistent body font */
-  background-color: #ffffff;
-  color: #333;
-  margin: 0;
-  padding: 0;
-  line-height: 1.6;
-}
+body { font-family: 'Roboto', sans-serif; background-color: #ffffff; color: #333; margin: 0; padding: 0; line-height: 1.6; }
+h2 { font-family: 'Montserrat', sans-serif; font-weight: bold; margin-bottom: 10px; }
+.about-prophet { background-color: #ffffff; border-left: 5px solid #6a0dad; padding: 30px; margin: 20px auto; max-width: 900px; border-radius: 10px; box-shadow: 0 3px 10px rgba(0,0,0,0.2); }
+.about-prophet .about-title { font-family: 'Montserrat', sans-serif; color: #6a0dad; font-size: 1.8rem; margin-bottom: 15px; }
+.about-prophet p { font-family: 'Roboto', sans-serif; color: #444; margin-bottom: 15px; font-size: 0.90rem; }
+.about-prophet .bible-verse-text { font-family: 'Roboto', sans-serif; font-style: italic; color: #b8860b; font-weight: bold; margin-top: 20px; border-left: 3px solid #b8860b; padding-left: 10px; font-size: 0.90rem; }
+.vision { background-color: #fdfdfd; border-top: 3px solid #b8860b; padding: 25px; margin: 20px auto; max-width: 900px; border-radius: 10px; box-shadow: 0 2px 8px rgba(0,0,0,0.08); }
+.vision .vision-title { font-family: 'Montserrat', sans-serif; color: #b8860b; font-size: 1.6rem; }
+.vision p { font-family: 'Roboto', sans-serif; color: #333; font-size: 0.90rem; }
+.mission { background-color: #ffffff; border: 2px dashed #6a0dad; padding: 25px; margin: 20px auto; max-width: 900px; border-radius: 10px; }
+.mission .mission-title { font-family: 'Montserrat', sans-serif; color: #6a0dad; font-size: 1.6rem; }
+.mission p { font-family: 'Roboto', sans-serif; color: #555; font-size: 0.90rem; }
+.faith-statement { background-color: #fefefe; border: 1px solid #e6e6e6; padding: 30px; margin: 20px auto; max-width: 900px; border-radius: 12px; box-shadow: 0 2px 12px rgba(0,0,0,0.08); font-family: 'Roboto', sans-serif; font-size: 0.90rem; }
+.faith-statement .section-header { font-family: 'Montserrat', sans-serif; color: #b8860b; font-size: 1.6rem; margin-bottom: 15px; }
+.faith-statement ul { list-style: none; padding: 0; }
+.faith-statement ul li { position: relative; padding-left: 30px; margin-bottom: 12px; color: #333; }
+.faith-statement ul li::before { content: "✦"; color: #6a0dad; position: absolute; left: 0; font-size: 1rem; }
 
-h2 {
-  font-family: 'Montserrat', sans-serif; /* consistent headings */
-  font-weight: bold;
-  margin-bottom: 10px;
-}
-
-/* ====== ABOUT PROPHET SECTION ====== */
-.about-prophet {
-  background-color: #ffffff;
-  border-left: 5px solid #6a0dad; /* Dark Purple */
-  padding: 30px;
-  margin: 20px auto;
-  max-width: 900px;
-  border-radius: 10px;
-  box-shadow: 0 3px 10px rgba(0,0,0,0.2);
-}
-
-.about-prophet .about-title {
-  font-family: 'Montserrat', sans-serif;
-  color: #6a0dad; /* Dark Purple */
-  font-size: 1.8rem;
-  margin-bottom: 15px;
-}
-
-.about-prophet p {
-  font-family: 'Roboto', sans-serif;
-  color: #444;
-  margin-bottom: 15px;
-  font-size: 0.90rem;
-}
-
-.about-prophet .bible-verse-text {
-  font-family: 'Roboto', sans-serif;
-  font-style: italic;
-  color: #b8860b; /* Gold */
-  font-weight: bold;
-  margin-top: 20px;
-  border-left: 3px solid #b8860b;
-  padding-left: 10px;
-  font-size: 0.90rem;
-}
-
-/* ====== VISION SECTION ====== */
-.vision {
-  background-color: #fdfdfd;
-  border-top: 3px solid #b8860b; /* Gold */
-  padding: 25px;
-  margin: 20px auto;
-  max-width: 900px;
-  border-radius: 10px;
-  box-shadow: 0 2px 8px rgba(0,0,0,0.08);
-}
-
-.vision .vision-title {
-  font-family: 'Montserrat', sans-serif;
-  color: #b8860b; /* Gold */
-  font-size: 1.6rem;
-}
-
-.vision p {
-  font-family: 'Roboto', sans-serif;
-  color: #333;
-  font-size: 0.90rem;
-}
-
-/* ====== MISSION SECTION ====== */
-.mission {
-  background-color: #ffffff;
-  border: 2px dashed #6a0dad; /* Purple outline */
-  padding: 25px;
-  margin: 20px auto;
-  max-width: 900px;
-  border-radius: 10px;
-}
-
-.mission .mission-title {
-  font-family: 'Montserrat', sans-serif;
-  color: #6a0dad;
-  font-size: 1.6rem;
-}
-
-.mission p {
-  font-family: 'Roboto', sans-serif;
-  color: #555;
-  font-size: 0.90rem;
-}
-
-/* ====== FAITH STATEMENT SECTION ====== */
-.faith-statement {
-  background-color: #fefefe;
-  border: 1px solid #e6e6e6;
-  padding: 30px;
-  margin: 20px auto;
-  max-width: 900px;
-  border-radius: 12px;
-  box-shadow: 0 2px 12px rgba(0,0,0,0.08);
-  font-family: 'Roboto', sans-serif;
-  font-size: 0.90rem;
-}
-
-.faith-statement .section-header {
-  font-family: 'Montserrat', sans-serif;
-  color: #b8860b; /* Gold */
-  font-size: 1.6rem;
-  margin-bottom: 15px;
-}
-
-.faith-statement ul {
-  list-style: none;
-  padding: 0;
-}
-
-.faith-statement ul li {
-  position: relative;
-  padding-left: 30px;
-  margin-bottom: 12px;
-  color: #333;
-}
-
-.faith-statement ul li::before {
-  content: "✦"; /* Gold bullet */
-  color: #6a0dad; /* Purple accent */
-  position: absolute;
-  left: 0;
-  font-size: 1rem;
-}
 
 /* WHO ARE WE>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>> */
 .about-extra { background-color:#3e1b5f; color:#ffffff; text-align:center; padding:80px 20px; position:relative; overflow:hidden; } 
@@ -724,225 +314,38 @@ h2 {
 
 
 /* SAW A SEED   button STYLING>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>> */
-.sow-seed-btn {
-  position: fixed;
-  bottom: 30px;
-  left: 30px;
-  background-color:  #1e7e34; /* green */
-  color: white;
-  font-weight: bold;
-  padding: 12px 20px;
-  border-radius: 50px;
-  box-shadow: 0 4px 15px rgba(40, 167, 69, 0.5);
-  display: flex;
-  align-items: center;
-  gap: 10px;
-  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
-  font-size: 1rem;
-  text-decoration: none;
-  z-index: 10000;
-  transition: background-color 0.3s ease, transform 0.6s ease-in-out;
-  animation: pulse-grow 3s infinite;
-}
-
-.sow-seed-btn:hover,
-.sow-seed-btn:focus {
-  background-color: #145622;
-  outline: none;
-  transform: scale(1.05);
-  animation-play-state: paused;
-}
-
-.seed-icon {
-  stroke: #f0cb53; /* gold stroke */
-  fill: none;
-  margin-top: -5px;
-  transform: scale(1.4);
-}
-
-/* Pulse animation */
-@keyframes pulse-grow {
-  0%, 100% {
-    transform: scale(1);
-    box-shadow: 0 4px 15px rgba(40, 167, 69, 0.5);
-  }
-  50% {
-    transform: scale(1.08);
-    box-shadow: 0 8px 25px rgba(40, 167, 69, 0.7);
-  }
-}
-
-/* Hide the button when hamburger is open */
-/* Optional: keep it fixed at bottom */
-.sow-seed-btn {
-    position: fixed;
-    bottom: 20px;
-    left: 20px;
-    transform: translateX(-50%);
-    z-index: 100; /* below mobile menu */
-}
+.sow-seed-btn { position: fixed; bottom: 20px; left: 20px; background-color: #1e7e34; color: white; font-weight: bold; padding: 12px 20px; border-radius: 50px; box-shadow: 0 4px 15px rgba(40, 167, 69, 0.5); display: flex; align-items: center; gap: 10px; font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif; font-size: 1rem; text-decoration: none; z-index: 100; transition: background-color 0.3s ease, transform 0.6s ease-in-out; animation: pulse-grow 3s infinite; transform: translateX(-50%); }
+.sow-seed-btn:hover, .sow-seed-btn:focus { background-color: #145622; outline: none; transform: scale(1.05); animation-play-state: paused; }
+.seed-icon { stroke: #f0cb53; fill: none; margin-top: -5px; transform: scale(1.4); }
+@keyframes pulse-grow { 0%, 100% { transform: scale(1); box-shadow: 0 4px 15px rgba(40, 167, 69, 0.5); } 50% { transform: scale(1.08); box-shadow: 0 8px 25px rgba(40, 167, 69, 0.7); } }
 
 
 /* SAW A SEED button STYLING DONE>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>> */
 
 
 /* ===== Giving Section - New Style ===== */
-.give-section {
-  background: linear-gradient(135deg, #ffffff, #ead0f8); /* Light purple gradient */
-  color: #fff;
-  padding: 4rem 2rem;
-  text-align: center;
-  border-top: 5px solid #FFD700; /* Gold accent on top */
-  border-bottom: 5px solid #FFD700; /* Gold accent on bottom */
-  font-family: 'Roboto', sans-serif; /* consistent body font */
-}
+.give-section { background: linear-gradient(135deg, #ffffff, #ead0f8); color: #fff; padding: 4rem 2rem; text-align: center; border-top: 5px solid #FFD700; border-bottom: 5px solid #FFD700; font-family: 'Roboto', sans-serif; }
+.give-section .give-wrapper { max-width: 720px; margin: auto; background: #2f0755; padding: 2rem 1.5rem; border-radius: 12px; box-shadow: 0 8px 20px rgba(0,0,0,0.5); }
+.give-section h2 { font-family: 'Montserrat', sans-serif; font-size: 2rem; color: goldenrod; font-weight: 700; margin-bottom: 1rem; }
+.give-section p { font-family: 'Roboto', sans-serif; font-size: 1rem; line-height: 1.7; margin-bottom: 2rem; color: #fff; }
+.give-section h3 { font-family: 'Montserrat', sans-serif; font-size: 1.4rem; color: #FFD700; margin-bottom: 1rem; }
+.give-section ul { list-style: none; padding: 0; margin: 0 auto; max-width: 450px; }
+.give-section ul li { font-family: 'Roboto', sans-serif; font-size: 1rem; margin-bottom: 0.7rem; color: #fff; transition: transform 0.3s ease, color 0.3s ease; }
+.give-section ul li strong { color: #FFD700; }
+.give-section ul li:hover { transform: scale(1.05); color: #FFD700; }
+@media (max-width: 600px) { .give-section h2 { font-size: 1.7rem; } .give-section h3 { font-size: 1.2rem; } .give-section p, .give-section ul li { font-size: 0.95rem; } }
 
-.give-section .give-wrapper {
-  max-width: 720px;
-  margin: auto;
-  background: #2f0755;
-  padding: 2rem 1.5rem;
-  border-radius: 12px;
-  box-shadow: 0 8px 20px rgba(0,0,0,0.5);
-}
-
-.give-section h2 {
-  font-family: 'Montserrat', sans-serif; /* consistent heading font */
-  font-size: 2rem; /* slightly adjusted for consistency */
-  color: goldenrod; /* Gold heading */
-  font-weight: 700;
-  margin-bottom: 1rem;
-}
-
-.give-section p {
-  font-family: 'Roboto', sans-serif;
-  font-size: 1rem; /* consistent paragraph size */
-  line-height: 1.7;
-  margin-bottom: 2rem;
-  color: #fff;
-}
-
-.give-section h3 {
-  font-family: 'Montserrat', sans-serif;
-  font-size: 1.4rem; /* slightly smaller than h2 */
-  color: #FFD700;
-  margin-bottom: 1rem;
-}
-
-.give-section ul {
-  list-style: none;
-  padding: 0;
-  margin: 0 auto;
-  max-width: 450px;
-}
-
-.give-section ul li {
-  font-family: 'Roboto', sans-serif;
-  font-size: 1rem;
-  margin-bottom: 0.7rem;
-  color: #fff;
-  transition: transform 0.3s ease, color 0.3s ease;
-}
-
-.give-section ul li strong {
-  color: #FFD700; /* Highlight labels */
-}
-
-.give-section ul li:hover {
-  transform: scale(1.05);
-  color: #FFD700;
-}
-
-/* ===== Responsive ===== */
-@media (max-width: 600px) {
-  .give-section h2 {
-    font-size: 1.7rem;
-  }
-  
-  .give-section h3 {
-    font-size: 1.2rem;
-  }
-
-  .give-section p,
-  .give-section ul li {
-    font-size: 0.95rem;
-  }
-}
 /* GIVE PAGE   STYLING  DONE>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>> */
 
 
 /* TESTIMONY  STYLING */
-:root {
-  --brand-dark-purple: #2f0755;
-  --brand-gold: #d4af37;
-  --brand-white: #ffffff;
-}
-
-.testimony-banner {
-  position: relative;
-  height: 200px; /* adjust height as needed */
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  text-align: center;
-  overflow: hidden;
-  margin-bottom: 50px;
-}
-
-.testimony-banner .banner-img {
-  position: absolute;
-  top: 0;
-  left: 0;
-  width: 100%;
-  height: 100%;
-  object-fit: cover; /* ensures image covers the section */
-  opacity: 0.4; /* low opacity for faded effect */
-  z-index: 1;
-}
-
-.testimony-banner .overlay {
-  position: absolute;
-  top: 0;
-  left: 0;
-  width: 100%;
-  height: 100%;
-  background-color: rgba(44, 5, 80, 0.6); /* purple overlay */
-  z-index: 2;
-  
-}
-
-.testimony-banner .banner-content {
-  position: relative;
-  z-index: 3;
-  color: #ffffff; /* white text */
-  padding: 0 20px;
-}
-
-.testimony-banner h2 {
-  font-size: 2.5rem;
-  margin-bottom: 0.5rem;
-  font-weight: bold;
-  color: gold;
-  text-transform: uppercase;
-}
-
-.testimony-banner p {
-  font-size: 1.1rem;
-  max-width: 700px;
-  margin: 0 auto;
-  line-height: 1.4;
-}
-
-/* Responsive for mobile */
-@media (max-width: 767px) {
-  .testimony-banner {
-    height: 130px;
-  }
-
-  .testimony-banner h2 {
-    font-size: 1.5rem;
-  }
-}
+:root { --brand-dark-purple: #2f0755; --brand-gold: #d4af37; --brand-white: #ffffff; }
+.testimony-banner { position: relative; height: 200px; display: flex; justify-content: center; align-items: center; text-align: center; overflow: hidden; margin-bottom: 50px; }
+.testimony-banner .banner-img { position: absolute; top: 0; left: 0; width: 100%; height: 100%; object-fit: cover; z-index: 1; }
+.testimony-banner .overlay { position: absolute; top: 0; left: 0; width: 100%; height: 100%; background: rgba(73, 15, 95, 0.8); z-index: 2; }
+.testimony-banner .banner-content { position: relative; z-index: 3; color: #ffffff; padding: 0 20px; }
+.testimony-banner h2 { font-size: clamp(1.4rem, 4vw, 2.5rem); margin-bottom: 0.5rem; font-weight: 900; color: gold; text-transform: uppercase; margin: 0; }
+@media (max-width: 767px) { .testimony-banner { height: 130px; } .testimony-banner h2 { font-size: 1.5rem; } }
 
 
 /* ===== Testimony Scripture Section (Responsive) ===== >>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>*/
@@ -963,272 +366,87 @@ h2 {
 
 
 
-.testimonies-videos {
-  display: flex;
-  flex-wrap: wrap;
-  justify-content: center;
-  gap: 2rem; /* clean spacing between videos */
-  margin-top: 50px;
-  margin-bottom: 50px;
-}
-
-/* Base styles for all videos */
-.testimony-video {
-  flex: 1 1 320px;  /* flexible but min width 320px */
-  max-width: 340px;
-  padding: 1rem;
-  border-radius: 12px;
-  color: var(--brand-dark-purple);
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  background: var(--brand-white);
-}
-
-.testimony-video iframe {
-  width: 100%;
-  height: 200px;
-  border-radius: 8px;
-  margin-bottom: 0.75rem;
-}
-
-.video-description {
-  font-size: 1rem;
-  text-align: center;
-  font-style: italic;
-}
-
-/* Video variations */
-.video-style-1 {
-  border: 3px solid var(--brand-gold);
-  box-shadow: 0 6px 20px rgba(59, 10, 69, 0.5);
-}
-
-.video-style-2 {
-  border: 3px solid var(--brand-gold);
-  box-shadow: 0 6px 20px rgba(59, 10, 69, 0.5);
-}
-
-.video-style-2 iframe {
-  border-radius: 12px;
-  box-shadow: 0 0 12px var(--brand-dark-purple);
-}
-
-.video-style-3 {
-  border: 3px solid var(--brand-gold);
-  box-shadow: 0 6px 20px rgba(59, 10, 69, 0.5);
-}
-
-/* Responsive */
-@media (max-width: 900px) {
-  .testimony-video {
-    max-width: 90%; /* full width on tablets */
-  }
-}
-
-@media (max-width: 768px) {
-  .testimonies-videos {
-    flex-direction: column;
-    gap: 1.5rem; /* smaller gap for mobile */
-  }
-
-  .testimony-page-title {
-    font-size: 2.5rem;
-    font-weight: 900;
-  }
-
-  .testimony-subtitle {
-    font-size: 1.8rem;
-  }
-
-  .testimony-description {
-    font-size: 1rem;
-  }
-}
+.testimonies-videos { display: flex; flex-wrap: wrap; justify-content: center; gap: 2rem; margin-top: 50px; margin-bottom: 50px; }
+.testimony-video { flex: 1 1 320px; max-width: 340px; padding: 1rem; border-radius: 12px; color: var(--brand-dark-purple); display: flex; flex-direction: column; align-items: center; background: var(--brand-white); }
+.testimony-video iframe { width: 100%; height: 200px; border-radius: 8px; margin-bottom: 0.75rem; }
+.video-description { font-size: 1rem; text-align: center; font-style: italic; }
+.video-style-1 { border: 3px solid var(--brand-gold); box-shadow: 0 6px 20px rgba(59, 10, 69, 0.5); }
+.video-style-2 { border: 3px solid var(--brand-gold); box-shadow: 0 6px 20px rgba(59, 10, 69, 0.5); }
+.video-style-2 iframe { border-radius: 12px; box-shadow: 0 0 12px var(--brand-dark-purple); }
+.video-style-3 { border: 3px solid var(--brand-gold); box-shadow: 0 6px 20px rgba(59, 10, 69, 0.5); }
+@media (max-width: 900px) { .testimony-video { max-width: 90%; } }
+@media (max-width: 768px) { .testimonies-videos { flex-direction: column; gap: 1.5rem; } .testimony-page-title { font-size: 2.5rem; font-weight: 900; } .testimony-subtitle { font-size: 1.8rem; } .testimony-description { font-size: 1rem; } }
 
 /* TESTIMONY PAGE STYLING DONE>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>> */
 
-/* =====================================================
-   MINISTRIES PAGE CSS — FULL RESPONSIVE STYLING
-/* ------------------------------
-  GENERAL SETTINGS
------------------------------- */
+:root {
+  --dark-purple: #2f0755;
+  --gold: #FFD700;
+  --white: #FFFFFF;
+  --light-black: #333333;
+  --transition-speed: 0.4s;
+  --border-radius: 10px;
+}
+
+/* RESET */
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
 body {
-  font-family: 'Roboto', sans-serif;
-  color: #333;
+  font-family: 'Arial', sans-serif;
+  background: rgb(245, 235, 250);
+  color: var(--light-black);
   line-height: 1.6;
 }
 
-h1, h2 {
-  font-family: 'Montserrat', sans-serif;
-}
+/* ======================================
+   UNIVERSAL RESPONSIVE BANNER STYLE
+   (Ministries Page Version)
+====================================== */
 
-.ministries-section {
-  max-width: 1200px;
-  margin: 0 auto;
-  padding: 40px 15px;
-  display: flex;
-  flex-direction: column;
-  gap: 60px;
-}
+.ministries-banner { position: relative; width: 100%; height: clamp(150px, 35vw, 230px); overflow: hidden; border-radius: 10px; }
+.ministries-banner img { width: 100%; height: 100%; object-fit: cover; object-position: center; display: block; }
+.banner-overlay { position: absolute; inset: 0; background: rgba(74, 23, 109, 0.8); }
+.banner-text { position: absolute; top: 50%; left: 50%; transform: translate(-50%, -50%); text-align: center; color: #fff; padding: 0 16px; }
+.banner-text h2 { font-size: clamp(1.4rem, 4vw, 2.5rem); font-weight: 600; line-height: 1.2; margin: 0; }
+@media (max-width: 480px) { .ministries-banner { border-radius: 8px; } }
 
-/* ------------------------------
-  BANNER (FULL WIDTH)
------------------------------- */
-.ministries-banner {
-  position: relative;
-  width: 100vw;
-  margin-left: calc(-50vw + 50%);
-  height: 210px; /* taller for desktop */
-  overflow: hidden;
-  margin-top: -50px;
-}
+.ministry { display: flex; flex-wrap: wrap; gap: 30px; padding: 60px 10%; align-items: center; }
+.ministry:nth-child(even) { background: #f9f9f9; }
+.ministry-text { flex: 1 1 500px; }
+.ministry-text h2 { font-size: 2rem; color: var(--dark-purple); margin-bottom: 15px; }
+.ministry-text p { margin-bottom: 15px; font-size: 1rem; }
+.ministry-text ul { list-style: disc inside; margin-bottom: 15px; }
+.ministry-text strong { display: block; margin: 15px 0 8px; color: var(--dark-purple); }
+.highlight-box { background: var(--gold); color: var(--dark-purple); padding: 15px 20px; margin: 20px 0; border-radius: var(--border-radius); font-weight: bold; }
+.mini-cta { display: inline-block; background: var(--dark-purple); color: var(--gold); padding: 12px 25px; text-decoration: none; border-radius: 5px; font-weight: bold; transition: 0.3s; }
+.mini-cta:hover { background: var(--gold); color: var(--dark-purple); }
+.ministry-video { flex: 1 1 450px; max-width: 600px; text-align: center; }
+.ministry-video img, .ministry-video iframe { width: 100%; height: auto; border-radius: var(--border-radius); margin-top: 15px; }
+.video-summary { font-size: 0.95rem; margin-top: 8px; }
 
-.ministries-banner img {
-  width: 100%;
-  height: 100%;
-  object-fit: cover;
-  display: block;
-  opacity: 0.75;
-}
+.slideshow-wrapper { position: relative; width: 100%; max-width: 100%; overflow: hidden; border-radius: 10px; height: 0; padding-bottom: 50%; background-color: #000; }
+.slideshow { position: absolute; top: 0; left: 0; width: 100%; height: 100%; }
+.slideshow img.slide { position: absolute; width: 100%; height: 100%; object-fit: cover; top: 0; left: 0; opacity: 0; transition: opacity 1s ease-in-out; z-index: 0; }
+.slideshow img.active { opacity: 1; z-index: 1; }
+@media (max-width: 1024px) { .slideshow-wrapper { padding-bottom: 55%; } }
+@media (max-width: 768px) { .slideshow-wrapper { padding-bottom: 60%; } }
+@media (max-width: 480px) { .slideshow-wrapper { padding-bottom: 65%; } }
 
-.banner-overlay {
-  position: absolute;
-  inset: 0;
-  background: rgba(59,0,102,0.7);
-}
+.ministries-cta { background: var(--dark-purple); color: rgb(248, 193, 52); text-align: left; padding: 60px 10%; }
+.ministries-cta h2 { font-size: 2.2rem; margin-bottom: 15px; color: rgb(248, 193, 52); }
+.ministries-cta p { font-size: 1rem; margin-bottom: 15px; color: rgb(248, 193, 52); }
+.cta-button { display: inline-block; background: var(--gold); color: var(--dark-purple); padding: 14px 30px; text-decoration: none; border-radius: 5px; font-weight: bold; transition: 0.3s; }
+.cta-button:hover { background: #e6c200; }
 
-.banner-text {
-  position: absolute;
-  top: 50%;
-  left: 50%;
-  transform: translate(-50%, -50%);
-  text-align: center;
-  color: gold;
-}
-
-.banner-text h1 { font-size: 2.5rem; font-weight: 700; }
-.banner-text p { font-size: 1.3rem; color: #fff; }
-
-/* For tablets and large phones (≤ 768px wide) */
-@media (max-width: 768px) {
- .banner-text h1 { font-size: 1.5rem !important;}
-}
-
-@keyframes fadeInLeft { 0% { opacity:0; transform:translateX(-40px); } 100% { opacity:1; transform:translateX(0); } }
-@keyframes fadeInRight { 0% { opacity:0; transform:translateX(40px); } 100% { opacity:1; transform:translateX(0); } }
-@keyframes zoomIn { 0% { opacity:0; transform:scale(0.9); } 100% { opacity:1; transform:scale(1); } }
-
-/* OUTREACH MINISTRY SECTION - GOLD BACKGROUND */
-.ministry.outreach-ministry { background-color:#bb9721; color:#3b0066;  padding:25px; border-radius:16px; display:flex; gap:30px; align-items:flex-start; box-shadow:0 10px 25px rgba(0,0,0,0.25); overflow:hidden; animation: zoomIn 1.2s ease-out both; }
-.ministry.outreach-ministry .ministry-text h2 { color:#54018f; font-size:2rem; margin-bottom:15px; font-weight:900; animation: fadeInLeft 1.2s ease-out both; animation-delay:0.2s; }
-.ministry.outreach-ministry .ministry-text p { color:#54018f; font-size:1rem; line-height:1.6; animation: fadeInLeft 1.4s ease-out both; animation-delay:0.3s; }
-.ministry.outreach-ministry .ministry-video { flex:1; max-width:50%; animation: fadeInRight 1.4s ease-out both; animation-delay:0.4s; }
-.ministry.outreach-ministry .ministry-video img { width:100%; border-radius:12px; object-fit:cover; aspect-ratio:16/9; box-shadow:0 10px 12px rgba(8,0,10,0.25); transition:transform 0.3s ease; }
-.ministry.outreach-ministry .ministry-video img:hover { transform:scale(1.03); }
-@media(max-width:992px){ .ministry.outreach-ministry{ flex-direction:column; align-items:center; } .ministry.outreach-ministry .ministry-video{ max-width:100%; margin-top:20px; } }
-
-/* CALL TO ACTION - MINISTRY SECTION - GOLD BACKGROUND */
-.ministries-cta { background-color:#5b406e; color:goldenrod; text-align:center; padding:50px 20px; box-shadow:0 10px 25px rgba(0,0,0,0.25); margin-top:60px; animation:fadeInUp 1.3s ease-out both; animation-delay:0.3s; }
-
-.ministries-cta .cta-content { max-width:800px; margin:0 auto; }
-
-@keyframes fadeInUp { 0% { opacity:0; transform:translateY(40px); } 100% { opacity:1; transform:translateY(0); } }
-
-.ministries-cta .cta-content h2 { font-size:2.2rem; margin-bottom:20px; }
-
-.ministries-cta .cta-content p { font-size:1rem; line-height:1.6; margin-bottom:30px; color:#fff; }
-
-.ministries-cta .cta-button { display:inline-block; padding:15px 30px; background-color:goldenrod; color:#3b0066; font-weight:700; text-decoration:none; border-radius:8px; transition:all 0.3s ease; }
-
-.ministries-cta .cta-button:hover { background-color:white; transform:translateY(-3px); box-shadow:0 8px 20px rgba(0,0,0,0.3); }
-
-@media (max-width:768px) { 
-  .ministries-cta .cta-content { max-width:90%; } 
-  .ministries-cta .cta-content h2 { font-size:1.8rem; } 
-  .ministries-cta .cta-content p { font-size:0.95rem; } 
-  .ministries-cta .cta-button { padding:12px 25px; font-size:0.95rem; } 
-}
-
-   
+@media (max-width: 1024px) { .ministry { flex-direction: column; } }
+@media (max-width: 768px) { .banner-text h1 { font-size: 2.2rem; } .banner-text p { font-size: 1.1rem; } .ministry-text h2 { font-size: 1.6rem; } }
+@media (max-width: 480px) { .ministry-text { padding: 0 10px; } .ministry-text p, .video-summary { font-size: 0.95rem; } .mini-cta, .cta-button { font-size: 0.95rem; padding: 10px 18px; } }
 
 
-/* ------------------------------
-  MINISTRY SECTIONS (HORIZONTAL)
------------------------------- */
-.ministry {
-  display: flex;
-  gap: 30px;
-  align-items: flex-start;
-  border-radius: 16px;
-  padding: 25px;
-  background: #5b406e; /* dark purple base */
-  color: #fff;
-  box-shadow: 0 10px 25px rgba(0,0,0,0.25);
-  overflow: hidden;
-}
-
-/* Ensure videos/images share equal width/height */
-.ministry-video {
-  flex: 1;
-  max-width: 50%;
-}
-
-.ministry-video iframe,
-.ministry-video img {
-  width: 100%;
-  aspect-ratio: 16/9; /* keep all videos/images same ratio */
-  object-fit: cover;
-  border-radius: 15px 15px 15px 15px; /* round corners */
-  box-shadow: 5px 5px 10px rgba(238, 196, 7, 0.2); /* x-offset, y-offset, blur, color */
-}
-
-.ministry-text {
-  flex: 1;
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
-}
-
-.ministry-text h2 { font-size: 2rem; margin-bottom: 15px; color: goldenrod; }
-.ministry-text p { font-size: 1rem; margin-bottom: 10px; }
-
-.video-summary {
-  margin-top: 10px;
-  font-size: 0.95rem;
-  text-align: center;
-  color: #fff;
-}
-
-/* ------------------------------
-  RESPONSIVE DESKTOP/TABLET
------------------------------- */
-@media (max-width: 1200px) {
-  .ministries-banner { height: 250px; }
-  .banner-text h1 { font-size: 2.5rem; }
-  .banner-text p { font-size: 1.2rem; }
-}
-
-@media (max-width: 992px) {
-  .ministry {
-    flex-direction: column;
-    align-items: center;
-  }
-  .ministry-video {
-    max-width: 100%;
-    margin-top: 20px;
-  }
-}
-
-@media (max-width: 576px) {
-  .ministries-banner { height: 180px; }
-  .banner-text h1 { font-size: 1.8rem; }
-  .banner-text p { font-size: 0.9rem; }
-  .ministry-text h2 { font-size: 1.5rem; }
-  .ministry-text p { font-size: 0.9rem; }
-  .ministry-video iframe,
-  .ministry-video img { height: 200px; }
-}
 /* === MINISTRY SECTION DONE>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>> === */
 
   
@@ -1288,156 +506,41 @@ h1, h2 {
 
 
 /* === CONTACT FORM SECTION === */
-.contact-form-section {
-  background: #fdf8f0;
-  padding: 3rem 2rem;
-  text-align: center;
-  font-family: 'Roboto', sans-serif; /* consistent body font */
-}
 
-.contact-form-section h2 {
-  font-family: 'Montserrat', sans-serif; /* heading font */
-  font-weight: 700;
-  color: #2a0f4b;
-  margin-bottom: 0.5rem;
-}
+/* ============================
+   UNIVERSAL contact BANNER
+   (Use on ALL pages for consistency)
+============================ */
 
-.contact-form-section p {
-  color: #444;
-  margin-bottom: 1.5rem;
-  font-size: 1rem;
-}
+.ministries-banner { position: relative; width: 100%; height: clamp(150px, 35vw, 230px); overflow: hidden; border-radius: 10px; }
+.ministries-banner img, .ministries-banner-img { width: 100%; height: 100%; object-fit: cover; object-position: center; display: block; }
+.ministries-banner .overlay, .overlay { position: absolute; inset: 0; background: rgba(73, 15, 95, 0.8); }
+.ministries-banner-text { position: absolute; top: 50%; left: 50%; transform: translate(-50%, -50%); text-align: center; color: white; padding: 0 16px; }
+.ministries-banner-title { font-size: clamp(1.4rem, 4vw, 2.5rem); font-weight: 700; margin: 0; line-height: 1.2; }
+@media (max-width: 480px) { .ministries-banner { border-radius: 8px; } }
 
-.contact-form-section form {
-  max-width: 600px;
-  margin: auto;
-  display: flex;
-  flex-direction: column;
-  gap: 1rem;
-}
-
-.contact-form-section input,
-.contact-form-section textarea {
-  padding: 0.8rem;
-  border-radius: 6px;
-  border: 1px solid #ccc;
-  font-size: 1rem;
-  font-family: 'Roboto', sans-serif;
-}
-
+.contact-form-section { background: #fdf8f0; padding: 3rem 2rem; text-align: center; font-family: 'Roboto', sans-serif; }
+.contact-form-section h2 { font-family: 'Montserrat', sans-serif; font-weight: 700; color: #2a0f4b; margin-bottom: 0.5rem; }
+.contact-form-section p { color: #444; margin-bottom: 1.5rem; font-size: 1rem; }
+.contact-form-section form { max-width: 600px; margin: auto; display: flex; flex-direction: column; gap: 1rem; }
+.contact-form-section input, .contact-form-section textarea { padding: 0.8rem; border-radius: 6px; border: 1px solid #ccc; font-size: 1rem; font-family: 'Roboto', sans-serif; }
 .contact-form-section textarea { min-height: 120px; }
+.contact-form-section button { background: goldenrod; border: none; color: #2a0f4b; padding: 0.9rem; font-size: 1rem; font-weight: bold; border-radius: 6px; cursor: pointer; transition: all 0.3s ease; font-family: 'Montserrat', sans-serif; }
+.contact-form-section button:hover { background: #2a0f4b; color: white; }
 
-.contact-form-section button {
-  background: goldenrod;
-  border: none;
-  color: #2a0f4b;
-  padding: 0.9rem;
-  font-size: 1rem;
-  font-weight: bold;
-  border-radius: 6px;
-  cursor: pointer;
-  transition: all 0.3s ease;
-  font-family: 'Montserrat', sans-serif; /* optional for button emphasis */
-}
+.contact-section { background: #fdf8f0; color: #ffffff; padding: 50px 30px; max-width: 500px; margin: 40px auto; border-radius: 20px; box-shadow: 0 15px 30px rgba(0, 0, 0, 0.35); font-family: 'Roboto', sans-serif; text-align: center; position: relative; overflow: hidden; }
+.contact-section h2 { font-family: 'Montserrat', sans-serif; color: #2a0f4b; font-size: 32px; margin-bottom: 30px; font-weight: 700; position: relative; display: inline-block; }
+.contact-section h2::after { content: ""; display: block; width: 60%; height: 3px; background: goldenrod; margin: 8px auto 0; border-radius: 2px; }
 
-.contact-form-section button:hover {
-  background: #2a0f4b;
-  color: white;
-}
+.contact-item { display: flex; align-items: center; gap: 15px; margin: 18px 0; padding: 14px 20px; border-left: 4px solid goldenrod; border-radius: 12px; background-color: #3b0066; transition: all 0.4s ease; box-shadow: 0 4px 12px rgba(0, 0, 0, 0.2); font-family: 'Roboto', sans-serif; }
+.contact-item i { color: goldenrod; font-size: 22px; min-width: 25px; text-align: center; }
+.contact-item:hover { transform: translateX(8px); background-color: goldenrod; }
+.contact-item:hover i { color: #2e005c; }
+.contact-item a { color: #ffffff; font-weight: 400; text-decoration: none; transition: all 0.3s ease; }
+.contact-item:hover a { color: #2e005c; }
+.contact-item .whatsapp, .contact-item a[href^="mailto:"] { padding: 6px 14px; border-radius: 25px; transition: all 0.3s ease; margin-left: -20px; font-weight: 500; }
+.contact-item .whatsapp:hover, .contact-item a[href^="mailto:"]:hover { background-color: #ffffff; color: #2a0f4b; border-color: goldenrod; transform: scale(1.05); }
 
-/* === CONTACT CARD SECTION === */
-.contact-section {
-  background: #fdf8f0;
-  color: #ffffff;
-  padding: 50px 30px;
-  max-width: 500px;
-  margin: 40px auto;
-  border-radius: 20px;
-  box-shadow: 0 15px 30px rgba(0, 0, 0, 0.35);
-  font-family: 'Roboto', sans-serif; /* consistent body font */
-  text-align: center;
-  position: relative;
-  overflow: hidden;
-}
-
-.contact-section h2 {
-  font-family: 'Montserrat', sans-serif; /* heading font */
-  color: #2a0f4b;
-  font-size: 32px;
-  margin-bottom: 30px;
-  font-weight: 700;
-  position: relative;
-  display: inline-block;
-}
-
-.contact-section h2::after {
-  content: "";
-  display: block;
-  width: 60%;
-  height: 3px;
-  background: goldenrod;
-  margin: 8px auto 0;
-  border-radius: 2px;
-}
-
-/* Contact Items */
-.contact-item {
-  display: flex;
-  align-items: center;
-  gap: 15px;
-  margin: 18px 0;
-  padding: 14px 20px;
-  border-left: 4px solid goldenrod;
-  border-radius: 12px;
-  background-color: #3b0066;
-  transition: all 0.4s ease;
-  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.2);
-  font-family: 'Roboto', sans-serif;
-}
-
-.contact-item i {
-  color: goldenrod;
-  font-size: 22px;
-  min-width: 25px;
-  text-align: center;
-}
-
-.contact-item:hover {
-  transform: translateX(8px);
-  background-color: goldenrod;
-}
-
-.contact-item:hover i {
-  color: #2e005c;
-}
-
-.contact-item a {
-  color: #ffffff;
-  font-weight: 400;
-  text-decoration: none;
-  transition: all 0.3s ease;
-}
-
-.contact-item:hover a {
-  color: #2e005c;
-}
-
-.contact-item .whatsapp,
-.contact-item a[href^="mailto:"] {
-  padding: 6px 14px;
-  border-radius: 25px;
-  transition: all 0.3s ease;
-  margin-left: -20px;
-  font-weight: 500;
-}
-
-.contact-item .whatsapp:hover,
-.contact-item a[href^="mailto:"]:hover {
-  background-color: #ffffff;
-  color: #2a0f4b;
-  border-color: goldenrod;
-  transform: scale(1.05);
-}
 /* CONTACT PAGE DONE  it also share DONATION FORM STYLE>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>> */
 
 
@@ -1445,360 +548,53 @@ h1, h2 {
 /* =============================
    Branch Section Container
    ============================= */
-.branch-map {
-  background-color: #ffffff; /* White background */
-  color: #2e005c;            /* Dark purple text */
-  padding: 30px 20px;        
-  margin: 30px auto;         
-  border-radius: 15px;       
-  max-width: 800px;          
-  box-shadow: 0 8px 20px rgba(0,0,0,0.1); /* Soft shadow */
-  font-family: 'Arial', sans-serif; 
-  text-align: center;
-  transition: transform 0.3s ease;
-  margin-top: 50px;
-}
+.branch-map { background-color: #ffffff; color: #2e005c; padding: 30px 20px; margin: 50px auto 30px; border-radius: 15px; max-width: 800px; box-shadow: 0 8px 20px rgba(0,0,0,0.1); font-family: 'Arial', sans-serif; text-align: center; transition: transform 0.3s ease; }
+.branch-map:hover { transform: scale(1.02); }
+.branch-map h2 { color: #2e005c; font-size: 28px; margin-bottom: 15px; display: flex; justify-content: center; align-items: center; gap: 10px; font-weight: 500; }
+.branch-map p { font-size: 16px; margin-bottom: 20px; color: #2e005c; }
+.map-container iframe { width: 100%; height: 300px; border: 0; border-radius: 12px; }
+@media (max-width: 600px) { .branch-map { padding: 20px 15px; } .branch-map h2 { font-size: 24px; } .branch-map p { font-size: 14px; } .map-container iframe { height: 350px; } }
 
-.branch-map:hover {
-  transform: scale(1.02); 
-}
-
-/* =============================
-   Branch Section Heading
-   ============================= */
-.branch-map h2 {
-  color: #2e005c;          /* Gold heading */
-  font-size: 28px;
-  margin-bottom: 15px;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  gap: 10px;    
-  font-weight: 500;           /* Space between icon and text */
-}
-
-/* =============================
-   Branch Section Text
-   ============================= */
-.branch-map p {
-  font-size: 16px;
-  margin-bottom: 20px;
-  color: #2e005c;          /* Dark purple text */
-}
-
-/* =============================
-   Map Container Styling
-   ============================= */
-
-
-.map-container iframe {
-  width: 100%;                  
-  height: 300px;                
-  border: 0;
-  border-radius: 12px;
-}
-
-/* =============================
-   Responsive Mobile Styling
-   ============================= */
-@media (max-width: 600px) {
-  .branch-map {
-    padding: 20px 15px;        
-  }
-
-  .branch-map h2 {
-    font-size: 24px;            
-  }
-
-  .branch-map p {
-    font-size: 14px;            
-  }
-
-  .map-container iframe {
-    height: 350px; 
-          
-  }
-}
 
 /* THIS  IS GIVE STYLING>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>> */
-.give-banner {
-  position: relative;
-  height: 220px;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  color: white;
-  text-align: center;
-  overflow: hidden;
-  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
-  padding: 0 20px;
-}
+.give-banner { position: relative; height: 220px; display: flex; align-items: center; justify-content: center; color: white; text-align: center; overflow: hidden; font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif; padding: 0 20px; }
+.give-banner .background-image { position: absolute; top: 0; left: 0; width: 100%; height: 100%; object-fit: cover; z-index: 1; }
+.give-banner .overlay { position: absolute; top: 0; left: 0; width: 100%; height: 100%; background-color: rgba(81,1,105,0.6); z-index: 2; }
+.give-banner .banner-content { position: relative; z-index: 3; max-width: 700px; padding: 0 10px; }
+.give-banner h1 { font-family: 'Montserrat', sans-serif; font-weight: 800; font-size: 3rem; letter-spacing: 2px; color: gold; margin-bottom: 0.5rem; }
+.give-banner p { font-size: 1.25rem; font-weight: 400; line-height: 1.5; color: white; }
 
-.give-banner .background-image {
-  position: absolute;
-  top: 0;
-  left: 0;
-  width: 100%;
-  height: 100%;
-  object-fit: cover;
-  /* No opacity on image */
-  z-index: 1;
-}
+@media (max-width: 768px) { .give-banner { height: 220px; } .give-banner h1 { font-size: 2rem; } .give-banner p { font-size: 1rem; } }
+@media (max-width: 480px) { .give-banner { height: 150px; } .give-banner h1 { font-size: 1.5rem; margin-top: 15px; } .give-banner p { font-size: 0.9rem; } }
 
-.give-banner .overlay {
-  position: absolute;
-  top: 0;
-  left: 0;
-  width: 100%;
-  height: 100%;
-  background-color: rgba(48, 17, 77, 0.4); /* low opacity dark purple */
-  z-index: 2;
-}
+.giving-section-2025 { background-color: #fdf8f0; padding: 3rem 2rem; font-family: 'Roboto', sans-serif; }
+.giving-wrapper-2025 { max-width: 720px; margin: auto; background-color: #fff; padding: 2.8rem 2rem; border-radius: 14px; box-shadow: 0 6px 22px rgba(0,0,0,0.12); text-align: center; }
+.giving-wrapper-2025 h2 { font-family: 'Montserrat', sans-serif; font-weight: 700; color: #2f0755; font-size: 2.2rem; margin-bottom: 1rem; position: relative; }
+.giving-wrapper-2025 h2::after { content: ""; display: block; width: 70px; height: 3px; background: rgb(240,183,39); margin: 0.6rem auto 1.5rem auto; border-radius: 2px; }
+.giving-wrapper-2025 p { color: #0f0f0f; font-size: 1.1rem; line-height: 1.7; margin-bottom: 2rem; }
+.giving-wrapper-2025 h3 { font-family: 'Montserrat', sans-serif; font-weight: 600; color: #2f0755; font-size: 1.5rem; margin-bottom: 1.2rem; }
+.giving-wrapper-2025 ul { list-style: none; padding: 0; margin: 0; }
+.giving-wrapper-2025 li { background: #fdf8f0; padding: 0.8rem 1rem; margin: 0.4rem 0; border-radius: 6px; font-size: 1rem; color: #0f0f0f; text-align: left; }
+.giving-wrapper-2025 li strong { color: #2f0755; font-weight: 600; }
 
-.give-banner .banner-content {
-  position: relative;
-  z-index: 3;
-  max-width: 700px;
-  padding: 0 10px;
-}
+.ari-partner-section { background-color: #5b406e; padding: 40px 20px; text-align: center; }
+.ari-partner-container { max-width: 800px; margin: auto; border: 2px solid gold; border-radius: 10px; padding: 25px; box-shadow: 0 0 15px rgba(255,208,0,0.6); }
+.ari-partner-container h2 { color: gold; margin-bottom: 15px; text-align: left; }
+.ari-partner-container p { color: white; font-size: 1.1rem; line-height: 1.6; text-align: left; }
 
-.give-banner h1 {
-  font-size: 3.2rem;
-  margin-bottom: 0.5rem;
-  letter-spacing: 2px;
-  color: gold; /* Gold color for main heading */
-  font-size: 3rem;
-  margin-bottom: 0.5rem;
-  font-weight: 800;
-  letter-spacing: 2px;
-}
+.ari-faq-section { background-color: #fdf8f0; padding: 50px 20px; }
+.ari-faq-container { max-width: 800px; margin: auto; }
+.ari-faq-container h2 { text-align: center; color: #1c0730; margin-bottom: 30px; }
+.ari-faq-item { margin-bottom: 15px; border-radius: 8px; background-color: white; border-left: 4px solid gold; box-shadow: 0 2px 6px rgba(0,0,0,0.08); overflow: hidden; }
+.ari-faq-toggle { display: none; }
+.ari-faq-question { display: block; padding: 15px 20px; cursor: pointer; color: #1c0730; font-weight: bold; position: relative; }
+.ari-faq-question::after { content: '▼'; position: absolute; right: 20px; transition: transform 0.3s ease; font-size: 0.8rem; }
+.ari-faq-toggle:checked + .ari-faq-question::after { transform: rotate(180deg); }
+.ari-faq-answer { max-height: 0; overflow: hidden; padding: 0 20px; color: #333; line-height: 1.5; transition: max-height 0.35s ease, padding 0.35s ease; }
+.ari-faq-toggle:checked ~ .ari-faq-answer { max-height: 500px; padding: 15px 20px; }
 
-.give-banner p {
-  font-size: 1.25rem;
-  font-weight: 400;
-  line-height: 1.5;
-  color: white; /* Subtitle text white */
-  font-size: 1.25rem;
-  font-weight: 400;
-  line-height: 1.5;
-}
+@media (max-width: 768px) { .ari-partner-container, .ari-faq-container { padding: 20px; } }
 
-.give-banner .overlay {
-  background-color: rgba(81, 1, 105, 0.6); /* lighter dark purple overlay, very low opacity */
-}
-
-
-/* Responsive styles */
-@media (max-width: 768px) {
-  .give-banner {
-    height: 220px;
-  }
-  .give-banner h1 {
-    font-size: 2rem;
-  }
-  .give-banner p {
-    font-size: 1rem;
-  }
-}
-
-@media (max-width: 480px) {
-  .give-banner {
-    height: 180px;
-  }
-  .give-banner h1 {
-    font-size: 1.5rem;
-    margin-top: 15px;
-  }
-  .give-banner p {
-    font-size: 0.9rem;
-  }
-
-.give-banner {
-  height: 150px;
-  }
-}
-
-/* ===== Giving + Bank Details Section ===== */
-/* ===== Giving + Bank Details Section ===== */
-.giving-section-2025 {
-  background-color: #fdf8f0; /* soft light background */
-  padding: 3rem 2rem;
-  font-family: 'Roboto', sans-serif;
-}
-
-.giving-wrapper-2025 {
-  max-width: 720px;
-  margin: auto;
-  background-color: #fff;
-  padding: 2.8rem 2rem;
-  border-radius: 14px;
-  box-shadow: 0 6px 22px rgba(0, 0, 0, 0.12);
-  text-align: center;
-}
-
-/* Headings */
-.giving-wrapper-2025 h2 {
-  font-family: 'Montserrat', sans-serif;
-  font-weight: 700;
-  color: #2f0755;
-  font-size: 2.2rem;
-  margin-bottom: 1rem;
-  position: relative;
-}
-
-.giving-wrapper-2025 h2::after {
-  content: "";
-  display: block;
-  width: 70px;
-  height: 3px;
-  background: rgb(240, 183, 39);
-  margin: 0.6rem auto 1.5rem auto;
-  border-radius: 2px;
-}
-
-.giving-wrapper-2025 p {
-  color:  #0f0f0f;
-  font-size: 1.1rem;
-  line-height: 1.7;
-  margin-bottom: 2rem;
-}
-
-.giving-wrapper-2025 h3 {
-  font-family: 'Montserrat', sans-serif;
-  font-weight: 600;
-  color: #2f0755;
-  font-size: 1.5rem;
-  margin-bottom: 1.2rem;
-}
-
-/* Bank Details */
-.giving-wrapper-2025 ul {
-  list-style: none;
-  padding: 0;
-  margin: 0;
-}
-
-.giving-wrapper-2025 li {
-  background: #fdf8f0;
-  padding: 0.8rem 1rem;
-  margin: 0.4rem 0;
-  border-radius: 6px;
-  font-size: 1rem;
-  color: #0f0f0f;
-  text-align: left;
-}
-
-.giving-wrapper-2025 li strong {
-  color: #2f0755;
-  font-weight: 600;
-}
-
-
-
-/* ===== Partner Section ===== */
-.ari-partner-section {
-  background-color:  #5b406e; /* Dark purple */
-  padding: 40px 20px;
-  text-align: center;
-}
-
-.ari-partner-container {
-  max-width: 800px;
-  margin: auto;
-  border: 2px solid gold;
-  border-radius: 10px;
-  padding: 25px;
-  box-shadow: 0 0 15px rgba(255, 208, 0, 0.6);
-}
-
-.ari-partner-container h2 {
-  color: gold;
-  margin-bottom: 15px;
-  text-align: left;
-}
-
-.ari-partner-container p {
-  color: white;
-  font-size: 1.1rem;
-  line-height: 1.6;
-  text-align: left;
-}
-
-/* ===== FAQ Section ===== */
-.ari-faq-section {
-  background-color: #fdf8f0;
-  padding: 50px 20px;
-}
-
-.ari-faq-container {
-  max-width: 800px;
-  margin: auto;
-}
-
-.ari-faq-container h2 {
-  text-align: center;
-  color: #1c0730;
-  margin-bottom: 30px;
-}
-
-/* FAQ Item Styling */
-.ari-faq-item {
-  margin-bottom: 15px;
-  border-radius: 8px;
-  background-color: white;
-  border-left: 4px solid gold;
-  box-shadow: 0 2px 6px rgba(0, 0, 0, 0.08);
-  overflow: hidden;
-}
-
-/* Hide checkbox */
-.ari-faq-toggle {
-  display: none;
-}
-
-.ari-faq-question {
-  display: block;
-  padding: 15px 20px;
-  cursor: pointer;
-  color: #1c0730;
-  font-weight: bold;
-  position: relative;
-}
-
-.ari-faq-question::after {
-  content: '▼';
-  position: absolute;
-  right: 20px;
-  transition: transform 0.3s ease;
-  font-size: 0.8rem;
-}
-
-.ari-faq-toggle:checked + .ari-faq-question::after {
-  transform: rotate(180deg);
-}
-
-/* Answer Section */
-.ari-faq-answer {
-  max-height: 0;
-  overflow: hidden;
-  padding: 0 20px;
-  color: #333;
-  line-height: 1.5;
-  transition: max-height 0.35s ease, padding 0.35s ease;
-}
-
-.ari-faq-toggle:checked ~ .ari-faq-answer {
-  max-height: 500px;
-  padding: 15px 20px;
-}
-
-/* ===== Responsive ===== */
-@media (max-width: 768px) {
-  .ari-partner-container,
-  .ari-faq-container {
-    padding: 20px;
-  }
-}
 
 /* =GIVE PAGE DONE>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>===== */
 
@@ -1847,416 +643,98 @@ h1, h2 {
 /* ===============================
    MY BLOG STYLING
 ================================ */
-/* Blog Container */
-.blog-container {
-  max-width: 900px;
-  margin: 20px auto;
-  font-family: 'Arial', sans-serif;
-  line-height: 1.6;
-  color: #ffffff;
-  background: #5b406e; /* dark purple background */
-  padding: 20px;
-  border-radius: 10px;
-  box-shadow: 0 4px 15px rgba(0,0,0,0.3);
-  
-}
-
-/* Preview Snippet */
-.blog-snippet {
-  max-height: 120px;
-  overflow: hidden;
-  
-}
-
-/* Read More Label */
-.read-more-toggle {
-  display: none;
-}
-
-.read-more-label {
-  display: inline-block;
-  margin-top: 10px;
-  color: gold; /* gold */
-  cursor: pointer;
-  font-weight: bold;
-}
-
-.read-more-label:hover {
-  text-decoration: underline;
-}
-
-/* Full Blog Content */
-.full-blog {
-  max-height: 0;
-  overflow: hidden;
-  transition: max-height 0.5s ease;
-  margin-top: 10px;
-}
-
-.read-more-toggle:checked ~ .full-blog {
-  max-height: 5000px; /* large enough for full content */
-}
-
-/* Headings */
-h1, h2, h3 {
-  color: gold; /* gold headings */
-}
-
-h2 {
-  margin-top: 20px;
-}
-
-h3 {
-  margin-top: 15px;
-  font-size: 1.1em;
-}
-
-/* Links */
-a {
-  color: gold;
-  text-decoration: none;
-}
-
-a:hover {
-  text-decoration: underline;
-}
-
-/* Responsive */
-@media (max-width: 768px) {
-  .blog-container {
-    padding: 15px;
-  }
-
-  h1 {
-    font-size: 1.6em;
-  }
-
-  h2 {
-    font-size: 1.3em;
-  }
-
-  h3 {
-    font-size: 1.1em;
-  }
-
-  .read-more-label {
-    font-size: 0.95em;
-  }
-}
-
-@media (max-width: 480px) {
-  h1 {
-    font-size: 1.4em;
-  }
-
-  h2 {
-    font-size: 1.2em;
-  }
-
-  h3 {
-    font-size: 1em;
-  }
-}
 
 
-/* BLOG SLIDESHOW ONLY */
-.blog-slideshow {
-  position: relative;
-  width: 100%;
-  max-width: 100%;
-  height: 400px; /* adjust as needed */
-  margin: 15px 0;
-  border-radius: 10px;
-  overflow: hidden;
-  box-shadow: 0 4px 15px rgba(0,0,0,0.3);
-}
+/* BLOG BANNER — SAME STYLING AS MINISTRIES BANNER */
+.blog-banner { position: relative; width: 100%; height: clamp(150px,35vw,230px); overflow: hidden; border-radius: 10px; }
+.blog-banner img { width: 100%; height: 100%; object-fit: cover; object-position: center; display: block; }
+.blog-banner .overlay { position: absolute; inset: 0; background: rgba(73,15,95,0.8); }
+.blog-banner-text { position: absolute; top: 50%; left: 50%; transform: translate(-50%,-50%); text-align: center; color: white; padding: 0 16px; }
+.blog-banner-title { font-size: clamp(1.4rem,4vw,2.5rem); font-weight: 700; margin: 0; line-height: 1.2; }
 
-.blog-slideshow img {
-  position: absolute;
-  top: 0;
-  left: 0;
-  width: 100%;
-  height: 100%;
-  object-fit: cover;  
-  object-position: center;
-  border-radius: 10px;
-  opacity: 0;
-  animation: blogCrossfade 16s infinite;
-}
+@media (max-width: 480px) { .blog-banner { border-radius: 8px; } }
 
+.blog-container { max-width: 900px; margin: 20px auto; font-family: 'Arial',sans-serif; line-height: 1.6; color: #ffffff; background: #5b406e; padding: 20px; border-radius: 10px; box-shadow: 0 4px 15px rgba(0,0,0,0.3); }
+.blog-snippet { max-height: 120px; overflow: hidden; }
+
+.read-more-toggle { display: none; }
+.read-more-label { display: inline-block; margin-top: 10px; color: gold; cursor: pointer; font-weight: bold; }
+.read-more-label:hover { text-decoration: underline; }
+.full-blog { max-height: 0; overflow: hidden; transition: max-height 0.5s ease; margin-top: 10px; }
+.read-more-toggle:checked ~ .full-blog { max-height: 5000px; }
+
+h1,h2,h3 { color: gold; }
+h2 { margin-top: 20px; }
+h3 { margin-top: 15px; font-size: 1.1em; }
+a { color: gold; text-decoration: none; }
+a:hover { text-decoration: underline; }
+
+@media (max-width: 768px) { .blog-container { padding: 15px; } h1 { font-size: 1.6em; } h2 { font-size: 1.3em; } h3 { font-size: 1.1em; } .read-more-label { font-size: 0.95em; } }
+@media (max-width: 480px) { h1 { font-size: 1.4em; } h2 { font-size: 1.2em; } h3 { font-size: 1em; } }
+
+.blog-slideshow { position: relative; width: 100%; max-width: 100%; height: 400px; margin: 15px 0; border-radius: 10px; overflow: hidden; box-shadow: 0 4px 15px rgba(0,0,0,0.3); }
+.blog-slideshow img { position: absolute; top: 0; left: 0; width: 100%; height: 100%; object-fit: cover; object-position: center; border-radius: 10px; opacity: 0; animation: blogCrossfade 16s infinite; }
 .blog-slideshow img:nth-child(1) { animation-delay: 0s; }
 .blog-slideshow img:nth-child(2) { animation-delay: 4s; }
 .blog-slideshow img:nth-child(3) { animation-delay: 8s; }
 .blog-slideshow img:nth-child(4) { animation-delay: 12s; }
 
-@keyframes blogCrossfade {
-  0%, 100% { opacity: 1; }   /* keep first image visible during loop */
-  5%       { opacity: 1; }   /* fade in */
-  25%      { opacity: 1; }   /* hold */
-  30%      { opacity: 1; }   /* fade out */
-}
+@keyframes blogCrossfade { 0%,100% { opacity: 1; } 5% { opacity: 1; } 25% { opacity: 1; } 30% { opacity: 1; } }
+
 
 
 
 /* ===============================
    FOOTER BASE STYLING
 ================================ */
-.custom-footer {
-  background-color: #1c0730; /* Dark Purple */
-  color: #ffffff;
-  width: 100%;
-  padding: 3rem 1rem;
-  font-family: Arial, sans-serif;
-  box-sizing: border-box;
-  text-align: center;
+.custom-footer { background-color: #1c0730; color: #ffffff; width: 100%; padding: 3rem 1rem; font-family: Arial,sans-serif; box-sizing: border-box; text-align: center; }
+
+.footer-visit-us { background-color: #1c0730; color: #ffffff; padding: 50px 20px; border-radius: 12px; max-width: 1000px; margin: 0 auto 40px; }
+.footer-visit-us .visit-title { font-size: 2rem; margin-bottom: 12px; color: goldenrod; }
+.footer-visit-us .visit-intro { color: #ffffff; margin-bottom: 35px; }
+.footer-visit-us .locations { display: grid; grid-template-columns: repeat(auto-fit,minmax(250px,1fr)); gap: 70px; }
+.footer-visit-us .location-card { background-color: #2a0f4b; padding: 25px; border-radius: 12px; box-shadow: 0 4px 10px rgba(0,0,0,0.3); transition: transform 0.2s; }
+.footer-visit-us .location-card:hover { transform: translateY(-5px); }
+.footer-visit-us .location-card h4 { color: goldenrod; margin-bottom: 10px; }
+.footer-visit-us .location-card p { color: #ffffff; margin-bottom: 12px; }
+.footer-visit-us .map-link { display: inline-block; padding: 10px 20px; background-color: goldenrod; color: #1c0730; border-radius: 6px; text-decoration: none; font-weight: 500; transition: background-color 0.3s; }
+.footer-visit-us .map-link:hover { background-color: #ffffff; color: #1c0730; }
+
+@media (max-width: 768px) { 
+  .footer-visit-us .location-card iframe { width: 100% !important; height: 250px !important; border: 0; border-radius: 8px; }
+  .footer-visit-us .map-link { display: block; text-align: center; margin-top: 12px; }
 }
 
-/* ===============================
-   VISIT US SECTION
-================================ */
-.footer-visit-us {
-  background-color: #1c0730; /* Dark Purple */
-  color: #ffffff;
-  padding: 50px 20px;
-  border-radius: 12px;
-  max-width: 1000px;
-  margin: 0 auto 40px;
-}
+.church-info { margin-top: 30px; margin-bottom: -30px; color: #ffffff; font-size: 0.91rem; line-height: 1.6; text-align: center; }
+.church-info a { color: goldenrod; text-decoration: none; font-weight: 600; }
+.church-info a:hover { text-decoration: underline; }
 
-.footer-visit-us .visit-title {
-  font-size: 2rem;
-  margin-bottom: 12px;
-  color: goldenrod; /* Gold */
-}
+.footer-main-row { display: flex; justify-content: center; align-items: flex-start; gap: 50px; flex-wrap: wrap; margin-bottom: 40px; }
 
-.footer-visit-us .visit-intro {
-  color: #ffffff;
-  margin-bottom: 35px;
-}
+.footer-contact-box { background-color: goldenrod; color: #1c0730; padding: 25px; border-radius: 10px; max-width: 320px; text-align: center; }
+.footer-contact-box .contact-entry { display: block; text-decoration: none; color: #1c0730; margin-bottom: 15px; padding: 10px; border-radius: 8px; transition: background-color 0.3s,color 0.3s; }
+.footer-contact-box .contact-entry:hover { background-color: rgba(255,255,255,0.2); color: #ffffff; }
+.footer-contact-box hr { border: none; border-top: 2px solid #1c0730; margin: 15px 0; }
 
-.footer-visit-us .locations {
-  display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
-  gap: 70px;
-}
+.footer-logo-social .footer-logo { width: 220px; margin: 0 auto 15px; display: block; }
+.footer-logo-social .follow-us { color: #d8ac1b; font-weight: bold; margin-bottom: 10px; }
+.footer-logo-social .social-icons a { color: #ffffff; font-size: 20px; margin: 0 5px; transition: color 0.3s; }
+.footer-logo-social .social-icons a:hover { color: #d8ac1b; }
 
-.footer-visit-us .location-card {
-  background-color: #2a0f4b; /* Slightly lighter purple */
-  padding: 25px;
-  border-radius: 12px;
-  box-shadow: 0 4px 10px rgba(0,0,0,0.3);
-  transition: transform 0.2s;
-}
+.footer-columns { display: flex; flex-direction: column; gap: 20px; text-align: center; }
+.footer-columns .footer-column h3 { border-bottom: 2px solid #d8ac1b; color: #ffffff; display: inline-block; padding-bottom: 5px; margin-bottom: 10px; }
+.footer-columns .footer-column ul { list-style: none; padding: 0; margin: 0; }
+.footer-columns .footer-column ul li { margin: 6px 0; }
+.footer-columns .footer-column ul li a { color: #ffffff; text-decoration: none; transition: color 0.3s; }
+.footer-columns .footer-column ul li a:hover { color: #d8ac1b; }
 
-.footer-visit-us .location-card:hover {
-  transform: translateY(-5px);
-}
+.footer-bottom { font-size: 13px; color: #ffffff; border-top: 1px solid #d8ac1b; padding-top: 20px; margin-top: 20px; }
+.footer-bottom .arigraphix { color: #d8ac1b; font-style: italic; }
 
-.footer-visit-us .location-card h4 {
-  color: goldenrod; /* Gold */
-  margin-bottom: 10px;
-}
-
-.footer-visit-us .location-card p {
-  color: #ffffff;
-  margin-bottom: 12px;
-}
-
-.footer-visit-us .map-link {
-  display: inline-block;
-  padding: 10px 20px;
-  background-color: goldenrod; /* Gold */
-  color: #1c0730; /* Dark Purple text */
-  border-radius: 6px;
-  text-decoration: none;
-  font-weight: 500;
-  transition: background-color 0.3s;
-}
-
-.footer-visit-us .map-link:hover {
-  background-color: #ffffff;
-  color: #1c0730;
-}
-
-/* Make Google Maps iframe responsive only on mobile */
-@media (max-width: 768px) {
-  .footer-visit-us .location-card iframe {
-    width: 100% !important;
-    height: 250px !important; /* adjust height as needed */
-    border: 0;
-    border-radius: 8px;
-  }
-
-  /* Make sure the link-style maps (anchor tags) still look fine */
-  .footer-visit-us .map-link {
-    display: block;
-    text-align: center;
-    margin-top: 12px;
-  }
-}
-  
-/* Church Info Section */
-.church-info {
-  margin-top: 30px;
-  margin-bottom: -30px;
-  color: #ffffff;
-  font-size: 0.91rem;
-  line-height: 1.6;
-  text-align: center;
-}
-
-.church-info a {
-  color: goldenrod;
-  text-decoration: none;
-  font-weight: 600;
-}
-
-.church-info a:hover {
-  text-decoration: underline;
-}
-
-/* ===============================
-   MAIN ROW (Contact | Logo | Links)
-================================ */
-.footer-main-row {
-  display: flex;
-  justify-content: center;
-  align-items: flex-start;
-  gap: 50px;
-  flex-wrap: wrap;
-  margin-bottom: 40px;
-}
-
-/* Contact Box */
-.footer-contact-box {
-  background-color: goldenrod; /* Gold */
-  color: #1c0730; /* Dark Purple */
-  padding: 25px;
-  border-radius: 10px;
-  max-width: 320px;
-  text-align: center;
-}
-
-.footer-contact-box .contact-entry {
-  display: block;
-  text-decoration: none;
-  color: #1c0730;
-  margin-bottom: 15px;
-  padding: 10px;
-  border-radius: 8px;
-  transition: background-color 0.3s, color 0.3s;
-}
-
-.footer-contact-box .contact-entry:hover {
-  background-color: rgba(255,255,255,0.2);
-  color: #ffffff;
-}
-
-.footer-contact-box hr {
-  border: none;
-  border-top: 2px solid #1c0730;
-  margin: 15px 0;
-}
-
-/* Logo & Social */
-.footer-logo-social .footer-logo {
-  width: 220px;
-  margin: 0 auto 15px;
-  display: block;
-}
-
-.footer-logo-social .follow-us {
-  color: #d8ac1b; /* Gold */
-  font-weight: bold;
-  margin-bottom: 10px;
-}
-
-.footer-logo-social .social-icons a {
-  color: #ffffff;
-  font-size: 20px;
-  margin: 0 5px;
-  transition: color 0.3s;
-}
-
-.footer-logo-social .social-icons a:hover {
-  color: #d8ac1b; /* Gold */
-}
-
-/* Quick Links & Legal */
-.footer-columns {
-  display: flex;
-  flex-direction: column;
-  gap: 20px;
-  text-align: center;
-}
-
-.footer-columns .footer-column h3 {
-  border-bottom: 2px solid #d8ac1b; /* Gold underline */
-  color: #ffffff;
-  display: inline-block;
-  padding-bottom: 5px;
-  margin-bottom: 10px;
-}
-
-.footer-columns .footer-column ul {
-  list-style: none; /* Remove bullets */
-  padding: 0;
-  margin: 0;
-}
-
-.footer-columns .footer-column ul li {
-  margin: 6px 0;
-}
-
-.footer-columns .footer-column ul li a {
-  color: #ffffff;
-  text-decoration: none;
-  transition: color 0.3s;
-}
-
-.footer-columns .footer-column ul li a:hover {
-  color: #d8ac1b; /* Gold hover */
-}
-
-/* Footer Bottom */
-.footer-bottom {
-  font-size: 13px;
-  color: #ffffff;
-  border-top: 1px solid #d8ac1b; /* Gold line */
-  padding-top: 20px;
-  margin-top: 20px;
-}
-
-.footer-bottom .arigraphix {
-  color: #d8ac1b; /* Gold */
-  font-style: italic;
-}
-
-/* ===============================
-   RESPONSIVE MOBILE
-================================ */
-@media (max-width: 767px) {
-  /* Stack main row vertically and center all items */
-  .footer-main-row {
-    flex-direction: column;
-    gap: 30px;
-    text-align: center;
-    align-items: center; /* centers horizontally */
-  }
-
-  /* Center columns in quick links */
-  .footer-columns {
-    flex-direction: column;
-    gap: 20px;
-    text-align: center;
-    align-items: center; /* centers horizontally */
-  }
-
-  /* Ensure contact box and logo/social are centered */
-  .footer-contact-box,
-  .footer-logo-social {
-    margin: 0 auto;
-  }
+@media (max-width: 767px) { 
+  .footer-main-row { flex-direction: column; gap: 30px; text-align: center; align-items: center; }
+  .footer-columns { flex-direction: column; gap: 20px; text-align: center; align-items: center; }
+  .footer-contact-box,.footer-logo-social { margin: 0 auto; }
 }
 
 
