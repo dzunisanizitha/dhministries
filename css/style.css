@@ -456,54 +456,203 @@ body {
 /* === EVENT BANNER === */
 
 /* === CALENDAR EMBADED FROM === */
-@keyframes fadeSlideIn { 0% { opacity:0; transform:translateY(40px) scale(0.98); } 100% { opacity:1; transform:translateY(0) scale(1); } }
-
-.calendar-embed { position:relative; overflow:hidden; padding:20px; background:linear-gradient(135deg, #2f0755 0%, #d4af37 100%); border-radius:14px; box-shadow:0 10px 25px rgba(0,0,0,0.25); animation:fadeSlideIn 1.2s ease-out both; }
-.calendar-embed iframe { border:solid 1px #777; width:100%; height:600px; border-radius:10px; box-shadow:0 8px 20px rgba(0,0,0,0.25); animation:fadeSlideIn 1.4s ease-out both; animation-delay:0.2s; }
-@media(max-width:768px){ .calendar-embed{ padding:10px;} .calendar-embed iframe{ height:500px; } }
-
-
-/* === EVENTS SECTION === */
-.events-section { max-width:1200px; margin:40px auto; padding:0 15px; color:#3b0066; font-family:'Roboto',sans-serif; }
-.events-section h2 { font-family:'Montserrat',sans-serif; text-align:center; color:#cca219; font-size:2.5rem; margin-bottom:1rem; font-weight:700; letter-spacing:2px; }
-.intro-text { text-align:center; max-width:800px; margin:0 auto 2rem; font-size:1.1rem; color:#3b0066; line-height:1.6; }
-
-/* Events Container */
-.events-container { display:flex; gap:20px; flex-wrap:wrap; justify-content:center; }
-
-/* Event Card */
-.event-card { background:#f9f7f1; border:2px solid #3b0066; border-radius:8px; overflow:hidden; width:18%; min-width:220px; box-shadow:0 2px 8px rgba(0,0,0,0.1); display:flex; flex-direction:column; transition:transform 0.3s ease; margin-bottom:40px; }
-.event-card:hover { transform:scale(1.05); }
-.event-flyer { width:100%; height:auto; object-fit:cover; display:block; }
-.event-info { padding:15px; flex-grow:1; }
-.event-info h3 { margin:0 0 10px; color:#3b0066; font-size:1.2rem; }
-.event-date-time { font-weight:bold; color:#313131; margin-bottom:10px; font-size:0.9rem; }
-
-
-/* Call to Action Box */
-.cta-box { text-align:center; margin-top:40px; background:#2a0f4b; color:#fff; padding:30px; border-radius:8px; box-shadow:0 2px 8px rgba(0,0,0,0.2); }
-.cta-box h3 { font-size:1.8rem; margin-bottom:10px; color:goldenrod; }
-.cta-box p { font-size:1rem; margin-bottom:20px; }
-.cta-button { display:inline-block; background:goldenrod; color:#2a0f4b; padding:12px 25px; border-radius:5px; text-decoration:none; font-weight:bold; transition:background 0.3s; }
-.cta-button:hover { background:#fff; color:#2a0f4b; }
-
+/* ===============================
+   CALENDAR EMBED
+================================ */
 .calendar-embed {
-  position: relative;
-  z-index: 2; 
-  width: 100%;
-  max-width: 1000px;
-  margin: 0 auto;
-  border-radius: 8px;
-  overflow: hidden;
-  box-shadow: 0 4px 12px rgba(0,0,0,0.2);
+  max-width: 900px;            /* limit width for large screens */
+  margin: 3rem auto;            /* center horizontally with spacing */
+  padding: 1rem;                /* inner spacing */
+  background-color: #1c0730;    /* dark purple background */
+  border-radius: 12px;          /* rounded corners */
+  box-shadow: 0 8px 20px rgba(0,0,0,0.3); /* subtle shadow */
+  overflow: hidden;             /* ensure iframe respects border radius */
 }
-.event-banner { position:relative; width:100%; height:auto; overflow:hidden; } .event-banner .overlay { position:absolute; inset:0; background-color:rgba(59,0,102,0.6); z-index:1; } .event-banner-text { position:absolute; top:10px; left:50%; transform:translateX(-50%); text-align:center; z-index:2; } .event-banner-title { font-family:'Montserrat',sans-serif; font-size:3rem; color:gold; font-weight:700; text-transform:uppercase; margin:0; } @media (max-width:992px) { .event-banner-title { font-size:2.5rem; } } @media (max-width:576px) { .event-banner-title { font-size:1.5rem; } } .calendar-embed { position:relative; z-index:2; width:100%; max-width:900px; margin:20px auto; border-radius:12px; overflow:hidden; box-shadow:0 4px 15px rgba(0,0,0,0.25); }
+
+.calendar-embed iframe {
+  border: none;                 /* remove default iframe border */
+  width: 100%;
+  height: 600px;
+  border-radius: 12px;          /* match container corners */
+}
+
+/* Responsive adjustments for mobile */
+@media (max-width: 768px) {
+  .calendar-embed {
+    padding: 0.5rem;
+    margin: 2rem 1rem;
+  }
+
+  .calendar-embed iframe {
+    height: 500px; /* slightly smaller for phones */
+  }
+}
+
+/* Optional: add heading above calendar */
+.calendar-embed h3 {
+  color: #FFD700;               /* gold heading */
+  font-size: 1.8rem;
+  text-align: center;
+  margin-bottom: 1rem;
+  font-family: 'Montserrat', sans-serif;
+}
 
 
-/* Responsive */
-@media (max-width:1024px) { .event-card { width:45%; min-width:unset; } }
-@media (max-width:600px) { .event-card { width:100%; } }
-@media (max-width: 768px) { .events-section h2{text-align: left !important; } .intro-text{text-align: left;} .cta-box{text-align: left;}}
+
+/* ===============================
+   EVENTS SECTION
+================================ */
+.events-section {
+  max-width: 1100px;
+  margin: 3rem auto;
+  padding: 2rem 1.5rem;
+  background-color: #fefefe; /* light background for contrast */
+  border-radius: 12px;
+  box-shadow: 0 8px 20px rgba(0,0,0,0.1);
+  font-family: 'Roboto', sans-serif;
+  color: #1c0730; /* dark purple text */
+}
+
+.events-section h2 {
+  font-size: 2.2rem;
+  font-weight: 900;
+  color: #2f0755; /* dark purple */
+  margin-bottom: 1rem;
+  text-align: center; /* desktop centered */
+}
+
+
+
+.events-section .intro-text {
+  font-size: 1rem;
+  margin-bottom: 2rem;
+  text-align: center; /* desktop centered */
+  line-height: 1.6;
+  color: #5b406e; /* softer dark purple */
+}
+
+/* EVENTS CONTAINER */
+.events-container {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+  gap: 1.5rem;
+}
+
+/* EVENT CARDS */
+.event-card {
+  background-color: #fff;
+  border-radius: 12px;
+  overflow: hidden;
+  box-shadow: 0 4px 15px rgba(0,0,0,0.15);
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.event-card:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 8px 25px rgba(0,0,0,0.25);
+}
+
+.event-card .event-flyer {
+  width: 100%;
+  height: auto;
+  display: block;
+}
+
+.event-info {
+  padding: 1rem;
+}
+
+.event-info h3 {
+  font-size: 1.2rem;
+  font-weight: 700;
+  margin-bottom: 0.5rem;
+  color: #2f0755;
+}
+
+.event-info .event-date-time {
+  font-size: 0.95rem;
+  color: #a67c00; /* gold accent */
+}
+
+/* CTA BOX */
+.cta-box {
+  margin-top: 3rem;
+  padding: 2rem;
+  background-color: #2f0755; /* dark purple */
+  color:  rgb(252, 192, 42); /* gold text */
+  border-radius: 12px;
+  text-align: center;
+}
+
+.cta-box h3 {
+  font-size: 1.8rem;
+  font-weight: 900;
+  margin-bottom: 1rem;
+}
+
+.cta-box p {
+  font-size: 1rem;
+  margin-bottom: 1.5rem;
+}
+
+.cta-box .cta-button {
+  display: inline-block;
+  padding: 12px 28px;
+  background-color: rgb(252, 192, 42); /* gold button */
+  color: #2f0755; /* dark purple text */
+  font-weight: 700;
+  border-radius: 8px;
+  text-decoration: none;
+  transition: all 0.3s ease;
+}
+
+.cta-box .cta-button:hover {
+  background-color: #fff;
+  color: #2f0755;
+  transform: translateY(-2px);
+}
+
+/* ===============================
+   MOBILE RESPONSIVE
+================================ */
+@media (max-width: 768px) {
+  .events-section h2 {
+    padding: 1rem;   text-align: left;      /* reduce padding around the section */
+  }
+
+  @media (max-width: 768px) {
+.events-section  .intro-text {
+text-align: left;
+}
+  }
+
+  .events-container {
+    display: flex;
+    flex-direction: column;  /* stack cards vertically */
+    gap: 1rem;               /* spacing between cards */
+  }
+
+  .event-card {
+    margin: 0;
+    padding: 0;
+    border-radius: 12px;
+    overflow: hidden;
+  }
+
+  .event-card .event-flyer {
+    width: 100%;
+    height: auto;
+    max-height: 180px;       /* smaller image height for mobile UX */
+    object-fit: cover;       /* keeps full design but fits smaller */
+    display: block;
+  }
+
+  .event-card .event-info {
+    padding: 0.5rem 0.5rem;  /* reduced padding for compact look */
+  } 
+
+  .cta-box {text-align: left;}
+}
 
 /* EVENT PAGE DONE >>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>> */
 
